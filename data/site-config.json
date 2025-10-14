@@ -3,17 +3,49 @@
     "homepageUrl": "https://sbb-binnenafbouw.github.io/safety/",
     "newsletterUrl": "https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60",
     "lmraUrl": "https://sbb-binnenafbouw.github.io/LMRA/",
-    "highlightedArticleSlug": "veilig-werken-met-hout"
+    "highlightedArticleSlug": "veilig-boren"
   },
   "languages": [
-    { "name": "Nederlands", "code": "nl", "flag": "🇳🇱" },
-    { "name": "English", "code": "en", "flag": "🇬🇧" },
-    { "name": "Deutsch", "code": "de", "flag": "🇩🇪" },
-    { "name": "Polski", "code": "pl", "flag": "🇵🇱" },
-    { "name": "Română", "code": "ro", "flag": "🇷🇴" },
-    { "name": "Български", "code": "bg", "flag": "🇧🇬" },
-    { "name": "Slovenčina", "code": "sk", "flag": "🇸🇰" },
-    { "name": "Українська", "code": "ua", "flag": "🇺🇦" }
+    {
+      "name": "Nederlands",
+      "code": "nl",
+      "flag": "🇳🇱"
+    },
+    {
+      "name": "English",
+      "code": "en",
+      "flag": "🇬🇧"
+    },
+    {
+      "name": "Deutsch",
+      "code": "de",
+      "flag": "🇩🇪"
+    },
+    {
+      "name": "Polski",
+      "code": "pl",
+      "flag": "🇵🇱"
+    },
+    {
+      "name": "Română",
+      "code": "ro",
+      "flag": "🇷🇴"
+    },
+    {
+      "name": "Български",
+      "code": "bg",
+      "flag": "🇧🇬"
+    },
+    {
+      "name": "Slovenčina",
+      "code": "sk",
+      "flag": "🇸🇰"
+    },
+    {
+      "name": "Українська",
+      "code": "ua",
+      "flag": "🇺🇦"
+    }
   ],
   "roles": [
     {
