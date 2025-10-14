@@ -314,7 +314,7 @@ function renderTitles() {
     const linkInput = document.createElement("input");
     linkInput.type = "text";
     linkInput.value = state.article.translations[langCode]?.link || "";
-    linkInput.placeholder = "Link";
+    linkInput.placeholder = `articles/${state.slug}/${langCode}`;
     linkInput.addEventListener("input", () => {
       ensureTranslation(langCode);
       state.article.translations[langCode].link = linkInput.value;
