@@ -206,49 +206,49 @@ export const FALLBACK_DATA = {
           title: "Veilig werken met hout",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_nl.png",
           html: "index_nl.html",
-          link: "articles/veilig-werken-met-hout/index_nl.html"
+          link: "articles/veilig-werken-met-hout/nl"
         },
         en: {
           title: "Safe woodworking practices",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_en.png",
           html: "index_en.html",
-          link: "articles/veilig-werken-met-hout/index_en.html"
+          link: "articles/veilig-werken-met-hout/en"
         },
         de: {
           title: "Sicher mit Holz arbeiten",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_de.png",
           html: "index_de.html",
-          link: "articles/veilig-werken-met-hout/index_de.html"
+          link: "articles/veilig-werken-met-hout/de"
         },
         pl: {
           title: "Bezpieczna praca z drewnem",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_pl.png",
           html: "index_pl.html",
-          link: "articles/veilig-werken-met-hout/index_pl.html"
+          link: "articles/veilig-werken-met-hout/pl"
         },
         ro: {
           title: "Lucrul sigur cu lemnul",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_ro.png",
           html: "index_ro.html",
-          link: "articles/veilig-werken-met-hout/index_ro.html"
+          link: "articles/veilig-werken-met-hout/ro"
         },
         bg: {
           title: "Безопасна работа с дърво",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_bg.png",
           html: "index_bg.html",
-          link: "articles/veilig-werken-met-hout/index_bg.html"
+          link: "articles/veilig-werken-met-hout/bg"
         },
         sk: {
           title: "Bezpečná práca s drevom",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_sk.png",
           html: "index_sk.html",
-          link: "articles/veilig-werken-met-hout/index_sk.html"
+          link: "articles/veilig-werken-met-hout/sk"
         },
         ua: {
           title: "Безпечна робота з деревиною",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_ua.png",
           html: "index_ua.html",
-          link: "articles/veilig-werken-met-hout/index_ua.html"
+          link: "articles/veilig-werken-met-hout/ua"
         }
       }
     },
@@ -262,49 +262,49 @@ export const FALLBACK_DATA = {
           title: "Veilig monteren van plafonds",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_nl.png",
           html: "index_nl.html",
-          link: "articles/veilig-monteren-van-plafonds/index_nl.html"
+          link: "articles/veilig-monteren-van-plafonds/nl"
         },
         en: {
           title: "Safe ceiling installation",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_en.png",
           html: "index_en.html",
-          link: "articles/veilig-monteren-van-plafonds/index_en.html"
+          link: "articles/veilig-monteren-van-plafonds/en"
         },
         de: {
           title: "Sichere Montage von Decken",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_de.png",
           html: "index_de.html",
-          link: "articles/veilig-monteren-van-plafonds/index_de.html"
+          link: "articles/veilig-monteren-van-plafonds/de"
         },
         pl: {
           title: "Bezpieczny montaż sufitów",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_pl.png",
           html: "index_pl.html",
-          link: "articles/veilig-monteren-van-plafonds/index_pl.html"
+          link: "articles/veilig-monteren-van-plafonds/pl"
         },
         ro: {
           title: "Montarea sigură a plafoanelor",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_ro.png",
           html: "index_ro.html",
-          link: "articles/veilig-monteren-van-plafonds/index_ro.html"
+          link: "articles/veilig-monteren-van-plafonds/ro"
         },
         bg: {
           title: "Безопасен монтаж на тавани",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_bg.png",
           html: "index_bg.html",
-          link: "articles/veilig-monteren-van-plafonds/index_bg.html"
+          link: "articles/veilig-monteren-van-plafonds/bg"
         },
         sk: {
           title: "Bezpečná montáž stropov",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_sk.png",
           html: "index_sk.html",
-          link: "articles/veilig-monteren-van-plafonds/index_sk.html"
+          link: "articles/veilig-monteren-van-plafonds/sk"
         },
         ua: {
           title: "Безпечний монтаж стель",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_ua.png",
           html: "index_ua.html",
-          link: "articles/veilig-monteren-van-plafonds/index_ua.html"
+          link: "articles/veilig-monteren-van-plafonds/ua"
         }
       }
     }
