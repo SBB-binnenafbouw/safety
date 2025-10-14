@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Drills – SBB Binnenafbouw</title>
+  <meta name="description" content="Explanation of different drills, applications, and material choice." />
+  <link rel="icon" href="binnenafbouw.png" />
+  <style>
+    :root{
+      --sbb-red:#7C1829; --text:#212121; --bg:#FFFFFF;
+      --g1:#A9A9A9; --g2:#F2F2F2; --radius:14px; --shadow:0 8px 24px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Helvetica, Arial, sans-serif; line-height:1.55; font-size:16px;}
+    a{color:var(--sbb-red); text-decoration:none}
+    a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid #000; outline-offset:2px; border-radius:10px}
+    img{max-width:100%; height:auto; display:block}
+    /* Header */
+    header{position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid var(--g2);}
+    @supports(backdrop-filter: blur(6px)){
+      header{backdrop-filter:saturate(160%) blur(6px); background:linear-gradient(to bottom, rgba(255,255,255,.92), rgba(255,255,255,.86));}
+    }
+    .topbar{display:flex; align-items:center; gap:12px; max-width:var(--maxw); margin:0 auto; padding:10px 12px;}
+    .logo{display:flex; align-items:center; gap:10px}
+    .logo img{height:32px; width:auto}
+    .brand{font-weight:700; letter-spacing:.2px}
+    nav{margin-left:auto; display:flex; align-items:center; gap:8px}
+    /* Language menu */
+    .lang{position:relative; display:block}
+    .lang summary{
+      list-style:none; cursor:pointer; padding:10px 14px; border:1px solid var(--sbb-red); border-radius:999px; background:var(--sbb-red); color:#fff; font-size:15px;
+      display:inline-flex; align-items:center; justify-content:center; gap:8px; min-width:44px; min-height:44px; box-shadow:var(--shadow);
+    }
+    .lang summary:hover{filter:brightness(0.95)}
+    .lang[open] summary{box-shadow:var(--shadow)}
+    .lang ul{
+      position:absolute; right:0; margin:8px 0 0 0; padding:8px; background:#fff; border:1px solid var(--g2); border-radius:12px;
+      box-shadow:var(--shadow); min-width:230px; list-style:none; max-height:60vh; overflow:auto;
+    }
+    .lang a{display:flex; align-items:center; gap:8px; padding:12px; border-radius:10px; -webkit-tap-highlight-color: transparent;}
+    .lang a:hover{background:var(--g2); text-decoration:none}
+    .lang .flag{width:20px; display:inline-block; text-align:center}
+    /* Hero */
+    .hero{max-width:var(--maxw); margin:14px auto; padding:0 12px; display:grid; gap:12px; grid-template-columns:1fr;}
+    .hero h1{margin:6px 0 0; font-weight:800; letter-spacing:.2px; font-size:clamp(20px, 3.6vw, 32px);}
+    .video{border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:#000; aspect-ratio:16/9;}
+    .video iframe{width:100%; height:100%; border:0}
+    /* TOC */
+    .toc{max-width:var(--maxw); margin:6px auto 16px; padding:12px; background:#fff; border:1px solid var(--g2); border-radius:var(--radius); display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px}
+    .toc h2{font-size:18px; margin:4px 0 8px}
+    .toc ol{margin:0; padding-left:18px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; text-align:center; padding:12px 16px; border-radius:999px; border:1px solid var(--sbb-red); background:var(--sbb-red); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); min-height:44px; line-height:1.25}
+    .btn:active{transform:translateY(1px)}
+    /* Sections */
+    section{max-width:var(--maxw); margin:16px auto; padding:0 12px}
+    h2{margin:8px 0 10px; font-size:clamp(18px, 3.2vw, 24px)}
+    /* Cards grid */
+    .grid{display:grid; gap:12px; grid-template-columns: repeat(3, 1fr);}
+    .card{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column; min-height:100%;}
+    .card img{width:100%; height:180px; object-fit:contain; background:#fff}
+    .img-top-space{margin-top:10px;}
+    .card .body{padding:12px}
+    .chip{display:inline-block; font-size:12px; font-weight:600; color:#fff; background:var(--sbb-red); padding:4px 8px; border-radius:999px; margin-bottom:8px;}
+    ul.clean{margin:8px 0 0 0; padding-left:0; list-style:none}
+    ul.clean li{margin:6px 0; padding-left:26px; position:relative}
+    ul.clean li::before{
+      content:""; position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:50%; border:1px solid var(--g1); display:inline-grid; place-items:center; font-size:12px; line-height:1; background:#fff;
+    }
+    ul.clean li.pro::before{content:"✔︎"; color:#157347; border-color:#157347;}
+    ul.clean li.con::before{content:"✖︎"; color:#B00020; border-color:#B00020;}
+    /* Matrix */
+    .matrix{border:1px solid var(--g2); border-radius:var(--radius); overflow:hidden;}
+    .mat-row{display:grid; grid-template-columns: 220px 1fr; border-top:1px solid var(--g2);} .mat-row:first-child{border-top:none}
+    .mat-key{background:var(--g2); padding:10px 12px; font-weight:700; display:flex; align-items:center;}
+    .mat-val{padding:10px 12px; display:flex; flex-wrap:wrap; gap:10px}
+    .pill{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--g2); border-radius:999px; padding:6px 10px; background:#fff;}
+    /* Footer */
+    footer{margin-top:32px; border-top:1px solid var(--g2); background:#fff;}
+    .footwrap{max-width:var(--maxw); margin:0 auto; padding:16px 12px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-size:14px;}
+    .muted{color:#555}
+    /* Responsive */
+    @media (max-width:1024px){
+      .grid{grid-template-columns: repeat(2, 1fr);}
+    }
+    @media (max-width:820px){
+      .grid{grid-template-columns: 1fr;}
+      .card img{height:160px;}
+      .toc{grid-template-columns:1fr}
+      .lang ul{position:fixed; left:12px; right:12px; top:68px; max-height:56vh; border-radius:14px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none!important; transition:none!important; scroll-behavior:auto!important}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo">
+        <img src="binnenafbouw.png" alt="SBB Binnenafbouw logo" />
+      </div>
+      <nav aria-label="Taalkeuze">
+        <details class="lang">
+          <summary aria-label="Taalmenu">
+            <span class="flag" aria-hidden="true">🇬🇧</span>
+            <span class="label">English</span>
+          </summary>
+          <ul role="listbox" aria-label="Kies taal">
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/nl/"><span class="flag">🇳🇱</span><span>Nederlands</span></a></li>
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/en/"><span class="flag">🇬🇧</span><span>English</span></a></li>
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/de/"><span class="flag">🇩🇪</span><span>Deutsch</span></a></li>
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/pl/"><span class="flag">🇵🇱</span><span>Polski</span></a></li>
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/ro/"><span class="flag">🇷🇴</span><span>Română</span></a></li>
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/bg/"><span class="flag">🇧🇬</span><span>Български</span></a></li>
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/sk/"><span class="flag">🇸🇰</span><span>Slovenčina</span></a></li>
+            <li><a role="option" href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/ua/"><span class="flag">🇺🇦</span><span>Українська</span></a></li>
+          </ul>
+        </details>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Drills: choice, use and materials</h1>
+      <div class="video" role="region" aria-label="Introductievideo">
+        <iframe src="https://player.vimeo.com/video/1123477328?title=0&byline=0&portrait=0"
+          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Introductie: Boren"></iframe>
+      </div>
+    </div>
+
+    <nav class="toc">
+      <div>
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#boortypes">Overview of drills</a></li>
+          <li><a href="#matrix">Type of drill per material</a></li>
+        </ol>
+      </div>
+      <a class="btn" href="https://sbb-binnenafbouw.github.io/LMRA/" role="button">Do the LMRA checklist before you start working.</a>
+    </nav>
+
+    <section id="boortypes">
+      <h2>Overview of drills</h2>
+      <div class="grid">
+        <article class="card" id="accuboormachine">
+          <img class="img-top-space" src="Accuboormachine.png" alt="Cordless drill/driver" />
+          <div class="body">
+            <span class="chip">Cordless drill/driver</span>
+            <p>Versatile for light tasks in wood, plastic and thin metal. Thanks to the battery you work cordlessly and flexibly. Some models include a hammer function for light masonry; useful for mounting and hanging.</p>
+            <ul class="clean"><li class="pro">Screwing and drilling in wood, plastic and plasterboard</li><li class="pro">Cordless working</li><li class="con">Battery needs recharging</li></ul>
+          </div>
+        </article>
+
+        <article class="card" id="klopboormachine">
+          <img src="Klopboormachine.png" alt="Hammer drill" />
+          <div class="body">
+            <span class="chip">Hammer drill</span>
+            <p>Suitable when you need to drill through harder material such as brick. Combines rotation with a fast hammering action, ideal for securing something firmly into the wall.</p>
+            <ul class="clean"><li class="pro">Drilling in wood, metal and soft stone</li><li class="pro">Rotating motion + hammer function</li><li class="con">Often corded (less flexible)</li><li class="con">Not for concrete</li></ul>
+          </div>
+        </article>
+
+        <article class="card" id="boorhamer">
+          <img src="Boorhamer.png" alt="Rotary hammer" />
+          <div class="body">
+            <span class="chip">Rotary hammer</span>
+            <p>For heavy-duty work. The powerful hammering action breaks through hard concrete and natural stone. Suitable for foundation work or making large holes (pipes).</p>
+            <ul class="clean"><li class="pro">Drilling in concrete and hard stone</li><li class="pro">Very high impact force</li><li class="con">Not suitable for wood, metal or soft stone</li></ul>
+          </div>
+        </article>
+
+        <article class="card" id="slagmoeraanzetter">
+          <img class="img-top-space" src="Slagmoeraanzetter.png" alt="Impact wrench" />
+          <div class="body">
+            <span class="chip">Impact wrench</span>
+            <p>Tightens and loosens nuts and bolts quickly. Handy for larger constructions such as decking, garden houses or heavy furniture.</p>
+            <ul class="clean"><li class="pro">Loosening and tightening bolts and nuts</li><li class="pro">High torque</li><li class="con">Risk of overtightening/damage</li></ul>
+          </div>
+        </article>
+
+        <article class="card" id="kolomboormachine">
+          <img class="img-top-space" src="Kolomboormachine.png" alt="Drill press" />
+          <div class="body">
+            <span class="chip">Drill press</span>
+            <p>For very precise drilling. Mounted on a stand, allowing you to make perfectly straight holes in wood, metal or plastic.</p>
+            <ul class="clean"><li class="pro">Highly accurate drilling (wood, metal, plastic)</li><li class="pro">Suitable for small/precision workpieces</li><li class="con">Can only be used from the fixed stand</li></ul>
+          </div>
+        </article>
+
+        <article class="card" id="breekhamer">
+          <img src="Breekhamer.png" alt="Demolition hammer" />
+          <div class="body">
+            <span class="chip">Demolition hammer</span>
+            <p>Heavy-duty demolition tool. Removes tiles and opens concrete floors. Not intended for drilling, but for breaking and chiseling.</p>
+            <ul class="clean"><li class="pro">Breaking and chiseling</li><li class="pro">Suitable for heavy demolition work</li><li class="con">Not for drilling</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="matrix">
+      <h2>Type of drill per material</h2>
+      <div class="matrix" role="table" aria-label="Boormachine per materiaal">
+        <div class="mat-row" role="row">
+          <div class="mat-key" role="rowheader">Wood / Plasterboard / Plastic</div>
+          <div class="mat-val" role="cell">
+            <span class="pill">Cordless drill/driver</span>
+            <span class="pill">Drill press</span>
+          </div>
+        </div>
+        <div class="mat-row" role="row">
+          <div class="mat-key" role="rowheader">Wood, Metal, Stone</div>
+          <div class="mat-val" role="cell">
+            <span class="pill">Hammer drill</span>
+          </div>
+        </div>
+        <div class="mat-row" role="row">
+          <div class="mat-key" role="rowheader">Concrete</div>
+          <div class="mat-val" role="cell">
+            <span class="pill">Rotary hammer</span>
+          </div>
+        </div>
+        <div class="mat-row" role="row">
+          <div class="mat-key" role="rowheader">Screws / Bolts &amp; Nuts</div>
+          <div class="mat-val" role="cell">
+            <span class="pill">Impact wrench</span>
+            <span class="pill">Cordless drill/driver (light screw work)</span>
+          </div>
+        </div>
+        <div class="mat-row" role="row">
+          <div class="mat-key" role="rowheader">Wood / Plastic / Metal</div>
+          <div class="mat-val" role="cell">
+            <span class="pill">Drill press</span>
+          </div>
+        </div>
+        <div class="mat-row" role="row">
+          <div class="mat-key" role="rowheader">Breaking / Chiseling</div>
+          <div class="mat-val" role="cell">
+            <span class="pill">Demolition hammer</span>
+          </div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:8px">⚠️ Note: also choose the correct drill bits (wood, metal, stone, SDS) and pay attention to speed/impact settings.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footwrap">
+      <div>© <span id="yr"></span> SBB Binnenafbouw</div>
+      <div>
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/nl/">/nl</a> ·
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/en/">/en</a> ·
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/de/">/de</a> ·
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/pl/">/pl</a> ·
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/ro/">/ro</a> ·
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/bg/">/bg</a> ·
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/sk/">/sk</a> ·
+        <a href="https://sbb-binnenafbouw.github.io/veiligheid-8-boren/ua/">/ua</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // jaar
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // language preview: force English in summary
+    (function(){
+      const summary = document.querySelector('.lang summary');
+      if(summary){
+        summary.querySelector('.flag').textContent = '🇬🇧';
+        summary.querySelector('.label').textContent = 'English';
+      }
+    })();
+  </script>
+</body>
+</html>
