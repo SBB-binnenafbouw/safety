@@ -51,13 +51,13 @@ Wil je een taal toevoegen? Voeg hem aan `languages` toe en denk eraan om ook elk
       "title": "Veilig werken op hoogte",
       "thumbnail": "articles/veilig-werken-op-hoogte/Thumbnail_nl.png",
       "html": "index_nl.html",
-      "link": "articles/veilig-werken-op-hoogte/index_nl.html"
+      "link": "articles/veilig-werken-op-hoogte/nl"
     },
     "en": {
       "title": "Safe work at height",
       "thumbnail": "articles/veilig-werken-op-hoogte/Thumbnail_en.png",
       "html": "index_en.html",
-      "link": "articles/veilig-werken-op-hoogte/index_en.html"
+      "link": "articles/veilig-werken-op-hoogte/en"
     }
     // vul alle talen aan
   }
