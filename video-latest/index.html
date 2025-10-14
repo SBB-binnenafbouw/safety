@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Doorverwijzen… | SBB Safety</title>
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Helvetica", "Arial", sans-serif;
+        --color-text: #212121;
+        --color-muted: #5f5f5f;
+        --color-accent: #7c1829;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #ffffff;
+        color: var(--color-text);
+      }
+
+      main {
+        text-align: center;
+        max-width: 420px;
+        padding: 32px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 1.6rem;
+      }
+
+      p {
+        margin: 0;
+        color: var(--color-muted);
+        line-height: 1.5;
+      }
+
+      p strong {
+        color: var(--color-accent);
+      }
+
+      p code {
+        font-size: 0.95rem;
+        padding: 2px 4px;
+        border-radius: 4px;
+        background-color: rgba(124, 24, 41, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Even een momentje…</h1>
+      <p id="status">
+        We sturen je direct door naar het <strong>uitgelichte item</strong>.
+      </p>
+    </main>
+
+    <script type="module" src="../assets/video-latest.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SBB Binnenafbouw | Safety hub</title>
+    <link rel="icon" href="assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-column">
+        <a
+          class="cta"
+          id="newsletterLink"
+          target="_blank"
+          rel="noreferrer"
+          href="https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60"
+        >
+          Inschrijven nieuwsbrief
+        </a>
+      </div>
+      <div class="header-logo">
+        <a id="logoLink">
+          <img src="assets/logo.png" alt="SBB Binnenafbouw" />
+        </a>
+      </div>
+      <div class="header-column header-column--align-end">
+        <div class="language-switcher" id="languageSwitcher">
+          <button class="language-switcher__button" id="languageTrigger">
+            🇳🇱 Nederlands
+          </button>
+          <ul class="language-switcher__menu" id="languageMenu"></ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="load-error load-error--inline" id="dataFallbackNotice" hidden>
+        De gegevens konden niet rechtstreeks uit de data-bestanden geladen worden.
+        Start de site via een lokale webserver (bv. <code>python -m http.server</code>) om je eigen data te zien.
+      </div>
+      <section class="hero">
+        <div class="hero__highlight">
+          <p class="hero__label" id="heroIntro">Ons nieuwste item:</p>
+          <article class="article-card article-card--featured" id="heroCard">
+            <a class="article-card__link" id="heroLink">
+              <img class="article-card__thumb" id="heroThumbnail" loading="lazy" alt="" />
+              <div class="article-card__body">
+                <h2 class="article-card__title" id="heroTitle"></h2>
+                <p class="article-card__date" id="heroMeta"></p>
+                <ul class="article-card__tags" id="heroTags"></ul>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="hero__checklist">
+          <h2>LMRA checklist</h2>
+          <p>
+            Start elke klus met de Laatste Minuut Risico Analyse en controleer of
+            je veilig aan het werk gaat.
+          </p>
+          <a
+            class="cta cta--secondary"
+            id="lmraLink"
+            target="_blank"
+            rel="noreferrer"
+            href="https://sbb-binnenafbouw.github.io/LMRA/"
+          >
+            Open de LMRA checklist
+          </a>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="catalog__bar">
+          <h2 class="catalog__title" id="catalogTitle">Al onze items:</h2>
+          <label class="catalog__filter">
+            <span id="filterLabel">Filter op functie</span>
+            <select id="roleFilter"></select>
+          </label>
+        </div>
+        <div class="articles-grid" id="articlesGrid"></div>
+      </section>
+    </main>
+
+    <template id="articleCardTemplate">
+      <article class="article-card">
+        <a class="article-card__link">
+          <img class="article-card__thumb" loading="lazy" alt="" />
+          <div class="article-card__body">
+            <h3 class="article-card__title"></h3>
+            <p class="article-card__date"></p>
+            <ul class="article-card__tags"></ul>
+          </div>
+        </a>
+      </article>
+    </template>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>

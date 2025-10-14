@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artikelbeheer</title>
+    <link rel="icon" href="../../../assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="../../../assets/article-admin.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <h1>Artikelbeheer – <span id="articleSlug"></span></h1>
+        <p>
+          Pas de datum, titels, functies en tags van dit artikel aan. Download
+          daarna het nieuwe <code>article.json</code>-bestand en vervang het in
+          de map van dit artikel.
+        </p>
+      </div>
+      <a class="page-header__link" id="articleBackLink" href="../index_nl.html">← Terug naar artikel</a>
+    </header>
+
+    <main class="page-content">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <h2>Site- en artikeldata</h2>
+            <output class="panel__status" id="siteStatus"></output>
+            <output class="panel__status" id="manifestStatus"></output>
+            <output class="panel__status" id="articleStatus"></output>
+          </div>
+          <div class="panel__actions">
+            <label class="button button--ghost">
+              Artikelbestand laden
+              <input type="file" data-import="article" accept="application/json" />
+            </label>
+            <button class="button button--primary" data-action="download-article">
+              Download article.json
+            </button>
+          </div>
+        </div>
+
+        <fieldset class="fieldset">
+          <legend>Metadata</legend>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="publishedInput">Publicatiedatum</label>
+              <input type="date" id="publishedInput" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Functies</legend>
+          <p class="hint">Selecteer voor welke functies dit artikel relevant is.</p>
+          <div class="pill-group" id="rolesContainer"></div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Tags</legend>
+          <p class="hint">Koppel tags zodat bezoekers kunnen filteren.</p>
+          <div class="pill-group" id="tagsContainer"></div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Titels en links per taal</legend>
+          <p class="hint">
+            Werk de titel, HTML-bestandsnaam en link voor iedere taal bij. Nieuwe
+            talen voeg je toe via de <a href="../../../admin/">algemene properties manager</a>.
+          </p>
+          <div class="titles-list" id="titlesContainer"></div>
+        </fieldset>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        Tip: download het bijgewerkte <code>article.json</code>-bestand en vervang
+        daarna het origineel in <code>articles/<span id="articleSlugFooter"></span>/</code>.
+      </p>
+    </footer>
+
+    <script type="module" src="../../../assets/article-admin.js"></script>
+  </body>
+</html>

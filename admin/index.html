@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Properties Manager | SBB Safety</title>
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <h1>SBB Safety – Properties manager</h1>
+        <p>
+          Pas de talen, functies, tags en uitgelichte artikelen aan zonder JSON
+          te schrijven. Download daarna de gewijzigde bestanden en vervang ze in
+          de projectmap.
+        </p>
+      </div>
+      <a class="page-header__link" href="../index.html">← Terug naar site</a>
+    </header>
+
+    <main class="page-content">
+      <section class="panel" id="siteConfigPanel">
+        <div class="panel__header">
+          <div>
+            <h2>Algemene instellingen (`data/site-config.json`)</h2>
+            <output class="panel__status" id="siteConfigStatus"></output>
+          </div>
+          <div class="panel__actions">
+            <label class="button button--ghost">
+              Site-config laden
+              <input type="file" accept="application/json" data-import="siteConfig" />
+            </label>
+            <button class="button button--primary" data-action="download-config">
+              Download site-config.json
+            </button>
+          </div>
+        </div>
+
+        <section class="section-block">
+          <div class="section-block__header">
+            <h3>Talen</h3>
+            <div class="section-block__actions">
+              <button class="button" data-action="add-language">Nieuwe taal</button>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table" id="languagesTable">
+              <thead>
+                <tr>
+                  <th>Naam</th>
+                  <th>Afkorting</th>
+                  <th>Vlag emoji</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-block__header">
+            <h3>Functies (per taal)</h3>
+            <div class="section-block__actions">
+              <button class="button" data-action="add-role">Nieuwe functie</button>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table" id="rolesTable">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-block__header">
+            <h3>Tags (per taal)</h3>
+            <div class="section-block__actions">
+              <button class="button" data-action="add-tag">Nieuwe tag</button>
+            </div>
+          </div>
+          <div class="table-wrapper">
+            <table class="data-table" id="tagsTable">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <h3>Uitgelicht item</h3>
+          <p class="hint">
+            Kies welk artikel in de hero wordt uitgelicht. De lijst is gebaseerd
+            op <code>data/articles.json</code>.
+          </p>
+          <label class="select">
+            <span>Uitgelicht artikel:</span>
+            <select id="highlightSelect"></select>
+          </label>
+        </section>
+      </section>
+
+      <section class="panel" id="manifestPanel">
+        <div class="panel__header">
+          <div>
+            <h2>Artikellijst (`data/articles.json`)</h2>
+            <output class="panel__status" id="manifestStatus"></output>
+          </div>
+          <div class="panel__actions">
+            <label class="button button--ghost">
+              Artikellijst laden
+              <input type="file" accept="application/json" data-import="manifest" />
+            </label>
+            <button class="button button--primary" data-action="download-manifest">
+              Download articles.json
+            </button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table" id="manifestTable">
+            <thead>
+              <tr>
+                <th>Slug</th>
+                <th>Properties pad</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="panel__actions panel__actions--end">
+          <button class="button" data-action="add-manifest-entry">Nieuwe regel</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        Klaar met bewerken? Download de aangepaste bestanden en plaats ze terug in
+        de map <code>data/</code>. Voor artikel-specifieke instellingen voeg je
+        <code>/admin/</code> toe aan de link van een artikel
+        (bijvoorbeeld <code>…/articles/veilig-werken-met-hout/admin/</code>).
+      </p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
