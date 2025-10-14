@@ -1,10 +1,6 @@
 [
   {
-    "slug": "veilig-werken-met-hout",
-    "properties": "articles/veilig-werken-met-hout/article.json"
-  },
-  {
-    "slug": "veilig-monteren-van-plafonds",
-    "properties": "articles/veilig-monteren-van-plafonds/article.json"
+    "slug": "veilig-boren",
+    "properties": "articles/veilig-boren/article.json"
   }
 ]
