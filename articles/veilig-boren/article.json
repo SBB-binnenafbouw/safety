@@ -1,56 +1,56 @@
 {
-  "slug": "veilig-werken-met-hout",
+  "slug": "veilig-boren",
   "published": "2024-05-01",
   "roles": ["timmerman", "afwerker"],
   "tags": ["video"],
   "translations": {
     "nl": {
-      "title": "Veilig werken met hout",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_nl.png",
+      "title": "Veilig boren",
+      "thumbnail": "articles/veilig-boren/Thumbnail_nl.png",
       "html": "index_nl.html",
-      "link": "articles/veilig-werken-met-hout/nl"
+      "link": "articles/veilig-boren/nl"
     },
     "en": {
-      "title": "Safe woodworking practices",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_en.png",
+      "title": "Safe drilling practices",
+      "thumbnail": "articles/veilig-boren/Thumbnail_en.png",
       "html": "index_en.html",
-      "link": "articles/veilig-werken-met-hout/en"
+      "link": "articles/veilig-boren/en"
     },
     "de": {
-      "title": "Sicher mit Holz arbeiten",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_de.png",
+      "title": "Sicher bohren",
+      "thumbnail": "articles/veilig-boren/Thumbnail_de.png",
       "html": "index_de.html",
-      "link": "articles/veilig-werken-met-hout/de"
+      "link": "articles/veilig-boren/de"
     },
     "pl": {
-      "title": "Bezpieczna praca z drewnem",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_pl.png",
+      "title": "Bezpieczne wiercenie",
+      "thumbnail": "articles/veilig-boren/Thumbnail_pl.png",
       "html": "index_pl.html",
-      "link": "articles/veilig-werken-met-hout/pl"
+      "link": "articles/veilig-boren/pl"
     },
     "ro": {
-      "title": "Lucrul sigur cu lemnul",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_ro.png",
+      "title": "Găurire în siguranță",
+      "thumbnail": "articles/veilig-boren/Thumbnail_ro.png",
       "html": "index_ro.html",
-      "link": "articles/veilig-werken-met-hout/ro"
+      "link": "articles/veilig-boren/ro"
     },
     "bg": {
-      "title": "Безопасна работа с дърво",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_bg.png",
+      "title": "Безопасно пробиване",
+      "thumbnail": "articles/veilig-boren/Thumbnail_bg.png",
       "html": "index_bg.html",
-      "link": "articles/veilig-werken-met-hout/bg"
+      "link": "articles/veilig-boren/bg"
     },
     "sk": {
-      "title": "Bezpečná práca s drevom",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_sk.png",
+      "title": "Bezpečné vŕtanie",
+      "thumbnail": "articles/veilig-boren/Thumbnail_sk.png",
       "html": "index_sk.html",
-      "link": "articles/veilig-werken-met-hout/sk"
+      "link": "articles/veilig-boren/sk"
     },
     "ua": {
-      "title": "Безпечна робота з деревиною",
-      "thumbnail": "articles/veilig-werken-met-hout/Thumbnail_ua.png",
+      "title": "Безпечне свердління",
+      "thumbnail": "articles/veilig-boren/Thumbnail_ua.png",
       "html": "index_ua.html",
-      "link": "articles/veilig-werken-met-hout/ua"
+      "link": "articles/veilig-boren/ua"
     }
   }
 }
