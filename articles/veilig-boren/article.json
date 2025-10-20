@@ -1,56 +1,70 @@
 {
   "slug": "veilig-boren",
-  "published": "2024-05-01",
-  "roles": ["timmerman", "afwerker"],
-  "tags": ["video"],
+  "published": "2025-10-01",
+  "roles": [
+    "timmerman",
+    "afwerker"
+  ],
+  "tags": [
+    "video",
+    "extra-info"
+  ],
   "translations": {
     "nl": {
       "title": "Veilig boren",
       "thumbnail": "articles/veilig-boren/Thumbnail_nl.png",
-      "html": "index_nl.html",
-      "link": "articles/veilig-boren/nl"
+      "video": "https://player.vimeo.com/video/1123486989?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_nl.html",
+      "link": "articles/veilig-boren/?lang=nl"
     },
     "en": {
       "title": "Safe drilling practices",
       "thumbnail": "articles/veilig-boren/Thumbnail_en.png",
-      "html": "index_en.html",
-      "link": "articles/veilig-boren/en"
+      "video": "https://player.vimeo.com/video/1123477328?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_en.html",
+      "link": "articles/veilig-boren/?lang=en"
     },
     "de": {
       "title": "Sicher bohren",
       "thumbnail": "articles/veilig-boren/Thumbnail_de.png",
-      "html": "index_de.html",
-      "link": "articles/veilig-boren/de"
+      "video": "https://player.vimeo.com/video/1123477742?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_de.html",
+      "link": "articles/veilig-boren/?lang=de"
     },
     "pl": {
       "title": "Bezpieczne wiercenie",
       "thumbnail": "articles/veilig-boren/Thumbnail_pl.png",
-      "html": "index_pl.html",
-      "link": "articles/veilig-boren/pl"
+      "video": "https://player.vimeo.com/video/1123477633?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_pl.html",
+      "link": "articles/veilig-boren/?lang=pl"
     },
     "ro": {
       "title": "Găurire în siguranță",
       "thumbnail": "articles/veilig-boren/Thumbnail_ro.png",
-      "html": "index_ro.html",
-      "link": "articles/veilig-boren/ro"
+      "video": "https://player.vimeo.com/video/1123477652?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_ro.html",
+      "link": "articles/veilig-boren/?lang=ro"
     },
     "bg": {
       "title": "Безопасно пробиване",
       "thumbnail": "articles/veilig-boren/Thumbnail_bg.png",
-      "html": "index_bg.html",
-      "link": "articles/veilig-boren/bg"
+      "video": "https://player.vimeo.com/video/1123477720?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_bg.html",
+      "link": "articles/veilig-boren/?lang=bg"
     },
     "sk": {
       "title": "Bezpečné vŕtanie",
       "thumbnail": "articles/veilig-boren/Thumbnail_sk.png",
-      "html": "index_sk.html",
-      "link": "articles/veilig-boren/sk"
+      "video": "https://player.vimeo.com/video/1123477680?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_sk.html",
+      "link": "articles/veilig-boren/?lang=sk"
     },
     "ua": {
       "title": "Безпечне свердління",
       "thumbnail": "articles/veilig-boren/Thumbnail_ua.png",
-      "html": "index_ua.html",
-      "link": "articles/veilig-boren/ua"
+      "video": "https://player.vimeo.com/video/1123477696?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-boren/veilig-boren_ua.html",
+      "link": "articles/veilig-boren/?lang=ua"
     }
   }
 }

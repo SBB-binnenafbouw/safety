@@ -10,6 +10,7 @@ const state = {
 
 const elements = {
   newsletterLink: document.getElementById("newsletterLink"),
+  newsletterFooterLink: document.getElementById("newsletterFooterLink"),
   logoLink: document.getElementById("logoLink"),
   languageSwitcher: document.getElementById("languageSwitcher"),
   languageTrigger: document.getElementById("languageTrigger"),
@@ -28,8 +29,66 @@ const elements = {
   filterLabel: document.getElementById("filterLabel"),
   articlesGrid: document.getElementById("articlesGrid"),
   articleCardTemplate: document.getElementById("articleCardTemplate"),
-  dataFallbackNotice: document.getElementById("dataFallbackNotice")
+  dataFallbackNotice: document.getElementById("dataFallbackNotice"),
+  footerYear: document.getElementById("footerYear")
 };
+
+const PROJECT_ROOT = new URL("../", import.meta.url);
+const LOCAL_HOSTNAMES = new Set(["localhost", "127.0.0.1", "[::1]"]);
+
+function isRelativeUrl(value) {
+  return typeof value === "string" && !/^[a-z][a-z0-9+.-]*:/i.test(value);
+}
+
+function isLocalEnvironment() {
+  if (typeof window === "undefined") return false;
+  if (window.location.protocol === "file:") return true;
+  return LOCAL_HOSTNAMES.has(window.location.hostname);
+}
+
+function resolveHomepageUrl() {
+  const configured = state.config?.site?.homepageUrl;
+  if (!configured || isLocalEnvironment()) {
+    return PROJECT_ROOT.href;
+  }
+  if (isRelativeUrl(configured)) {
+    return new URL(configured, PROJECT_ROOT).href;
+  }
+  return configured;
+}
+
+function resolveArticleLink(article, translation, languageCode) {
+  const slug = article.slug;
+  const fallback = `articles/${slug}/?lang=${languageCode}`;
+  const raw = translation?.link;
+
+  if (!raw) {
+    return fallback;
+  }
+
+  try {
+    const url = new URL(raw, window.location.href);
+    if (!url.searchParams.has("lang")) {
+      url.searchParams.set("lang", languageCode);
+    }
+
+    if (isRelativeUrl(raw)) {
+      const relativePath = url.pathname.replace(/^\//, "");
+      const search = url.searchParams.toString();
+      return search ? `${relativePath}?${search}` : relativePath;
+    }
+
+    return url.toString();
+  } catch (error) {
+    return fallback;
+  }
+}
+
+function findTranslationKey(article, translation) {
+  if (!article?.translations || !translation) return null;
+  const entry = Object.entries(article.translations).find(([, value]) => value === translation);
+  return entry ? entry[0] : null;
+}
 
 async function init() {
   try {
@@ -134,9 +193,16 @@ function setupLanguageSwitcher() {
 
 function populateStaticLinks() {
   const { site } = state.config;
+  const homepageUrl = resolveHomepageUrl();
   elements.newsletterLink.href = site.newsletterUrl;
-  elements.lmraLink.href = site.lmraUrl;
-  elements.logoLink.href = buildLanguageAwareUrl(state.currentLanguage, site.homepageUrl);
+  if (elements.newsletterFooterLink) {
+    elements.newsletterFooterLink.href = site.newsletterUrl;
+  }
+  elements.lmraLink.href = buildLanguageAwareUrl(state.currentLanguage, site.lmraUrl);
+  elements.logoLink.href = buildLanguageAwareUrl(state.currentLanguage, homepageUrl);
+  if (elements.footerYear) {
+    elements.footerYear.textContent = new Date().getFullYear();
+  }
 }
 
 function updateFallbackNotice() {
@@ -226,9 +292,16 @@ function renderTexts() {
   elements.filterLabel.textContent = uiText.filterLabel[lang] || uiText.filterLabel.nl;
   elements.newsletterLink.textContent =
     uiText.newsletterCta[lang] || uiText.newsletterCta.nl;
+  if (elements.newsletterFooterLink) {
+    elements.newsletterFooterLink.textContent =
+      uiText.newsletterCta[lang] || uiText.newsletterCta.nl;
+  }
   elements.heroChecklistCopy.textContent =
     uiText.lmraIntro[lang] || uiText.lmraIntro.nl;
   elements.lmraLink.textContent = uiText.lmraButton[lang] || uiText.lmraButton.nl;
+  if (elements.footerYear) {
+    elements.footerYear.textContent = new Date().getFullYear();
+  }
 }
 
 function renderHero() {
@@ -247,11 +320,19 @@ function renderHero() {
   elements.heroCard.style.display = "";
   elements.heroIntro.style.display = "";
   const translation = getTranslation(heroArticle, state.currentLanguage);
-  elements.heroLink.href = translation.link;
+  if (!translation) {
+    elements.heroCard.style.display = "none";
+    elements.heroIntro.style.display = "none";
+    return;
+  }
+  const translationLang =
+    findTranslationKey(heroArticle, translation) || state.currentLanguage;
+  const heroLink = resolveArticleLink(heroArticle, translation, translationLang);
+  elements.heroLink.href = heroLink;
   elements.heroThumbnail.src = translation.thumbnail;
   elements.heroThumbnail.alt = translation.title;
   elements.heroTitle.textContent = translation.title;
-  elements.heroMeta.textContent = buildMeta(heroArticle);
+  elements.heroMeta.textContent = buildMeta(heroArticle, translationLang);
   renderTagList(elements.heroTags, heroArticle.tags, state.currentLanguage);
 }
 
@@ -284,6 +365,10 @@ function createArticleCard(article) {
   const translation = getTranslation(article, state.currentLanguage);
   if (!translation) return null;
 
+  const translationLang =
+    findTranslationKey(article, translation) || state.currentLanguage;
+  const articleLink = resolveArticleLink(article, translation, translationLang);
+
   const fragment = elements.articleCardTemplate.content.cloneNode(true);
   const link = fragment.querySelector(".article-card__link");
   const thumb = fragment.querySelector(".article-card__thumb");
@@ -291,18 +376,18 @@ function createArticleCard(article) {
   const date = fragment.querySelector(".article-card__date");
   const tags = fragment.querySelector(".article-card__tags");
 
-  link.href = translation.link;
+  link.href = articleLink;
   thumb.src = translation.thumbnail;
   thumb.alt = translation.title;
   title.textContent = translation.title;
-  date.textContent = buildMeta(article);
+  date.textContent = buildMeta(article, translationLang);
   renderTagList(tags, article.tags, state.currentLanguage);
 
   return fragment;
 }
 
-function buildMeta(article) {
-  const date = formatDate(article.published, state.currentLanguage);
+function buildMeta(article, languageCode = state.currentLanguage) {
+  const date = formatDate(article.published, languageCode);
   return date;
 }
 

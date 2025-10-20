@@ -1,0 +1,64 @@
+{
+  "slug": "hijswerktuigen",
+  "published": "2025-09-01",
+  "roles": ["timmerman", "afwerker"],
+  "tags": ["video"],
+  "translations": {
+    "nl": {
+      "title": "Kleine hijs- en hefwerktuigen",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_nl.png",
+      "video": "https://player.vimeo.com/video/1123477633?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_nl.html",
+      "link": "articles/hijswerktuigen/?lang=nl"
+    },
+    "en": {
+      "title": "Small lifting equipment",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_en.png",
+      "video": "https://player.vimeo.com/video/1123477652?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_en.html",
+      "link": "articles/hijswerktuigen/?lang=en"
+    },
+    "de": {
+      "title": "Sicher bohren",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_de.png",
+      "video": "https://player.vimeo.com/video/1123477675?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_de.html",
+      "link": "articles/hijswerktuigen/?lang=de"
+    },
+    "pl": {
+      "title": "Bezpieczne wiercenie",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_pl.png",
+      "video": "https://player.vimeo.com/video/1123477699?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_pl.html",
+      "link": "articles/hijswerktuigen/?lang=pl"
+    },
+    "ro": {
+      "title": "Găurire în siguranță",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_ro.png",
+      "video": "https://player.vimeo.com/video/1123477705?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_ro.html",
+      "link": "articles/hijswerktuigen/?lang=ro"
+    },
+    "bg": {
+      "title": "Безопасно пробиване",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_bg.png",
+      "video": "https://player.vimeo.com/video/1123477720?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_bg.html",
+      "link": "articles/hijswerktuigen/?lang=bg"
+    },
+    "sk": {
+      "title": "Bezpečné vŕtanie",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_sk.png",
+      "video": "https://player.vimeo.com/video/1123477680?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_sk.html",
+      "link": "articles/hijswerktuigen/?lang=sk"
+    },
+    "ua": {
+      "title": "Безпечне свердління",
+      "thumbnail": "articles/hijswerktuigen/Thumbnail_ua.png",
+      "video": "https://player.vimeo.com/video/1123477696?title=0&byline=0&portrait=0",
+      "html": "articles/hijswerktuigen/hijswerktuigen_ua.html",
+      "link": "articles/hijswerktuigen/?lang=ua"
+    }
+  }
+}

@@ -1,21 +1,21 @@
-export const FALLBACK_DATA = {
+﻿export const FALLBACK_DATA = {
   config: {
     site: {
-      homepageUrl: "https://sbb-binnenafbouw.github.io/safety/",
+      homepageUrl: "./",
       newsletterUrl:
         "https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60",
       lmraUrl: "https://sbb-binnenafbouw.github.io/LMRA/",
       highlightedArticleSlug: "veilig-werken-met-hout"
     },
     languages: [
-      { name: "Nederlands", code: "nl", flag: "🇳🇱" },
-      { name: "English", code: "en", flag: "🇬🇧" },
-      { name: "Deutsch", code: "de", flag: "🇩🇪" },
-      { name: "Polski", code: "pl", flag: "🇵🇱" },
-      { name: "Română", code: "ro", flag: "🇷🇴" },
-      { name: "Български", code: "bg", flag: "🇧🇬" },
-      { name: "Slovenčina", code: "sk", flag: "🇸🇰" },
-      { name: "Українська", code: "ua", flag: "🇺🇦" }
+      { name: "Nederlands", code: "nl", flag: "ðŸ‡³ðŸ‡±" },
+      { name: "English", code: "en", flag: "ðŸ‡¬ðŸ‡§" },
+      { name: "Deutsch", code: "de", flag: "ðŸ‡©ðŸ‡ª" },
+      { name: "Polski", code: "pl", flag: "ðŸ‡µðŸ‡±" },
+      { name: "RomÃ¢nÄƒ", code: "ro", flag: "ðŸ‡·ðŸ‡´" },
+      { name: "Ð‘ÑŠÐ»Ð³Ð°Ñ€ÑÐºÐ¸", code: "bg", flag: "ðŸ‡§ðŸ‡¬" },
+      { name: "SlovenÄina", code: "sk", flag: "ðŸ‡¸ðŸ‡°" },
+      { name: "Ð£ÐºÑ€Ð°Ñ—Ð½ÑÑŒÐºÐ°", code: "ua", flag: "ðŸ‡ºðŸ‡¦" }
     ],
     roles: [
       {
@@ -24,11 +24,11 @@ export const FALLBACK_DATA = {
           nl: "Timmerman",
           en: "Carpenter",
           de: "Zimmermann",
-          pl: "Cieśla",
-          ro: "Tâmplar",
-          bg: "Дърводелец",
-          sk: "Tesár",
-          ua: "Тесляр"
+          pl: "CieÅ›la",
+          ro: "TÃ¢mplar",
+          bg: "Ð”ÑŠÑ€Ð²Ð¾Ð´ÐµÐ»ÐµÑ†",
+          sk: "TesÃ¡r",
+          ua: "Ð¢ÐµÑÐ»ÑÑ€"
         }
       },
       {
@@ -39,9 +39,9 @@ export const FALLBACK_DATA = {
           de: "Stuckateur",
           pl: "Tynkarz",
           ro: "Zugrav",
-          bg: "Шпакловчик",
+          bg: "Ð¨Ð¿Ð°ÐºÐ»Ð¾Ð²Ñ‡Ð¸Ðº",
           sk: "Omietkar",
-          ua: "Штукатур"
+          ua: "Ð¨Ñ‚ÑƒÐºÐ°Ñ‚ÑƒÑ€"
         }
       },
       {
@@ -52,9 +52,9 @@ export const FALLBACK_DATA = {
           de: "Monteur",
           pl: "Monter",
           ro: "Montator",
-          bg: "Монтажник",
-          sk: "Montér",
-          ua: "Монтажник"
+          bg: "ÐœÐ¾Ð½Ñ‚Ð°Ð¶Ð½Ð¸Ðº",
+          sk: "MontÃ©r",
+          ua: "ÐœÐ¾Ð½Ñ‚Ð°Ð¶Ð½Ð¸Ðº"
         }
       },
       {
@@ -63,11 +63,11 @@ export const FALLBACK_DATA = {
           nl: "Afwerker",
           en: "Finisher",
           de: "Ausbauer",
-          pl: "Wykończeniowiec",
+          pl: "WykoÅ„czeniowiec",
           ro: "Specialist finisaje",
-          bg: "Завършител",
-          sk: "Dokončovací pracovník",
-          ua: "Оздоблювальник"
+          bg: "Ð—Ð°Ð²ÑŠÑ€ÑˆÐ¸Ñ‚ÐµÐ»",
+          sk: "DokonÄovacÃ­ pracovnÃ­k",
+          ua: "ÐžÐ·Ð´Ð¾Ð±Ð»ÑŽÐ²Ð°Ð»ÑŒÐ½Ð¸Ðº"
         }
       },
       {
@@ -77,10 +77,10 @@ export const FALLBACK_DATA = {
           en: "Lubricator",
           de: "Schmierfachkraft",
           pl: "Smarownik",
-          ro: "Ungător",
-          bg: "Смазвач",
-          sk: "Mazáč",
-          ua: "Мастильник"
+          ro: "UngÄƒtor",
+          bg: "Ð¡Ð¼Ð°Ð·Ð²Ð°Ñ‡",
+          sk: "MazÃ¡Ä",
+          ua: "ÐœÐ°ÑÑ‚Ð¸Ð»ÑŒÐ½Ð¸Ðº"
         }
       }
     ],
@@ -93,9 +93,9 @@ export const FALLBACK_DATA = {
           de: "Video",
           pl: "Wideo",
           ro: "Video",
-          bg: "Видео",
+          bg: "Ð’Ð¸Ð´ÐµÐ¾",
           sk: "Video",
-          ua: "Відео"
+          ua: "Ð’Ñ–Ð´ÐµÐ¾"
         }
       },
       {
@@ -105,10 +105,10 @@ export const FALLBACK_DATA = {
           en: "Checklist",
           de: "Checkliste",
           pl: "Lista kontrolna",
-          ro: "Listă de verificare",
-          bg: "Контролен списък",
-          sk: "Kontrolný zoznam",
-          ua: "Чекліст"
+          ro: "ListÄƒ de verificare",
+          bg: "ÐšÐ¾Ð½Ñ‚Ñ€Ð¾Ð»ÐµÐ½ ÑÐ¿Ð¸ÑÑŠÐº",
+          sk: "KontrolnÃ½ zoznam",
+          ua: "Ð§ÐµÐºÐ»Ñ–ÑÑ‚"
         }
       }
     ],
@@ -119,79 +119,79 @@ export const FALLBACK_DATA = {
         de: "Unser neuestes Element:",
         pl: "Nasz najnowszy element:",
         ro: "Cel mai nou articol:",
-        bg: "Нашият най-нов материал:",
-        sk: "Náš najnovší materiál:",
-        ua: "Наший найновіший матеріал:"
+        bg: "ÐÐ°ÑˆÐ¸ÑÑ‚ Ð½Ð°Ð¹-Ð½Ð¾Ð² Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»:",
+        sk: "NÃ¡Å¡ najnovÅ¡Ã­ materiÃ¡l:",
+        ua: "ÐÐ°ÑˆÐ¸Ð¹ Ð½Ð°Ð¹Ð½Ð¾Ð²Ñ–ÑˆÐ¸Ð¹ Ð¼Ð°Ñ‚ÐµÑ€Ñ–Ð°Ð»:"
       },
       allItems: {
         nl: "Al onze items:",
         en: "All our items:",
         de: "Alle unsere Materialien:",
-        pl: "Wszystkie nasze materiały:",
+        pl: "Wszystkie nasze materiaÅ‚y:",
         ro: "Toate materialele noastre:",
-        bg: "Всички наши материали:",
-        sk: "Všetky naše materiály:",
-        ua: "Усі наші матеріали:"
+        bg: "Ð’ÑÐ¸Ñ‡ÐºÐ¸ Ð½Ð°ÑˆÐ¸ Ð¼Ð°Ñ‚ÐµÑ€Ð¸Ð°Ð»Ð¸:",
+        sk: "VÅ¡etky naÅ¡e materiÃ¡ly:",
+        ua: "Ð£ÑÑ– Ð½Ð°ÑˆÑ– Ð¼Ð°Ñ‚ÐµÑ€Ñ–Ð°Ð»Ð¸:"
       },
       filterLabel: {
         nl: "Filter op functie",
         en: "Filter by role",
         de: "Nach Funktion filtern",
-        pl: "Filtruj według funkcji",
-        ro: "Filtrează după funcție",
-        bg: "Филтрирай по функция",
-        sk: "Filtrovať podľa pozície",
-        ua: "Фільтрувати за роллю"
+        pl: "Filtruj wedÅ‚ug funkcji",
+        ro: "FiltreazÄƒ dupÄƒ funcÈ›ie",
+        bg: "Ð¤Ð¸Ð»Ñ‚Ñ€Ð¸Ñ€Ð°Ð¹ Ð¿Ð¾ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ñ",
+        sk: "FiltrovaÅ¥ podÄ¾a pozÃ­cie",
+        ua: "Ð¤Ñ–Ð»ÑŒÑ‚Ñ€ÑƒÐ²Ð°Ñ‚Ð¸ Ð·Ð° Ñ€Ð¾Ð»Ð»ÑŽ"
       },
       filterAll: {
         nl: "Alle functies",
         en: "All roles",
         de: "Alle Funktionen",
         pl: "Wszystkie funkcje",
-        ro: "Toate funcțiile",
-        bg: "Всички функции",
-        sk: "Všetky pozície",
-        ua: "Усі ролі"
+        ro: "Toate funcÈ›iile",
+        bg: "Ð’ÑÐ¸Ñ‡ÐºÐ¸ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸",
+        sk: "VÅ¡etky pozÃ­cie",
+        ua: "Ð£ÑÑ– Ñ€Ð¾Ð»Ñ–"
       },
       newsletterCta: {
         nl: "Inschrijven nieuwsbrief",
         en: "Subscribe to newsletter",
         de: "Newsletter abonnieren",
-        pl: "Zapisz się do newslettera",
-        ro: "Abonează-te la newsletter",
-        bg: "Абонирай се за бюлетин",
-        sk: "Prihlásiť sa na newsletter",
-        ua: "Підписатися на розсилку"
+        pl: "Zapisz siÄ™ do newslettera",
+        ro: "AboneazÄƒ-te la newsletter",
+        bg: "ÐÐ±Ð¾Ð½Ð¸Ñ€Ð°Ð¹ ÑÐµ Ð·Ð° Ð±ÑŽÐ»ÐµÑ‚Ð¸Ð½",
+        sk: "PrihlÃ¡siÅ¥ sa na newsletter",
+        ua: "ÐŸÑ–Ð´Ð¿Ð¸ÑÐ°Ñ‚Ð¸ÑÑ Ð½Ð° Ñ€Ð¾Ð·ÑÐ¸Ð»ÐºÑƒ"
       },
       lmraIntro: {
         nl: "Start elke klus met de Laatste Minuut Risico Analyse en controleer of je veilig aan het werk gaat.",
         en: "Begin every job with the Last Minute Risk Assessment and double-check you are working safely.",
-        de: "Beginne jede Aufgabe mit der Last-Minute-Risikoanalyse und prüfe, ob du sicher arbeitest.",
-        pl: "Rozpocznij każde zadanie od analizy ryzyka LMRA i upewnij się, że pracujesz bezpiecznie.",
-        ro: "Începe fiecare lucrare cu analiza LMRA și verifică dacă lucrezi în siguranță.",
-        bg: "Започни всяка задача с анализа LMRA и се увери, че работиш безопасно.",
-        sk: "Začni každú zákazku analýzou LMRA a over si, že pracuješ bezpečne.",
-        ua: "Починай кожне завдання з аналізу LMRA та переконайся, що працюєш безпечно."
+        de: "Beginne jede Aufgabe mit der Last-Minute-Risikoanalyse und prÃ¼fe, ob du sicher arbeitest.",
+        pl: "Rozpocznij kaÅ¼de zadanie od analizy ryzyka LMRA i upewnij siÄ™, Å¼e pracujesz bezpiecznie.",
+        ro: "ÃŽncepe fiecare lucrare cu analiza LMRA È™i verificÄƒ dacÄƒ lucrezi Ã®n siguranÈ›Äƒ.",
+        bg: "Ð—Ð°Ð¿Ð¾Ñ‡Ð½Ð¸ Ð²ÑÑÐºÐ° Ð·Ð°Ð´Ð°Ñ‡Ð° Ñ Ð°Ð½Ð°Ð»Ð¸Ð·Ð° LMRA Ð¸ ÑÐµ ÑƒÐ²ÐµÑ€Ð¸, Ñ‡Ðµ Ñ€Ð°Ð±Ð¾Ñ‚Ð¸Ñˆ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾.",
+        sk: "ZaÄni kaÅ¾dÃº zÃ¡kazku analÃ½zou LMRA a over si, Å¾e pracujeÅ¡ bezpeÄne.",
+        ua: "ÐŸÐ¾Ñ‡Ð¸Ð½Ð°Ð¹ ÐºÐ¾Ð¶Ð½Ðµ Ð·Ð°Ð²Ð´Ð°Ð½Ð½Ñ Ð· Ð°Ð½Ð°Ð»Ñ–Ð·Ñƒ LMRA Ñ‚Ð° Ð¿ÐµÑ€ÐµÐºÐ¾Ð½Ð°Ð¹ÑÑ, Ñ‰Ð¾ Ð¿Ñ€Ð°Ñ†ÑŽÑ”Ñˆ Ð±ÐµÐ·Ð¿ÐµÑ‡Ð½Ð¾."
       },
       lmraButton: {
         nl: "Open de LMRA checklist",
         en: "Open the LMRA checklist",
-        de: "LMRA-Checkliste öffnen",
-        pl: "Otwórz checklistę LMRA",
+        de: "LMRA-Checkliste Ã¶ffnen",
+        pl: "OtwÃ³rz checklistÄ™ LMRA",
         ro: "Deschide checklist-ul LMRA",
-        bg: "Отвори LMRA чеклиста",
-        sk: "Otvoriť LMRA checklist",
-        ua: "Відкрити чекліст LMRA"
+        bg: "ÐžÑ‚Ð²Ð¾Ñ€Ð¸ LMRA Ñ‡ÐµÐºÐ»Ð¸ÑÑ‚Ð°",
+        sk: "OtvoriÅ¥ LMRA checklist",
+        ua: "Ð’Ñ–Ð´ÐºÑ€Ð¸Ñ‚Ð¸ Ñ‡ÐµÐºÐ»Ñ–ÑÑ‚ LMRA"
       },
       languageSelector: {
         nl: "Kies een taal",
         en: "Choose a language",
-        de: "Sprache auswählen",
-        pl: "Wybierz język",
-        ro: "Alege o limbă",
-        bg: "Избери език",
+        de: "Sprache auswÃ¤hlen",
+        pl: "Wybierz jÄ™zyk",
+        ro: "Alege o limbÄƒ",
+        bg: "Ð˜Ð·Ð±ÐµÑ€Ð¸ ÐµÐ·Ð¸Ðº",
         sk: "Vyber jazyk",
-        ua: "Оберіть мову"
+        ua: "ÐžÐ±ÐµÑ€Ñ–Ñ‚ÑŒ Ð¼Ð¾Ð²Ñƒ"
       }
     }
   },
@@ -205,50 +205,58 @@ export const FALLBACK_DATA = {
         nl: {
           title: "Veilig werken met hout",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_nl.png",
-          html: "index_nl.html",
-          link: "articles/veilig-werken-met-hout/nl"
+          video: "https://player.vimeo.com/video/1123477500?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_nl.html",
+          link: "articles/veilig-werken-met-hout/?lang=nl"
         },
         en: {
           title: "Safe woodworking practices",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_en.png",
-          html: "index_en.html",
-          link: "articles/veilig-werken-met-hout/en"
+          video: "https://player.vimeo.com/video/1123477501?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_en.html",
+          link: "articles/veilig-werken-met-hout/?lang=en"
         },
         de: {
           title: "Sicher mit Holz arbeiten",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_de.png",
-          html: "index_de.html",
-          link: "articles/veilig-werken-met-hout/de"
+          video: "https://player.vimeo.com/video/1123477502?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_de.html",
+          link: "articles/veilig-werken-met-hout/?lang=de"
         },
         pl: {
           title: "Bezpieczna praca z drewnem",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_pl.png",
-          html: "index_pl.html",
-          link: "articles/veilig-werken-met-hout/pl"
+          video: "https://player.vimeo.com/video/1123477503?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_pl.html",
+          link: "articles/veilig-werken-met-hout/?lang=pl"
         },
         ro: {
           title: "Lucrul sigur cu lemnul",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_ro.png",
-          html: "index_ro.html",
-          link: "articles/veilig-werken-met-hout/ro"
+          video: "https://player.vimeo.com/video/1123477504?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_ro.html",
+          link: "articles/veilig-werken-met-hout/?lang=ro"
         },
         bg: {
-          title: "Безопасна работа с дърво",
+          title: "Ð‘ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ð° Ñ Ð´ÑŠÑ€Ð²Ð¾",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_bg.png",
-          html: "index_bg.html",
-          link: "articles/veilig-werken-met-hout/bg"
+          video: "https://player.vimeo.com/video/1123477505?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_bg.html",
+          link: "articles/veilig-werken-met-hout/?lang=bg"
         },
         sk: {
-          title: "Bezpečná práca s drevom",
+          title: "BezpeÄnÃ¡ prÃ¡ca s drevom",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_sk.png",
-          html: "index_sk.html",
-          link: "articles/veilig-werken-met-hout/sk"
+          video: "https://player.vimeo.com/video/1123477506?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_sk.html",
+          link: "articles/veilig-werken-met-hout/?lang=sk"
         },
         ua: {
-          title: "Безпечна робота з деревиною",
+          title: "Ð‘ÐµÐ·Ð¿ÐµÑ‡Ð½Ð° Ñ€Ð¾Ð±Ð¾Ñ‚Ð° Ð· Ð´ÐµÑ€ÐµÐ²Ð¸Ð½Ð¾ÑŽ",
           thumbnail: "articles/veilig-werken-met-hout/Thumbnail_ua.png",
-          html: "index_ua.html",
-          link: "articles/veilig-werken-met-hout/ua"
+          video: "https://player.vimeo.com/video/1123477507?title=0&byline=0&portrait=0",
+          html: "articles/veilig-werken-met-hout/veilig-werken-met-hout_ua.html",
+          link: "articles/veilig-werken-met-hout/?lang=ua"
         }
       }
     },
@@ -261,52 +269,62 @@ export const FALLBACK_DATA = {
         nl: {
           title: "Veilig monteren van plafonds",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_nl.png",
-          html: "index_nl.html",
-          link: "articles/veilig-monteren-van-plafonds/nl"
+          video: "https://player.vimeo.com/video/1123477600?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_nl.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=nl"
         },
         en: {
           title: "Safe ceiling installation",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_en.png",
-          html: "index_en.html",
-          link: "articles/veilig-monteren-van-plafonds/en"
+          video: "https://player.vimeo.com/video/1123477601?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_en.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=en"
         },
         de: {
           title: "Sichere Montage von Decken",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_de.png",
-          html: "index_de.html",
-          link: "articles/veilig-monteren-van-plafonds/de"
+          video: "https://player.vimeo.com/video/1123477602?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_de.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=de"
         },
         pl: {
-          title: "Bezpieczny montaż sufitów",
+          title: "Bezpieczny montaÅ¼ sufitÃ³w",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_pl.png",
-          html: "index_pl.html",
-          link: "articles/veilig-monteren-van-plafonds/pl"
+          video: "https://player.vimeo.com/video/1123477603?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_pl.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=pl"
         },
         ro: {
-          title: "Montarea sigură a plafoanelor",
+          title: "Montarea sigurÄƒ a plafoanelor",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_ro.png",
-          html: "index_ro.html",
-          link: "articles/veilig-monteren-van-plafonds/ro"
+          video: "https://player.vimeo.com/video/1123477604?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_ro.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=ro"
         },
         bg: {
-          title: "Безопасен монтаж на тавани",
+          title: "Ð‘ÐµÐ·Ð¾Ð¿Ð°ÑÐµÐ½ Ð¼Ð¾Ð½Ñ‚Ð°Ð¶ Ð½Ð° Ñ‚Ð°Ð²Ð°Ð½Ð¸",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_bg.png",
-          html: "index_bg.html",
-          link: "articles/veilig-monteren-van-plafonds/bg"
+          video: "https://player.vimeo.com/video/1123477605?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_bg.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=bg"
         },
         sk: {
-          title: "Bezpečná montáž stropov",
+          title: "BezpeÄnÃ¡ montÃ¡Å¾ stropov",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_sk.png",
-          html: "index_sk.html",
-          link: "articles/veilig-monteren-van-plafonds/sk"
+          video: "https://player.vimeo.com/video/1123477606?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_sk.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=sk"
         },
         ua: {
-          title: "Безпечний монтаж стель",
+          title: "Ð‘ÐµÐ·Ð¿ÐµÑ‡Ð½Ð¸Ð¹ Ð¼Ð¾Ð½Ñ‚Ð°Ð¶ ÑÑ‚ÐµÐ»ÑŒ",
           thumbnail: "articles/veilig-monteren-van-plafonds/Thumbnail_ua.png",
-          html: "index_ua.html",
-          link: "articles/veilig-monteren-van-plafonds/ua"
+          video: "https://player.vimeo.com/video/1123477607?title=0&byline=0&portrait=0",
+          html: "articles/veilig-monteren-van-plafonds/veilig-monteren-van-plafonds_ua.html",
+          link: "articles/veilig-monteren-van-plafonds/?lang=ua"
         }
       }
     }
   ]
 };
+
+

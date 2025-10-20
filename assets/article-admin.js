@@ -298,26 +298,37 @@ function renderTitles() {
     });
     card.appendChild(titleInput);
 
+    const videoInput = document.createElement("input");
+    videoInput.type = "text";
+    videoInput.value = state.article.translations[langCode]?.video || "";
+    videoInput.placeholder = "https://player.vimeo.com/video/<id>";
+    videoInput.addEventListener("input", () => {
+      ensureTranslation(langCode);
+      state.article.translations[langCode].video = videoInput.value.trim();
+      markArticleDirty("Vimeo-link aangepast.");
+    });
+    card.appendChild(videoInput);
+
     const metaRow = document.createElement("div");
     metaRow.className = "form-row form-row--inline";
 
     const htmlInput = document.createElement("input");
     htmlInput.type = "text";
     htmlInput.value = state.article.translations[langCode]?.html || "";
-    htmlInput.placeholder = "index_<taal>.html";
+    htmlInput.placeholder = `articles/${state.slug}/${state.slug}_${langCode}.html`;
     htmlInput.addEventListener("input", () => {
       ensureTranslation(langCode);
-      state.article.translations[langCode].html = htmlInput.value;
+      state.article.translations[langCode].html = htmlInput.value.trim();
       markArticleDirty("HTML-pad aangepast.");
     });
 
     const linkInput = document.createElement("input");
     linkInput.type = "text";
     linkInput.value = state.article.translations[langCode]?.link || "";
-    linkInput.placeholder = `articles/${state.slug}/${langCode}`;
+    linkInput.placeholder = `articles/${state.slug}/?lang=${langCode}`;
     linkInput.addEventListener("input", () => {
       ensureTranslation(langCode);
-      state.article.translations[langCode].link = linkInput.value;
+      state.article.translations[langCode].link = linkInput.value.trim();
       markArticleDirty("Link aangepast.");
     });
 
@@ -338,14 +349,27 @@ function ensureArticleStructure() {
 }
 
 function ensureTranslation(langCode) {
+  const defaults = {
+    title: "",
+    thumbnail:
+      state.article.translations?.nl?.thumbnail ||
+      `articles/${state.slug}/Thumbnail_${langCode}.png`,
+    video: "",
+    html: `articles/${state.slug}/${state.slug}_${langCode}.html`,
+    link: `articles/${state.slug}/?lang=${langCode}`
+  };
+
   if (!state.article.translations[langCode]) {
-    state.article.translations[langCode] = {
-      title: "",
-      thumbnail: state.article.translations.nl?.thumbnail || "",
-      html: "",
-      link: ""
-    };
+    state.article.translations[langCode] = { ...defaults };
+    return;
   }
+
+  const translation = state.article.translations[langCode];
+  Object.entries(defaults).forEach(([key, value]) => {
+    if (!(key in translation) || translation[key] === undefined || translation[key] === null) {
+      translation[key] = value;
+    }
+  });
 }
 
 function toggleArrayItem(array, value, shouldInclude) {

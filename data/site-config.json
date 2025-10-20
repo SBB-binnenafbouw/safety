@@ -1,6 +1,6 @@
 {
   "site": {
-    "homepageUrl": "https://sbb-binnenafbouw.github.io/safety/",
+    "homepageUrl": "./",
     "newsletterUrl": "https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60",
     "lmraUrl": "https://sbb-binnenafbouw.github.io/LMRA/",
     "highlightedArticleSlug": "veilig-boren"
@@ -139,6 +139,32 @@
         "bg": "Контролен списък",
         "sk": "Kontrolný zoznam",
         "ua": "Чекліст"
+      }
+    },
+    {
+      "id": "met-samenvatting",
+      "translations": {
+        "nl": "Met samenvatting",
+        "en": "With summary",
+        "de": "Mit Zusammenfassung",
+        "pl": "Z podsumowaniem",
+        "ro": "Cu rezumat",
+        "bg": "С обобщение",
+        "sk": "So zhrnutím",
+        "ua": "З підсумком"
+      }
+    },
+    {
+      "id": "extra-info",
+      "translations": {
+        "nl": "Met extra info",
+        "en": "With extra info",
+        "de": "Mit zusätzlichen Infos",
+        "pl": "Z dodatkowymi informacjami",
+        "ro": "Cu informații suplimentare",
+        "bg": "С допълнителна информация",
+        "sk": "S doplňujúcimi informáciami",
+        "ua": "З додатковою інформацією"
       }
     }
   ],

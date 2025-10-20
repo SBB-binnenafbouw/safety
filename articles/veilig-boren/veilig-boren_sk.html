@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="Prehľad vŕtačiek, použitie a výber materiálu." name="description"/>
+<link href="sk/binnenafbouw.png" rel="icon"/>
+<style>
+    :root{
+      --sbb-red:#7C1829; --text:#212121; --bg:#FFFFFF;
+      --g1:#A9A9A9; --g2:#F2F2F2; --radius:14px; --shadow:0 8px 24px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Helvetica, Arial, sans-serif; line-height:1.55; font-size:16px;}
+    a{color:var(--sbb-red); text-decoration:none}
+    a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid #000; outline-offset:2px; border-radius:10px}
+    img{max-width:100%; height:auto; display:block}
+    /* Header */
+    header{position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid var(--g2);}
+    @supports(backdrop-filter: blur(6px)){
+      header{backdrop-filter:saturate(160%) blur(6px); background:linear-gradient(to bottom, rgba(255,255,255,.92), rgba(255,255,255,.86));}
+    }
+    .topbar{display:flex; align-items:center; gap:12px; max-width:var(--maxw); margin:0 auto; padding:10px 12px;}
+    .logo{display:flex; align-items:center; gap:10px}
+    .logo img{height:32px; width:auto}
+    .brand{font-weight:700; letter-spacing:.2px}
+    nav{margin-left:auto; display:flex; align-items:center; gap:8px}
+    /* Language menu */
+    .lang{position:relative; display:block}
+    .lang summary{
+      list-style:none; cursor:pointer; padding:10px 14px; border:1px solid var(--sbb-red); border-radius:999px; background:var(--sbb-red); color:#fff; font-size:15px;
+      display:inline-flex; align-items:center; justify-content:center; gap:8px; min-width:44px; min-height:44px; box-shadow:var(--shadow);
+    }
+    .lang summary:hover{filter:brightness(0.95)}
+    .lang[open] summary{box-shadow:var(--shadow)}
+    .lang ul{
+      position:absolute; right:0; margin:8px 0 0 0; padding:8px; background:#fff; border:1px solid var(--g2); border-radius:12px;
+      box-shadow:var(--shadow); min-width:230px; list-style:none; max-height:60vh; overflow:auto;
+    }
+    .lang a{display:flex; align-items:center; gap:8px; padding:12px; border-radius:10px; -webkit-tap-highlight-color: transparent;}
+    .lang a:hover{background:var(--g2); text-decoration:none}
+    .lang .flag{width:20px; display:inline-block; text-align:center}
+    /* Hero */
+    .hero{max-width:var(--maxw); margin:14px auto; padding:0 12px; display:grid; gap:12px; grid-template-columns:1fr;}
+    .hero h1{margin:6px 0 0; font-weight:800; letter-spacing:.2px; font-size:clamp(20px, 3.6vw, 32px);}
+    .video{border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:#000; aspect-ratio:16/9;}
+    .video iframe{width:100%; height:100%; border:0}
+    /* TOC */
+    .toc{max-width:var(--maxw); margin:6px auto 16px; padding:12px; background:#fff; border:1px solid var(--g2); border-radius:var(--radius); display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px}
+    .toc h2{font-size:18px; margin:4px 0 8px}
+    .toc ol{margin:0; padding-left:18px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; text-align:center; padding:12px 16px; border-radius:999px; border:1px solid var(--sbb-red); background:var(--sbb-red); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); min-height:44px; line-height:1.25}
+    .btn:active{transform:translateY(1px)}
+    /* Sections */
+    section{max-width:var(--maxw); margin:16px auto; padding:0 12px}
+    h2{margin:8px 0 10px; font-size:clamp(18px, 3.2vw, 24px)}
+    /* Cards grid */
+    .grid{display:grid; gap:12px; grid-template-columns: repeat(3, 1fr);}
+    .card{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column; min-height:100%;}
+    .card img{width:100%; height:180px; object-fit:contain; background:#fff}
+    .img-top-space{margin-top:10px;}
+    .card .body{padding:12px}
+    .chip{display:inline-block; font-size:12px; font-weight:600; color:#fff; background:var(--sbb-red); padding:4px 8px; border-radius:999px; margin-bottom:8px;}
+    ul.clean{margin:8px 0 0 0; padding-left:0; list-style:none}
+    ul.clean li{margin:6px 0; padding-left:26px; position:relative}
+    ul.clean li::before{
+      content:""; position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:50%; border:1px solid var(--g1); display:inline-grid; place-items:center; font-size:12px; line-height:1; background:#fff;
+    }
+    ul.clean li.pro::before{content:"✔︎"; color:#157347; border-color:#157347;}
+    ul.clean li.con::before{content:"✖︎"; color:#B00020; border-color:#B00020;}
+    /* Matrix */
+    .matrix{border:1px solid var(--g2); border-radius:var(--radius); overflow:hidden;}
+    .mat-row{display:grid; grid-template-columns: 220px 1fr; border-top:1px solid var(--g2);} .mat-row:first-child{border-top:none}
+    .mat-key{background:var(--g2); padding:10px 12px; font-weight:700; display:flex; align-items:center;}
+    .mat-val{padding:10px 12px; display:flex; flex-wrap:wrap; gap:10px}
+    .pill{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--g2); border-radius:999px; padding:6px 10px; background:#fff;}
+    /* Footer */
+    footer{margin-top:32px; border-top:1px solid var(--g2); background:#fff;}
+    .footwrap{max-width:var(--maxw); margin:0 auto; padding:16px 12px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-size:14px;}
+    .muted{color:#555}
+    /* Responsive */
+    @media (max-width:1024px){
+      .grid{grid-template-columns: repeat(2, 1fr);}
+    }
+    @media (max-width:820px){
+      .grid{grid-template-columns: 1fr;}
+      .card img{height:160px;}
+      .toc{grid-template-columns:1fr}
+      .lang ul{position:fixed; left:12px; right:12px; top:68px; max-height:56vh; border-radius:14px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none!important; transition:none!important; scroll-behavior:auto!important}
+    }
+  </style>
+</head>
+<body>
+<main>
+<nav class="toc">
+<div>
+<h2>Obsah</h2>
+<ol>
+<li><a href="#boortypes">Prehľad vŕtačiek</a></li>
+<li><a href="#matrix">Typ vŕtačky podľa materiálu</a></li>
+</ol>
+</div>
+<a class="btn" href="https://sbb-binnenafbouw.github.io/LMRA/?lang=sk" role="button">Vyplňte kontrolný zoznam LMRA pred začatím práce.</a>
+</nav>
+<section id="boortypes">
+<h2>Prehľad vŕtačiek</h2>
+<div class="grid">
+<article class="card" id="accuboormachine">
+<img alt="Aku vŕtačka" class="img-top-space" src="nl/Accuboormachine.png"/>
+<div class="body">
+<span class="chip">Aku vŕtačka</span>
+<p>Univerzálna pre ľahké práce v dreve, plaste a tenkom kove. Vďaka akumulátoru pracujete bez kábla a flexibilne. Niektoré modely majú aj príklepovú funkciu na ľahké murivo; praktické pri vešaní a montáži.</p>
+<ul class="clean"><li class="pro">Skrutkovanie a vŕtanie do dreva, plastu a sadrokartónu</li><li class="pro">Bezdrôtová práca</li><li class="con">Nutné dobíjanie akumulátora</li></ul>
+</div>
+</article>
+<article class="card" id="klopboormachine">
+<img alt="Príklepová vŕtačka" src="nl/Klopboormachine.png"/>
+<div class="body">
+<span class="chip">Príklepová vŕtačka</span>
+<p>Vhodná, ak potrebujete vŕtať do tvrdšieho materiálu, ako je tehla. Kombinuje rotáciu s rýchlym príklepom, ideálna na pevné uchytenie predmetov do steny.</p>
+<ul class="clean"><li class="pro">Vŕtanie do dreva, kovu a mäkkých druhov kameňa</li><li class="pro">Otočný pohyb + príklepová funkcia</li><li class="con">Často s káblom (menej flexibilná)</li><li class="con">Nevhodná do betónu</li></ul>
+</div>
+</article>
+<article class="card" id="boorhamer">
+<img alt="Vŕtacie kladivo" src="nl/Boorhamer.png"/>
+<div class="body">
+<span class="chip">Vŕtacie kladivo</span>
+<p>Na ťažké práce. Silná príklepová funkcia prerazí tvrdý betón a prírodný kameň. Vhodné na základy alebo veľké otvory (napr. na rozvody).</p>
+<ul class="clean"><li class="pro">Vŕtanie do betónu a tvrdého kameňa</li><li class="pro">Veľmi vysoká úderná sila</li><li class="con">Nevhodné do dreva, kovu alebo mäkkého kameňa</li></ul>
+</div>
+</article>
+<article class="card" id="slagmoeraanzetter">
+<img alt="Rázový uťahovač" class="img-top-space" src="nl/Slagmoeraanzetter.png"/>
+<div class="body">
+<span class="chip">Rázový uťahovač</span>
+<p>Rýchlo uťahuje alebo povoľuje matice a skrutky. Praktický pre väčšie konštrukcie, ako sú terasy, záhradné domčeky alebo ťažký nábytok.</p>
+<ul class="clean"><li class="pro">Uťahovanie a povoľovanie skrutiek a matíc</li><li class="pro">Vysoká úderná sila</li><li class="con">Riziko pretiahnutia/poškodenia</li></ul>
+</div>
+</article>
+<article class="card" id="kolomboormachine">
+<img alt="Stĺpová vŕtačka" class="img-top-space" src="nl/Kolomboormachine.png"/>
+<div class="body">
+<span class="chip">Stĺpová vŕtačka</span>
+<p>Na veľmi presné vŕtanie. Je upevnená na stojane, takže vyvŕtate dokonale kolmé otvory do dreva, kovu alebo plastu.</p>
+<ul class="clean"><li class="pro">Veľmi presné vŕtanie (drevo, kov, plast)</li><li class="pro">Vhodná pre malé/precízne diely</li><li class="con">Použiteľná iba zo stojana</li></ul>
+</div>
+</article>
+<article class="card" id="breekhamer">
+<img alt="Búracie kladivo" src="nl/Breekhamer.png"/>
+<div class="body">
+<span class="chip">Búracie kladivo</span>
+<p>Hrubé demolačné náradie. Odstraňuje dlaždice a rozbíja betónové podlahy. Nie je určené na vŕtanie, ale na sekanie a búranie.</p>
+<ul class="clean"><li class="pro">Búranie a sekanie</li><li class="pro">Vhodné na ťažké demolačné práce</li><li class="con">Nie je určené na vŕtanie</li></ul>
+</div>
+</article>
+</div>
+</section>
+<section id="matrix">
+<h2>Typ vŕtačky podľa materiálu</h2>
+<div aria-label="Boormachine per materiaal" class="matrix" role="table">
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Drevo / Sadrokartón / Plast</div>
+<div class="mat-val" role="cell">
+<span class="pill">Aku vŕtačka</span>
+<span class="pill">Stĺpová vŕtačka</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Drevo, Kov, Kameň</div>
+<div class="mat-val" role="cell">
+<span class="pill">Príklepová vŕtačka</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Betón</div>
+<div class="mat-val" role="cell">
+<span class="pill">Vŕtacie kladivo</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Skrutkovanie / Skrutka &amp; Matica</div>
+<div class="mat-val" role="cell">
+<span class="pill">Rázový uťahovač</span>
+<span class="pill">Aku vŕtačka (ľahké skrutkovanie)</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Drevo / Plast / Kov</div>
+<div class="mat-val" role="cell">
+<span class="pill">Stĺpová vŕtačka</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Búranie / Sekanie</div>
+<div class="mat-val" role="cell">
+<span class="pill">Búracie kladivo</span>
+</div>
+</div>
+</div>
+<p class="muted" style="margin-top:8px">Upozornenie: vyberajte aj správne vrtáky (drevo, kov, kameň, SDS) a sledujte nastavenie otáčok/príklepu.</p>
+</section>
+</main>
+<script>
+    // jaar
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // language preview: force Slovak
+    (function(){
+      const summary = document.querySelector('.lang summary');
+      if(summary){
+        summary.querySelector('.flag').textContent = '🇸🇰';
+        summary.querySelector('.label').textContent = 'Slovenčina';
+      }
+    })();
+  </script>
+</body>
+</html>

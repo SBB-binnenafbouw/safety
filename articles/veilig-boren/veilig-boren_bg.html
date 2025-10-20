@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="bg">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="Uitleg over verschillende boormachines, toepassingen en materiaalkeuze." name="description"/>
+<link href="bg/binnenafbouw.png" rel="icon"/>
+<style>
+    :root{
+      --sbb-red:#7C1829; --text:#212121; --bg:#FFFFFF;
+      --g1:#A9A9A9; --g2:#F2F2F2; --radius:14px; --shadow:0 8px 24px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Helvetica, Arial, sans-serif; line-height:1.55; font-size:16px;}
+    a{color:var(--sbb-red); text-decoration:none}
+    a:focus-visible, button:focus-visible, summary:focus-visible{outline:2px solid #000; outline-offset:2px; border-radius:10px}
+    img{max-width:100%; height:auto; display:block}
+    /* Header */
+    header{position:sticky; top:0; z-index:10; background:#fff; border-bottom:1px solid var(--g2);}
+    @supports(backdrop-filter: blur(6px)){
+      header{backdrop-filter:saturate(160%) blur(6px); background:linear-gradient(to bottom, rgba(255,255,255,.92), rgba(255,255,255,.86));}
+    }
+    .topbar{display:flex; align-items:center; gap:12px; max-width:var(--maxw); margin:0 auto; padding:10px 12px;}
+    .logo{display:flex; align-items:center; gap:10px}
+    .logo img{height:32px; width:auto}
+    .brand{font-weight:700; letter-spacing:.2px}
+    nav{margin-left:auto; display:flex; align-items:center; gap:8px}
+    /* Language menu */
+    .lang{position:relative; display:block}
+    .lang summary{
+      list-style:none; cursor:pointer; padding:10px 14px; border:1px solid var(--sbb-red); border-radius:999px; background:var(--sbb-red); color:#fff; font-size:15px;
+      display:inline-flex; align-items:center; justify-content:center; gap:8px; min-width:44px; min-height:44px; box-shadow:var(--shadow);
+    }
+    .lang summary:hover{filter:brightness(0.95)}
+    .lang[open] summary{box-shadow:var(--shadow)}
+    .lang ul{
+      position:absolute; right:0; margin:8px 0 0 0; padding:8px; background:#fff; border:1px solid var(--g2); border-radius:12px;
+      box-shadow:var(--shadow); min-width:230px; list-style:none; max-height:60vh; overflow:auto;
+    }
+    .lang a{display:flex; align-items:center; gap:8px; padding:12px; border-radius:10px; -webkit-tap-highlight-color: transparent;}
+    .lang a:hover{background:var(--g2); text-decoration:none}
+    .lang .flag{width:20px; display:inline-block; text-align:center}
+    /* Hero */
+    .hero{max-width:var(--maxw); margin:14px auto; padding:0 12px; display:grid; gap:12px; grid-template-columns:1fr;}
+    .hero h1{margin:6px 0 0; font-weight:800; letter-spacing:.2px; font-size:clamp(20px, 3.6vw, 32px);}
+    .video{border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:#000; aspect-ratio:16/9;}
+    .video iframe{width:100%; height:100%; border:0}
+    /* TOC */
+    .toc{max-width:var(--maxw); margin:6px auto 16px; padding:12px; background:#fff; border:1px solid var(--g2); border-radius:var(--radius); display:grid; grid-template-columns:1fr auto; align-items:center; gap:12px}
+    .toc h2{font-size:18px; margin:4px 0 8px}
+    .toc ol{margin:0; padding-left:18px}
+    .btn{display:inline-flex; align-items:center; justify-content:center; text-align:center; padding:12px 16px; border-radius:999px; border:1px solid var(--sbb-red); background:var(--sbb-red); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); min-height:44px; line-height:1.25}
+    .btn:active{transform:translateY(1px)}
+    /* Sections */
+    section{max-width:var(--maxw); margin:16px auto; padding:0 12px}
+    h2{margin:8px 0 10px; font-size:clamp(18px, 3.2vw, 24px)}
+    /* Cards grid */
+    .grid{display:grid; gap:12px; grid-template-columns: repeat(3, 1fr);}
+    .card{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column; min-height:100%;}
+    .card img{width:100%; height:180px; object-fit:contain; background:#fff}
+    .img-top-space{margin-top:10px;}
+    .card .body{padding:12px}
+    .chip{display:inline-block; font-size:12px; font-weight:600; color:#fff; background:var(--sbb-red); padding:4px 8px; border-radius:999px; margin-bottom:8px;}
+    ul.clean{margin:8px 0 0 0; padding-left:0; list-style:none}
+    ul.clean li{margin:6px 0; padding-left:26px; position:relative}
+    ul.clean li::before{
+      content:""; position:absolute; left:0; top:2px; width:18px; height:18px; border-radius:50%; border:1px solid var(--g1); display:inline-grid; place-items:center; font-size:12px; line-height:1; background:#fff;
+    }
+    ul.clean li.pro::before{content:"✔︎"; color:#157347; border-color:#157347;}
+    ul.clean li.con::before{content:"✖︎"; color:#B00020; border-color:#B00020;}
+    /* Matrix */
+    .matrix{border:1px solid var(--g2); border-radius:var(--radius); overflow:hidden;}
+    .mat-row{display:grid; grid-template-columns: 220px 1fr; border-top:1px solid var(--g2);} .mat-row:first-child{border-top:none}
+    .mat-key{background:var(--g2); padding:10px 12px; font-weight:700; display:flex; align-items:center;}
+    .mat-val{padding:10px 12px; display:flex; flex-wrap:wrap; gap:10px}
+    .pill{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--g2); border-radius:999px; padding:6px 10px; background:#fff;}
+    /* Footer */
+    footer{margin-top:32px; border-top:1px solid var(--g2); background:#fff;}
+    .footwrap{max-width:var(--maxw); margin:0 auto; padding:16px 12px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; font-size:14px;}
+    .muted{color:#555}
+    /* Responsive */
+    @media (max-width:1024px){
+      .grid{grid-template-columns: repeat(2, 1fr);}
+    }
+    @media (max-width:820px){
+      .grid{grid-template-columns: 1fr;}
+      .card img{height:160px;}
+      .toc{grid-template-columns:1fr}
+      .lang ul{position:fixed; left:12px; right:12px; top:68px; max-height:56vh; border-radius:14px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none!important; transition:none!important; scroll-behavior:auto!important}
+    }
+  </style>
+</head>
+<body>
+<main>
+<nav class="toc">
+<div>
+<h2>Съдържание</h2>
+<ol>
+<li><a href="#boortypes">Преглед на бормашини</a></li>
+<li><a href="#matrix">Видове бормашини според материала</a></li>
+</ol>
+</div>
+<a class="btn" href="https://sbb-binnenafbouw.github.io/LMRA/?lang=bg" role="button">Попълнете контролния списък LMRA преди да започнете работа.</a>
+</nav>
+<section id="boortypes">
+<h2>Преглед на бормашини</h2>
+<div class="grid">
+<article class="card" id="accuboormachine">
+<img alt="Акумулаторна бормашина (завиване/пробиване)" class="img-top-space" src="nl/Accuboormachine.png"/>
+<div class="body">
+<span class="chip">Акумулаторна бормашина</span>
+<p>Универсална за леки задачи в дърво, пластмаса и тънък метал. Благодарение на батерията работите без кабел и с голяма свобода. Някои модели имат ударна функция за леки зидарски работи; удобно при монтаж и окачване.</p>
+<ul class="clean">
+<li class="pro">Завиване и пробиване в дърво, пластмаса и гипс</li>
+<li class="pro">Безкабелна работа</li>
+<li class="con">Необходимо е зареждане на батерията</li>
+</ul>
+</div>
+</article>
+<article class="card" id="klopboormachine">
+<img alt="Ударна бормашина" src="nl/Klopboormachine.png"/>
+<div class="body">
+<span class="chip">Ударна бормашина</span>
+<p>Подходяща, ако трябва да пробивате в по-твърди материали като тухли. Съчетава въртене с бързо ударно движение – идеална за здраво фиксиране в стени.</p>
+<ul class="clean">
+<li class="pro">Пробиване в дърво, метал и меки видове камък</li>
+<li class="pro">Въртене + ударна функция</li>
+<li class="con">Често с кабел (по-малко гъвкава)</li>
+<li class="con">Не е за бетон</li>
+</ul>
+</div>
+</article>
+<article class="card" id="boorhamer">
+<img alt="Перфоратор" src="nl/Boorhamer.png"/>
+<div class="body">
+<span class="chip">Перфоратор (ударен чук)</span>
+<p>За тежка работа. Мощната ударна функция пробива твърд бетон и естествен камък. Подходящ за фундаментни задачи или големи отвори (тръби).</p>
+<ul class="clean">
+<li class="pro">Пробиване в бетон и твърди каменни материали</li>
+<li class="pro">Много висока ударна сила</li>
+<li class="con">Не е подходящ за дърво, метал или мек камък</li>
+</ul>
+</div>
+</article>
+<article class="card" id="slagmoeraanzetter">
+<img alt="Ударен гайковерт" class="img-top-space" src="nl/Slagmoeraanzetter.png"/>
+<div class="body">
+<span class="chip">Ударен гайковерт</span>
+<p>Бързо завива или развива болтове и гайки. Удобен за по-големи конструкции като тераси, градински постройки или тежки мебели.</p>
+<ul class="clean">
+<li class="pro">Завиване и развиване на болтове и гайки</li>
+<li class="pro">Висока ударна сила</li>
+<li class="con">Риск от пренавиване/повреда</li>
+</ul>
+</div>
+</article>
+<article class="card" id="kolomboormachine">
+<img alt="Колонна бормашина (прецизно пробиване)" class="img-top-space" src="nl/Kolomboormachine.png"/>
+<div class="body">
+<span class="chip">Колонна бормашина</span>
+<p>За много прецизна работа. Закрепена е върху стойка, така че правите идеално прави отвори в дърво, метал или пластмаса.</p>
+<ul class="clean">
+<li class="pro">Изключително точно пробиване (дърво, метал, пластмаса)</li>
+<li class="pro">Подходяща за малки/прецизни детайли</li>
+<li class="con">Използва се само от фиксираната стойка</li>
+</ul>
+</div>
+</article>
+<article class="card" id="breekhamer">
+<img alt="Къртач" src="nl/Breekhamer.png"/>
+<div class="body">
+<span class="chip">Къртач</span>
+<p>Груб инструмент за разрушаване. Премахва плочки и отваря бетонни подове. Не е предназначен за пробиване, а за къртене и длето.</p>
+<ul class="clean">
+<li class="pro">Къртене и длето</li>
+<li class="pro">Подходящ за тежки разрушителни работи</li>
+<li class="con">Не е за пробиване</li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+<section id="matrix">
+<h2>Видове бормашини според материала</h2>
+<div aria-label="Boormachine per materiaal" class="matrix" role="table">
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Дърво / Гипс / Пластмаса</div>
+<div class="mat-val" role="cell">
+<span class="pill">Акумулаторна бормашина</span>
+<span class="pill">Колонна бормашина</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Дърво, Метал, Камък</div>
+<div class="mat-val" role="cell">
+<span class="pill">Ударна бормашина</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Бетон</div>
+<div class="mat-val" role="cell">
+<span class="pill">Перфоратор (ударен чук)</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Завиване / Болтове и гайки</div>
+<div class="mat-val" role="cell">
+<span class="pill">Ударен гайковерт</span>
+<span class="pill">Акумулаторна бормашина (завиване/пробиване) (licht schroefwerk)</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Дърво / Пластмаса / Метал</div>
+<div class="mat-val" role="cell">
+<span class="pill">Колонна бормашина</span>
+</div>
+</div>
+<div class="mat-row" role="row">
+<div class="mat-key" role="rowheader">Къртене / Длето</div>
+<div class="mat-val" role="cell">
+<span class="pill">Къртач</span>
+</div>
+</div>
+</div>
+<p class="muted" style="margin-top:8px">⚠ Забележка: избирайте и правилните свредла (за дърво, метал, камък, SDS) и обръщайте внимание на обороти/ударни настройки.</p>
+</section>
+</main>
+<script>
+    // jaar
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // taal preview: flag + native name op basis van URL
+    (function(){
+      const langs = {
+        "nl": {flag:"🇳🇱", name:"Nederlands", path:"/nl/"},
+        "en": {flag:"🇬🇧", name:"English",   path:"/en/"},
+        "de": {flag:"🇩🇪", name:"Deutsch",   path:"/de/"},
+        "pl": {flag:"🇵🇱", name:"Polski",    path:"/pl/"},
+        "ro": {flag:"🇷🇴", name:"Română",    path:"/ro/"},
+        "bg": {flag:"🇧🇬", name:"Български", path:"/bg/"},
+        "sk": {flag:"🇸🇰", name:"Slovenčina",path:"/sk/"},
+        "ua": {flag:"🇺🇦", name:"Українська",path:"/ua/"}
+      };
+      const p = location.pathname.toLowerCase();
+      const entry = langs["bg"];
+      const summary = document.querySelector('.lang summary');
+      if(summary){
+        summary.querySelector('.flag').textContent = entry.flag;
+        summary.querySelector('.label').textContent = entry.name;
+      }
+    })();
+  </script>
+</body>
+</html>

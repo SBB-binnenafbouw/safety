@@ -2,5 +2,9 @@
   {
     "slug": "veilig-boren",
     "properties": "articles/veilig-boren/article.json"
+  },
+  {
+    "slug": "hijswerktuigen",
+    "properties": "articles/hijswerktuigen/article.json"
   }
 ]

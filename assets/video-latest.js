@@ -80,14 +80,14 @@ function resolveTargetUrl(dataset) {
 
   const preferredLang = detectPreferredLanguage(article);
   const translations = article.translations || {};
-  const translation = translations[preferredLang];
-  const link = translation?.link || translation?.html;
+  const translation = translations[preferredLang] || Object.values(translations)[0];
+  const link = buildArticleLink(article, translation, preferredLang);
 
   if (!link) {
     throw new Error("Geen geldige link voor het uitgelichte artikel.");
   }
 
-  return new URL(link, repoRoot).toString();
+  return link;
 }
 
 function detectPreferredLanguage(article) {
@@ -117,6 +117,26 @@ function detectPathLanguage() {
   const langSegment = segments[index + 1];
   if (!langSegment || langSegment === "index.html") return null;
   return langSegment;
+}
+
+function buildArticleLink(article, translation, languageCode) {
+  const slug = article.slug;
+  const fallback = `articles/${slug}/?lang=${languageCode}`;
+  if (!translation) {
+    return new URL(fallback, repoRoot).toString();
+  }
+
+  const raw = translation.link || fallback;
+
+  try {
+    const url = new URL(raw, repoRoot);
+    if (!url.searchParams.has("lang")) {
+      url.searchParams.set("lang", languageCode);
+    }
+    return url.toString();
+  } catch (error) {
+    return new URL(fallback, repoRoot).toString();
+  }
 }
 
 function fetchJson(resource) {

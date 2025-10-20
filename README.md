@@ -1,29 +1,29 @@
-# Safety hub voor SBB Binnenafbouw
+﻿# Safety hub voor SBB Binnenafbouw
 
 Deze map is klaar om naar een GitHub Pages-site te uploaden. Alles staat losjes in gewone bestanden, zodat je met een teksteditor eenvoudig talen, functies, tags en artikelen kunt bijwerken.
 
 ## Mappen en bestanden
 
-- `index.html` – de homepage met hero, filter en kaartoverzicht.
-- `assets/` – gedeelde styling (`styles.css`), artikelstijl (`article.css`), logo (`logo.png`) en scripts (`app.js`).
-- `data/site-config.json` – alle systeeminstellingen: talen, functies, tags, UI-teksten en welk artikel uitgelicht wordt.
-- `data/articles.json` – lijst van artikels en een verwijzing naar de properties-bestanden.
-- `articles/<slug>/` – per artikel een map met HTML-versies, thumbnails en een `article.json`.
-- `video-latest/` – tussenpagina die altijd doorstuurt naar het momenteel uitgelichte artikel (met optionele taalpad, bijvoorbeeld `video-latest/en/`).
-- `admin/` � lokale properties manager met tabellen voor talen, functies, tags en uitgelicht artikel (open `admin/index.html`).
+- `index.html` â€“ de homepage met hero, filter en kaartoverzicht.
+- `assets/` â€“ gedeelde styling (`styles.css`), artikelstijl (`article.css`), logo (`logo.png`) en scripts (`app.js`).
+- `data/site-config.json` â€“ alle systeeminstellingen: talen, functies, tags, UI-teksten en welk artikel uitgelicht wordt.
+- `data/articles.json` â€“ lijst van artikels en een verwijzing naar de properties-bestanden.
+- `articles/<slug>/` â€“ per artikel een map met HTML-versies, thumbnails en een `article.json`.
+- `video-latest/` â€“ tussenpagina die altijd doorstuurt naar het momenteel uitgelichte artikel (met optionele taalpad, bijvoorbeeld `video-latest/en/`).
+- `admin/`  lokale properties manager met tabellen voor talen, functies, tags en uitgelicht artikel (open `admin/index.html`).
 
-Daarnaast kun je op artikelniveau bewerken door `/admin/` aan de artikel-URL toe te voegen (bijvoorbeeld `articles/veilig-werken-met-hout/admin/`). Daar wijzig je datum, titels per taal, gekoppelde functies en tags van ��n artikel.
-Open lokaal idealiter via een kleine webserver (bijvoorbeeld `python -m http.server` of de VS Code “Live Server”-extensie). Direct via `file:///` blokkeren moderne browsers het laden van de JSON-data; in dat geval toont de site de fallback-voorbeelden (twee demo-artikelen en de standaard instellingen).
+Daarnaast kun je op artikelniveau bewerken door `/admin/` aan de artikel-URL toe te voegen (bijvoorbeeld `articles/veilig-werken-met-hout/admin/`). Daar wijzig je datum, titels per taal, gekoppelde functies en tags van n artikel.
+Open lokaal idealiter via een kleine webserver (bijvoorbeeld `python -m http.server` of de VSâ€¯Code â€œLive Serverâ€-extensie). Direct via `file:///` blokkeren moderne browsers het laden van de JSON-data; in dat geval toont de site de fallback-voorbeelden (twee demo-artikelen en de standaard instellingen).
 
 ## Talen, functies en tags beheren
 
 In `data/site-config.json` staat alles in tabellen (arrays) die je simpel kunt bewerken:
 
-- `languages` – naam, afkorting (code) en vlag.
-- `roles` – elke functie krijgt een `id` en vertalingen per taal.
-- `tags` – zelfde principe voor tags.
-- `uiText` – vertaalde labels voor knoppen en teksten op de homepage.
-- `site.highlightedArticleSlug` – `slug` van het artikel dat je wilt uitlichten in de hero.
+- `languages` â€“ naam, afkorting (code) en vlag.
+- `roles` â€“ elke functie krijgt een `id` en vertalingen per taal.
+- `tags` â€“ zelfde principe voor tags.
+- `uiText` â€“ vertaalde labels voor knoppen en teksten op de homepage.
+- `site.highlightedArticleSlug` â€“ `slug` van het artikel dat je wilt uitlichten in de hero.
 
 Werkstappen:
 1. Pas de tekst aan in een editor.
@@ -35,9 +35,9 @@ Wil je een taal toevoegen? Voeg hem aan `languages` toe en denk eraan om ook elk
 ## Een nieuw artikel toevoegen
 
 1. Maak een nieuwe map onder `articles/`, bijvoorbeeld `articles/veilig-werken-op-hoogte/`.
-2. Zet per taal een HTML-bestand en thumbnail in die map:
-   - `index_nl.html`, `index_en.html`, … (gebruik het sjabloon uit de voorbeelden).
-   - `Thumbnail_nl.png`, `Thumbnail_en.png`, … (kan ook een foto zijn).
+2. Zet per taal een fragment en thumbnail in die map:
+   - `veilig-werken-op-hoogte_nl.html`, `veilig-werken-op-hoogte_en.html`, ... (een HTML-bestand per taal met alleen de content van het artikel).
+   - `Thumbnail_nl.png`, `Thumbnail_en.png`, ... (worden gebruikt voor de kaarten op de homepage).
 3. Maak (of kopieer) het bestand `article.json` naar die map en vul het in:
 
 ```json
@@ -50,14 +50,16 @@ Wil je een taal toevoegen? Voeg hem aan `languages` toe en denk eraan om ook elk
     "nl": {
       "title": "Veilig werken op hoogte",
       "thumbnail": "articles/veilig-werken-op-hoogte/Thumbnail_nl.png",
-      "html": "index_nl.html",
-      "link": "articles/veilig-werken-op-hoogte/nl"
+      "video": "https://player.vimeo.com/video/<embed-id>?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-werken-op-hoogte/veilig-werken-op-hoogte_nl.html",
+      "link": "articles/veilig-werken-op-hoogte/?lang=nl"
     },
     "en": {
       "title": "Safe work at height",
       "thumbnail": "articles/veilig-werken-op-hoogte/Thumbnail_en.png",
-      "html": "index_en.html",
-      "link": "articles/veilig-werken-op-hoogte/en"
+      "video": "https://player.vimeo.com/video/<embed-id>?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-werken-op-hoogte/veilig-werken-op-hoogte_en.html",
+      "link": "articles/veilig-werken-op-hoogte/?lang=en"
     }
     // vul alle talen aan
   }
@@ -77,12 +79,12 @@ Wil je een taal toevoegen? Voeg hem aan `languages` toe en denk eraan om ook elk
 ```
 
 5. Optioneel: wil je de homepage-hero op dit artikel laten wijzen? Zet de `slug` in `site.highlightedArticleSlug`.
+6. Wil je voor dit artikel ook een formulier? Kopieer de map `articles/veilig-boren/admin/` naar `articles/<slug>/admin/` (of maak een nieuwe `admin/index.html`) en open die URL in de browser.
 
-6. Wil je voor dit artikel ook een formulier? Kopieer de map `articles/veilig-werken-met-hout/admin/` naar `articles/<slug>/admin/` (of maak een nieuwe `admin/index.html`) en open die URL in de browser.
 ### Over de artikel-links
 
-- Het veld `link` bepaalt de URL van een kaart. In dit voorbeeld verwijzen ze naar `articles/<slug>/index_<taal>.html`.
-- Wil je de nette structuur `https://.../<titel>/<taal>/`? Zorg dat je in GitHub daadwerkelijk folders `/<titel>/<taal>/index.html` publiceert en pas de `link`-waarde daarop aan.
+- Het veld `link` bepaalt de URL van een kaart. Gebruik in de nieuwe opbouw `articles/<slug>/?lang=<code>`.
+- Wil je een andere structuur (bijvoorbeeld `https://.../<titel>/<taal>/`)? Zorg dat je precies die paden publiceert en pas de `link`-waarde daarop aan.
 
 ## Filters en tags
 
@@ -92,7 +94,7 @@ Wil je een taal toevoegen? Voeg hem aan `languages` toe en denk eraan om ook elk
 
 ## Hero en checklist
 
-- De tekst “Ons nieuwste item” en de checklist-knoppen komen uit `uiText`.
+- De tekst â€œOns nieuwste itemâ€ en de checklist-knoppen komen uit `uiText`.
 - Het LMRA-blok gebruikt de URL uit `site.lmraUrl`.
 - Voor de nieuwsbrief-knop gebruik je `site.newsletterUrl`.
 
@@ -110,4 +112,6 @@ Nieuwe artikelen uploaden = map toevoegen + bestanden aanpassen + opnieuw pushen
 
 - Bewaar bij grote wijzigingen altijd eerst een kopie.
 - Test lokaal door `index.html` te openen en de taal te wisselen.
-- Laat bestandsnamen van afbeeldingen en HTML’s overeenkomen met de taalcode, zo houd je alles overzichtelijk.
+- Laat bestandsnamen van afbeeldingen en HTMLâ€™s overeenkomen met de taalcode, zo houd je alles overzichtelijk.
+
+
