@@ -67,13 +67,24 @@ function resolveArticleLink(article, translation, languageCode) {
   }
 
   try {
-    const url = new URL(raw, window.location.href);
+    const url = new URL(raw, PROJECT_ROOT);
+
     if (!url.searchParams.has("lang")) {
       url.searchParams.set("lang", languageCode);
     }
 
     if (isRelativeUrl(raw)) {
-      const relativePath = url.pathname.replace(/^\//, "");
+      let relativePath = url.pathname.replace(/^\//, "");
+      const projectPath = PROJECT_ROOT.pathname.replace(/^\//, "");
+      if (projectPath) {
+        const normalisedProjectPath = projectPath.endsWith("/")
+          ? projectPath
+          : `${projectPath}/`;
+        if (relativePath.startsWith(normalisedProjectPath)) {
+          relativePath = relativePath.slice(normalisedProjectPath.length);
+        }
+      }
+      relativePath = relativePath.replace(/^\//, "");
       const search = url.searchParams.toString();
       return search ? `${relativePath}?${search}` : relativePath;
     }
@@ -83,6 +94,7 @@ function resolveArticleLink(article, translation, languageCode) {
     return fallback;
   }
 }
+
 
 function findTranslationKey(article, translation) {
   if (!article?.translations || !translation) return null;
@@ -467,3 +479,4 @@ function fetchJson(path) {
 }
 
 init();
+
