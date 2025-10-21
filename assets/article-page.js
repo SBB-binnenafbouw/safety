@@ -17,6 +17,7 @@ const elements = {
   languageTrigger: document.getElementById("languageTrigger"),
   languageMenu: document.getElementById("languageMenu"),
   articleBackLink: document.getElementById("articleBackLink"),
+  articleRolesLabel: document.querySelector(".article-page__label"),
   articleMeta: document.getElementById("articleMeta"),
   articleTitle: document.getElementById("articleTitle"),
   articleRoles: document.getElementById("articleRoles"),
@@ -263,20 +264,30 @@ function renderTitle(translation) {
       state.currentLanguage,
       homepage || PROJECT_ROOT.href
     );
+    const backText = translateUiText("articleBack", "\u2190 Terug naar overzicht");
+    elements.articleBackLink.textContent = backText;
   }
 }
 
 function renderMeta() {
   if (!state.article) return;
+
+  if (elements.articleRolesLabel) {
+    const labelText = translateUiText("relevantLabel", "Relevant voor:");
+    elements.articleRolesLabel.textContent = labelText;
+  }
+
   if (elements.articleMeta) {
     const dateLabel = formatDate(state.article.published, state.currentLanguage);
     const tags = Array.isArray(state.article.tags) ? state.article.tags : [];
     const tagNames = tags
       .map((id) => getTagLabel(id, state.currentLanguage))
       .filter(Boolean);
-    const metaText = tagNames.length ? `${dateLabel} • ${tagNames.join(", ")}` : dateLabel;
+    const bullet = "\u2022";
+    const metaText = tagNames.length ? `${dateLabel} ${bullet} ${tagNames.join(", ")}` : dateLabel;
     elements.articleMeta.textContent = metaText;
   }
+
   renderChipList(elements.articleRoles, state.article.roles, getRoleLabel);
 }
 
@@ -405,6 +416,16 @@ function formatDate(value, languageCode) {
   }).format(date);
 }
 
+function translateUiText(key, fallback) {
+  const dictionary = state.config?.uiText?.[key];
+  if (!dictionary) return fallback;
+  return (
+    dictionary[state.currentLanguage] ||
+    dictionary.nl ||
+    fallback
+  );
+}
+
 function buildLanguageAwareUrl(code, baseUrl) {
   try {
     const url = new URL(baseUrl, window.location.href);
@@ -437,6 +458,11 @@ function fetchJson(resource) {
     return response.json();
   });
 }
+
+
+
+
+
 
 
 
