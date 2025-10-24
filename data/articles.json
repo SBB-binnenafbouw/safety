@@ -6,5 +6,29 @@
   {
     "slug": "hijswerktuigen",
     "properties": "articles/hijswerktuigen/article.json"
+  },
+  {
+    "slug": "veilig-slijpen",
+    "properties": "articles/veilig-slijpen/article.json"
+  },
+  {
+    "slug": "veilig-tillen",
+    "properties": "articles/veilig-tillen/article.json"
+  },
+  {
+    "slug": "gereedschapskeuringen",
+    "properties": "articles/gereedschapskeuringen/article.json"
+  },
+  {
+    "slug": "lmra-checklist",
+    "properties": "articles/lmra-checklist/article.json"
+  },
+  {
+    "slug": "rolsteigers",
+    "properties": "articles/rolsteigers/article.json"
+  },
+  {
+    "slug": "trappen-en-ladders",
+    "properties": "articles/trappen-en-ladders/article.json"
   }
 ]
