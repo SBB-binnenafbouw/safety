@@ -13,57 +13,58 @@
       "title": "LMRA checklist",
       "thumbnail": "articles/lmra-checklist/Thumbnail_nl.png",
       "video": "https://player.vimeo.com/video/1129155230?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/nl.html",
       "link": "articles/lmra-checklist/?lang=nl"
     },
     "en": {
       "title": "LMRA checklist",
       "thumbnail": "articles/lmra-checklist/Thumbnail_en.png",
       "video": "https://player.vimeo.com/video/1129155219?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/en.html",
       "link": "articles/lmra-checklist/?lang=en"
     },
     "de": {
       "title": "LMRA-Checkliste",
       "thumbnail": "articles/lmra-checklist/Thumbnail_de.png",
       "video": "https://player.vimeo.com/video/1129155201?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/de.html",
       "link": "articles/lmra-checklist/?lang=de"
     },
     "pl": {
       "title": "lista kontrolna LMRA",
       "thumbnail": "articles/lmra-checklist/Thumbnail_pl.png",
       "video": "https://player.vimeo.com/video/1129155249?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/pl.html",
       "link": "articles/lmra-checklist/?lang=pl"
     },
     "ro": {
       "title": "lista de verificare LMRA",
       "thumbnail": "articles/lmra-checklist/Thumbnail_ro.png",
       "video": "https://player.vimeo.com/video/1129155274?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/ro.html",
       "link": "articles/lmra-checklist/?lang=ro"
     },
     "bg": {
       "title": "контролен списък LMRA",
       "thumbnail": "articles/lmra-checklist/Thumbnail_bg.png",
       "video": "https://player.vimeo.com/video/1129155188?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/bg.html",
       "link": "articles/lmra-checklist/?lang=bg"
     },
     "sk": {
       "title": "kontrolný zoznam LMRA",
       "thumbnail": "articles/lmra-checklist/Thumbnail_sk.png",
       "video": "https://player.vimeo.com/video/1129155171?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/sk.html",
       "link": "articles/lmra-checklist/?lang=sk"
     },
     "ua": {
       "title": "контрольний список LMRA",
       "thumbnail": "articles/lmra-checklist/Thumbnail_ua.png",
       "video": "https://player.vimeo.com/video/1129155290?title=0&byline=0&portrait=0",
-      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "html": "articles/lmra-checklist/ua.html",
       "link": "articles/lmra-checklist/?lang=ua"
     }
   }
+
 }
