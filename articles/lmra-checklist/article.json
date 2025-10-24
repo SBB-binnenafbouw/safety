@@ -1,0 +1,69 @@
+{
+  "slug": "lmra-checklist",
+  "published": "2025-07-01",
+  "roles": [
+    "timmerman",
+    "afwerker"
+  ],
+  "tags": [
+    "video"
+  ],
+  "translations": {
+    "nl": {
+      "title": "LMRA checklist",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_nl.png",
+      "video": "https://vimeo.com/1129155230",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=nl"
+    },
+    "en": {
+      "title": "LMRA checklist",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_en.png",
+      "video": "https://vimeo.com/1129155219",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=en"
+    },
+    "de": {
+      "title": "LMRA-Checkliste",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_de.png",
+      "video": "https://vimeo.com/1129155201",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=de"
+    },
+    "pl": {
+      "title": "lista kontrolna LMRA",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_pl.png",
+      "video": "https://vimeo.com/1129155249",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=pl"
+    },
+    "ro": {
+      "title": "lista de verificare LMRA",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_ro.png",
+      "video": "https://vimeo.com/1129155274",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=ro"
+    },
+    "bg": {
+      "title": "контролен списък LMRA",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_bg.png",
+      "video": "https://vimeo.com/1129155188",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=bg"
+    },
+    "sk": {
+      "title": "kontrolný zoznam LMRA",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_sk.png",
+      "video": "https://vimeo.com/1129155171",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=sk"
+    },
+    "ua": {
+      "title": "контрольний список LMRA",
+      "thumbnail": "articles/lmra-checklist/Thumbnail_ua.png",
+      "video": "https://vimeo.com/1129155290",
+      "html": "articles/lmra-checklist/lmra-checklist.html",
+      "link": "articles/lmra-checklist/?lang=ua"
+    }
+  }
+}

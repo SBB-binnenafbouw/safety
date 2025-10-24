@@ -1,0 +1,69 @@
+{
+  "slug": "veilig-slijpen",
+  "published": "2025-06-01",
+  "roles": [
+    "timmerman",
+    "afwerker"
+  ],
+  "tags": [
+    "video"
+  ],
+  "translations": {
+    "nl": {
+      "title": "Veilig slijpen",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_nl.png",
+      "video": "https://vimeo.com/1129155809",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=nl"
+    },
+    "en": {
+      "title": "Safe Grinding",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_en.png",
+      "video": "https://vimeo.com/1129155899",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=en"
+    },
+    "de": {
+      "title": "Sicheres Schleifen",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_de.png",
+      "video": "https://vimeo.com/1129155793",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=de"
+    },
+    "pl": {
+      "title": "Bezpieczne szlifowanie",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_pl.png",
+      "video": "https://vimeo.com/1129155827",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=pl"
+    },
+    "ro": {
+      "title": "Slefuire în siguranță",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_ro.png",
+      "video": "https://vimeo.com/1129155845",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=ro"
+    },
+    "bg": {
+      "title": "Безопасно шлифоване",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_bg.png",
+      "video": "https://vimeo.com/1129155777",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=bg"
+    },
+    "sk": {
+      "title": "Bezpečné brúsenie",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_sk.png",
+      "video": "https://vimeo.com/1129155860",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=sk"
+    },
+    "ua": {
+      "title": "Безпечне шліфування",
+      "thumbnail": "articles/veilig-slijpen/Thumbnail_ua.png",
+      "video": "https://vimeo.com/1129155881",
+      "html": "articles/veilig-slijpen/veilig-slijpen.html",
+      "link": "articles/veilig-slijpen/?lang=ua"
+    }
+  }
+}

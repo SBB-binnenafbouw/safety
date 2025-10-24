@@ -1,0 +1,69 @@
+{
+  "slug": "gereedschapskeuringen",
+  "published": "2025-04-01",
+  "roles": [
+    "timmerman",
+    "afwerker"
+  ],
+  "tags": [
+    "video"
+  ],
+  "translations": {
+    "nl": {
+      "title": "Gereedschapskeuringen",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_nl.png",
+      "video": "https://vimeo.com/1129155335",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=nl"
+    },
+    "en": {
+      "title": "Work equipment inspections",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_en.png",
+      "video": "https://vimeo.com/1129155308",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=en"
+    },
+    "de": {
+      "title": "Work equipment inspections",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_de.png",
+      "video": "https://vimeo.com/1129155308",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=de"
+    },
+    "pl": {
+      "title": "Inspekcje sprzętu roboczego",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_pl.png",
+      "video": "https://vimeo.com/1129155548",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=pl"
+    },
+    "ro": {
+      "title": "Inspecții ale echipamentelor de lucru",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_ro.png",
+      "video": "https://vimeo.com/1129155590",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=ro"
+    },
+    "bg": {
+      "title": "Work equipment inspections",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_bg.png",
+      "video": "https://vimeo.com/1129155308",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=bg"
+    },
+    "sk": {
+      "title": "Work equipment inspections",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_sk.png",
+      "video": "https://vimeo.com/1129155308",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=sk"
+    },
+    "ua": {
+      "title": "Work equipment inspections",
+      "thumbnail": "articles/gereedschapskeuringen/Thumbnail_ua.png",
+      "video": "https://vimeo.com/1129155308",
+      "html": "articles/gereedschapskeuringen/gereedschapskeuringen.html",
+      "link": "articles/gereedschapskeuringen/?lang=ua"
+    }
+  }
+}
