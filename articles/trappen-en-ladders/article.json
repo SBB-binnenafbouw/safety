@@ -13,57 +13,58 @@
       "title": "Veilig met trappen en ladders",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_nl.png",
       "video": "https://player.vimeo.com/video/1129155946?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/nl.html",
       "link": "articles/trappen-en-ladders/?lang=nl"
     },
     "en": {
       "title": "Safe use of stairs and ladders",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_en.png",
       "video": "https://player.vimeo.com/video/1129155721?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/en.html",
       "link": "articles/trappen-en-ladders/?lang=en"
     },
     "de": {
       "title": "Sicherer Gebrauch von Treppen und Leitern",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_de.png",
       "video": "https://player.vimeo.com/video/1129155746?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/de.html",
       "link": "articles/trappen-en-ladders/?lang=de"
     },
     "pl": {
       "title": "Bezpieczne użytkowanie schodów i drabin",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_pl.png",
       "video": "https://player.vimeo.com/video/1129155075?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/pl.html",
       "link": "articles/trappen-en-ladders/?lang=pl"
     },
     "ro": {
       "title": "Utilizarea în siguranță a scărilor și a scărilor d",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_ro.png",
       "video": "https://player.vimeo.com/video/1129155934?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/ro.html",
       "link": "articles/trappen-en-ladders/?lang=ro"
     },
     "bg": {
       "title": "Safe use of stairs and ladders",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_bg.png",
       "video": "https://player.vimeo.com/video/1129155721?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/bg.html",
       "link": "articles/trappen-en-ladders/?lang=bg"
     },
     "sk": {
       "title": "Safe use of stairs and ladders",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_sk.png",
       "video": "https://player.vimeo.com/video/1129155721?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/sk.html",
       "link": "articles/trappen-en-ladders/?lang=sk"
     },
     "ua": {
       "title": "Safe use of stairs and ladders",
       "thumbnail": "articles/trappen-en-ladders/Thumbnail_ua.png",
       "video": "https://player.vimeo.com/video/1129155721?title=0&byline=0&portrait=0",
-      "html": "articles/trappen-en-ladders/trappen-en-ladders.html",
+      "html": "articles/trappen-en-ladders/ua.html",
       "link": "articles/trappen-en-ladders/?lang=ua"
     }
   }
+
 }
