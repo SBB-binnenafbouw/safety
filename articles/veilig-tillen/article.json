@@ -12,56 +12,56 @@
     "nl": {
       "title": "Veilig tillen",
       "thumbnail": "articles/veilig-tillen/Thumbnail_nl.png",
-      "video": "https://vimeo.com/1129155514",
+      "video": "https://player.vimeo.com/video/1129155514?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=nl"
     },
     "en": {
       "title": "Safe lifting",
       "thumbnail": "articles/veilig-tillen/Thumbnail_en.png",
-      "video": "https://vimeo.com/1129155149",
+      "video": "https://player.vimeo.com/video/1129155149?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=en"
     },
     "de": {
       "title": "Sicheres Heben",
       "thumbnail": "articles/veilig-tillen/Thumbnail_de.png",
-      "video": "https://vimeo.com/1129155129",
+      "video": "https://player.vimeo.com/video/1129155129?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=de"
     },
     "pl": {
       "title": "Bezpieczne podnoszenie",
       "thumbnail": "articles/veilig-tillen/Thumbnail_pl.png",
-      "video": "https://vimeo.com/1129155574",
+      "video": "https://player.vimeo.com/video/1129155574?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=pl"
     },
     "ro": {
       "title": "Ridicare în siguranță",
       "thumbnail": "articles/veilig-tillen/Thumbnail_ro.png",
-      "video": "https://vimeo.com/1129155607",
+      "video": "https://player.vimeo.com/video/1129155607?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=ro"
     },
     "bg": {
       "title": "Безопасно вдигане",
       "thumbnail": "articles/veilig-tillen/Thumbnail_bg.png",
-      "video": "https://vimeo.com/1129155112",
+      "video": "https://player.vimeo.com/video/1129155112?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=bg"
     },
     "sk": {
       "title": "Bezpečné zdvíhanie",
       "thumbnail": "articles/veilig-tillen/Thumbnail_sk.png",
-      "video": "https://vimeo.com/1129155759",
+      "video": "https://player.vimeo.com/video/1129155759?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=sk"
     },
     "ua": {
       "title": "Безпечне піднімання",
       "thumbnail": "articles/veilig-tillen/Thumbnail_ua.png",
-      "video": "https://vimeo.com/1129155917",
+      "video": "https://player.vimeo.com/video/1129155917?title=0&byline=0&portrait=0",
       "html": "articles/veilig-tillen/veilig-tillen.html",
       "link": "articles/veilig-tillen/?lang=ua"
     }

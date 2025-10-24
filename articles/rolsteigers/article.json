@@ -12,56 +12,56 @@
     "nl": {
       "title": "Veilig met rolsteigers",
       "thumbnail": "articles/rolsteigers/Thumbnail_nl.png",
-      "video": "https://vimeo.com/1129155699",
+      "video": "https://player.vimeo.com/video/1129155699?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=nl"
     },
     "en": {
       "title": "Safe with mobile scaffolds",
       "thumbnail": "articles/rolsteigers/Thumbnail_en.png",
-      "video": "https://vimeo.com/1129155628",
+      "video": "https://player.vimeo.com/video/1129155628?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=en"
     },
     "de": {
       "title": "Safe with mobile scaffolds",
       "thumbnail": "articles/rolsteigers/Thumbnail_de.png",
-      "video": "https://vimeo.com/1129155628",
+      "video": "https://player.vimeo.com/video/1129155628?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=de"
     },
     "pl": {
       "title": "Bezpienczny z rusztowaniami mobilnymi",
       "thumbnail": "articles/rolsteigers/Thumbnail_pl.png",
-      "video": "https://vimeo.com/1129155656",
+      "video": "https://player.vimeo.com/video/1129155656?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=pl"
     },
     "ro": {
       "title": "Sigur cu schele mobile",
       "thumbnail": "articles/rolsteigers/Thumbnail_ro.png",
-      "video": "https://vimeo.com/1129155674",
+      "video": "https://player.vimeo.com/video/1129155674?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=ro"
     },
     "bg": {
       "title": "Safe with mobile scaffolds",
       "thumbnail": "articles/rolsteigers/Thumbnail_bg.png",
-      "video": "https://vimeo.com/1129155628",
+      "video": "https://player.vimeo.com/video/1129155628?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=bg"
     },
     "sk": {
       "title": "Safe with mobile scaffolds",
       "thumbnail": "articles/rolsteigers/Thumbnail_sk.png",
-      "video": "https://vimeo.com/1129155628",
+      "video": "https://player.vimeo.com/video/1129155628?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=sk"
     },
     "ua": {
       "title": "Safe with mobile scaffolds",
       "thumbnail": "articles/rolsteigers/Thumbnail_ua.png",
-      "video": "https://vimeo.com/1129155628",
+      "video": "https://player.vimeo.com/video/1129155628?title=0&byline=0&portrait=0",
       "html": "articles/rolsteigers/rolsteigers.html",
       "link": "articles/rolsteigers/?lang=ua"
     }
