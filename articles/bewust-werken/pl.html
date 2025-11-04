@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="Plan krok po kroku: bezpieczny start, praca i zakończenie na budowie." name="description"/>
+<link href="nl/binnenafbouw.png" rel="icon"/>
+<title>Bezpieczna praca – plan krok po kroku</title>
+<style>
+    :root{
+      --sbb-red:#7C1829; --text:#212121; --bg:#FFFFFF;
+      --g1:#A9A9A9; --g2:#E0E0E0; --g3:#ECECEC;
+      --radius:14px; --shadow:0 6px 18px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Helvetica, Arial, sans-serif; line-height:1.4; font-size:16px;}
+    a{color:var(--sbb-red); text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+
+    nav.toc{max-width:var(--maxw); margin:16px auto; padding:12px; background:#fff; border:1px solid var(--g2); border-radius:var(--radius); display:grid; grid-template-columns:1fr; gap:12px; box-shadow:var(--shadow)}
+    nav.toc h1{margin:0; font-size:clamp(20px, 3.6vw, 28px);}
+    nav.toc ol{margin:0; padding-left:0; list-style:none}
+    nav.toc li{margin-bottom:6px}
+    nav.toc li a span.step{color:var(--text); font-weight:600;}
+
+    .btn{display:inline-flex; align-items:center; justify-content:center; text-align:center; padding:10px 14px; border-radius:999px; border:1px solid var(--sbb-red); background:var(--sbb-red); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); min-height:40px; line-height:1.25; font-size:14px}
+
+    main{max-width:var(--maxw); margin:0 auto; padding:0 12px 24px}
+    section{margin:32px 0; background:var(--g3); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px;}
+    h2{margin:8px 0 14px; font-size:clamp(18px, 3.2vw, 24px); color:var(--sbb-red)}
+
+    .card{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 3px 10px rgba(0,0,0,0.08); margin-bottom:14px}
+    .icon-300{width:220px; height:220px; object-fit:contain; background:#fff; border:none; border-radius:12px}
+
+    .risk-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:14px}
+    .risk-item{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    .risk-item h4{margin:0 0 10px; font-size:16px; line-height:1.4;}
+    .risk-item h4 br{display:none;}
+    .risk-img{display:flex; align-items:center; justify-content:flex-start}
+
+    @media (max-width:1024px){
+      .risk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width:640px){
+      .risk-grid{grid-template-columns:1fr}
+      .icon-300{width:200px; height:200px}
+    }
+  </style>
+</head>
+<body>
+<nav aria-label="Spis treści" class="toc">
+<div>
+<h1>Bezpieczna praca – plan krok po kroku</h1>
+<ol>
+<li><a href="#stap1"><span class="step">Stap 1.</span> <span class="title">Przygotuj się</span></a></li>
+<li><a href="#stap2"><span class="step">Stap 2.</span> <span class="title">Tuż przed startem</span></a></li>
+<li><a href="#stap3"><span class="step">Stap 3.</span> <span class="title">W trakcie pracy</span></a></li>
+<li><a href="#stap4"><span class="step">Stap 4.</span> <span class="title">Zakończenie pracy</span></a></li>
+</ol>
+</div>
+</nav>
+<main>
+<section id="stap1">
+<h2>Krok 1. Przygotuj się do pracy.</h2>
+<div class="card">
+<p style="font-size:18px; font-weight:500; margin-bottom:10px">Upewnij się, że twoje narzędzia i środki ochrony są skontrolowane.</p>
+<a class="btn" href="https://sbb-binnenafbouw.github.io/safety/articles/gereedschapskeuringen/?lang=pl" role="button">Obejrzyj film o kontroli</a>
+</div>
+<div class="card">
+<p style="font-size:18px; font-weight:500;">Na budowie zawsze noś kask, buty ochronne i dobrze widoczną odzież.</p>
+<figure style="margin:12px 0 0">
+<img alt="Niezbędne ŚOI: kask, buty ochronne i odzież o wysokiej widoczności" class="icon-300" src="essentials.png"/>
+</figure>
+</div>
+<h3 style="margin:18px 0 10px; color:var(--text)">Ryzyko → Ochrona</h3>
+<div aria-label="Ryzyka i ochrona" class="risk-grid">
+<div class="risk-item">
+<h4>Unoszący się pył / drobne cząstki<br/>(np. wiercenie lub cięcie)</h4>
+<div class="risk-img"><img alt="Ochrona dróg oddechowych" class="icon-300" src="adembescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Głośny hałas</h4>
+<div class="risk-img"><img alt="Ochrona słuchu" class="icon-300" src="gehoorbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Surowe materiały / cięcie</h4>
+<div class="risk-img"><img alt="Ochrona rąk" class="icon-300" src="handschoenen.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Wibracje (np. podczas wiercenia)</h4>
+<div class="risk-img"><img alt="Rękawice antywibracyjne" class="icon-300" src="trilhandschoeneng.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Praca na wysokości</h4>
+<div class="risk-img"><img alt="Ochrona przed upadkiem" class="icon-300" src="valbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Elektryczność</h4>
+<div class="risk-img"><img alt="Rękawice elektroizolacyjne" class="icon-300" src="elekhandschoenen.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Ciemne miejsca</h4>
+<div class="risk-img"><img alt="Latarka czołowa" class="icon-300" src="hoofdlamp.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Zagrożenie dla oczu (np. szlifowanie)</h4>
+<div class="risk-img"><img alt="Ochrona oczu" class="icon-300" src="oogbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Warunki pogodowe</h4>
+<div class="risk-img"><img alt="Ochrona przed pogodą" class="icon-300" src="weerbescherming.png"/></div>
+</div>
+</div>
+</section>
+<section id="stap2">
+<h2>Krok 2. Tuż przed rozpoczęciem pracy</h2>
+<div class="card"><div class="body">
+<p>Wykonaj ocenę ryzyka w ostatniej chwili (LMRA).</p>
+<p><a class="btn" href="https://sbb-binnenafbouw.github.io/LMRA/?lang=pl" role="button">Otwórz LMRA</a></p>
+<p>Jeśli jakaś odpowiedź brzmi „nie”, najpierw to załatw. Dopiero potem rozpocznij pracę.</p>
+</div></div>
+</section>
+<section id="stap3">
+<h2>Krok 3. W trakcie pracy</h2>
+<div class="card"><div class="body">
+<ul>
+<li>Stale myśl o bezpieczeństwie</li>
+<li>Rozpoznawaj zagrożenia i szukaj bezpieczniejszych rozwiązań</li>
+<li>Sprzątaj pomiędzy zadaniami</li>
+<li>Pomagaj innym pracować bezpiecznie</li>
+</ul>
+</div></div>
+</section>
+<section id="stap4">
+<h2>Krok 4. Po zakończeniu pracy</h2>
+<div class="card"><div class="body">
+<p><strong>Zanim pójdziesz do domu:</strong></p>
+<ul>
+<li>Posprzątaj <em>(Wskazówka: sprzątaj na bieżąco; później będzie mniej pracy.)</em></li>
+<li>Sprawdź, czy twoje narzędzia są całe i kompletne</li>
+<li>Zastanów się nad dniem: co poszło dobrze, a co można poprawić? Zarówno w pracy, jak i w bezpieczeństwie</li>
+</ul>
+</div></div>
+</section>
+</main>
+</body>
+</html>

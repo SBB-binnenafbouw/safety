@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="Plán krok za krokom: bezpečný začiatok, práca a ukončenie na stavenisku." name="description"/>
+<link href="nl/binnenafbouw.png" rel="icon"/>
+<title>Bezpečná práca – plán krok za krokom</title>
+<style>
+    :root{
+      --sbb-red:#7C1829; --text:#212121; --bg:#FFFFFF;
+      --g1:#A9A9A9; --g2:#E0E0E0; --g3:#ECECEC;
+      --radius:14px; --shadow:0 6px 18px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Helvetica, Arial, sans-serif; line-height:1.4; font-size:16px;}
+    a{color:var(--sbb-red); text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+
+    nav.toc{max-width:var(--maxw); margin:16px auto; padding:12px; background:#fff; border:1px solid var(--g2); border-radius:var(--radius); display:grid; grid-template-columns:1fr; gap:12px; box-shadow:var(--shadow)}
+    nav.toc h1{margin:0; font-size:clamp(20px, 3.6vw, 28px);}
+    nav.toc ol{margin:0; padding-left:0; list-style:none}
+    nav.toc li{margin-bottom:6px}
+    nav.toc li a span.step{color:var(--text); font-weight:600;}
+
+    .btn{display:inline-flex; align-items:center; justify-content:center; text-align:center; padding:10px 14px; border-radius:999px; border:1px solid var(--sbb-red); background:var(--sbb-red); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); min-height:40px; line-height:1.25; font-size:14px}
+
+    main{max-width:var(--maxw); margin:0 auto; padding:0 12px 24px}
+    section{margin:32px 0; background:var(--g3); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px;}
+    h2{margin:8px 0 14px; font-size:clamp(18px, 3.2vw, 24px); color:var(--sbb-red)}
+
+    .card{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 3px 10px rgba(0,0,0,0.08); margin-bottom:14px}
+    .icon-300{width:220px; height:220px; object-fit:contain; background:#fff; border:none; border-radius:12px}
+
+    .risk-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:14px}
+    .risk-item{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    .risk-item h4{margin:0 0 10px; font-size:16px; line-height:1.4;}
+    .risk-item h4 br{display:none;}
+    .risk-img{display:flex; align-items:center; justify-content:flex-start}
+
+    @media (max-width:1024px){
+      .risk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width:640px){
+      .risk-grid{grid-template-columns:1fr}
+      .icon-300{width:200px; height:200px}
+    }
+  </style>
+</head>
+<body>
+<nav aria-label="Obsah" class="toc">
+<div>
+<h1>Bezpečná práca – plán krok za krokom</h1>
+<ol>
+<li><a href="#stap1"><span class="step">Stap 1.</span> <span class="title">Priprav sa</span></a></li>
+<li><a href="#stap2"><span class="step">Stap 2.</span> <span class="title">Tesne pred štartom</span></a></li>
+<li><a href="#stap3"><span class="step">Stap 3.</span> <span class="title">Počas práce</span></a></li>
+<li><a href="#stap4"><span class="step">Stap 4.</span> <span class="title">Ukončenie práce</span></a></li>
+</ol>
+</div>
+</nav>
+<main>
+<section id="stap1">
+<h2>Krok 1. Priprav sa na prácu.</h2>
+<div class="card">
+<p style="font-size:18px; font-weight:500; margin-bottom:10px">Uisti sa, že tvoje náradie a OOP sú skontrolované.</p>
+<a class="btn" href="https://sbb-binnenafbouw.github.io/safety/articles/gereedschapskeuringen/?lang=sk" role="button">Pozri si video o kontrole</a>
+</div>
+<div class="card">
+<p style="font-size:18px; font-weight:500;">Na stavenisku vždy nos prilbu, bezpečnostnú obuv a dobre viditeľné oblečenie.</p>
+<figure style="margin:12px 0 0">
+<img alt="Základné OOPP: prilba, bezpečnostná obuv a oblečenie s vysokou viditeľnosťou" class="icon-300" src="essentials.png"/>
+</figure>
+</div>
+<h3 style="margin:18px 0 10px; color:var(--text)">Riziko → Ochrana</h3>
+<div aria-label="Riziká a ochrana" class="risk-grid">
+<div class="risk-item">
+<h4>Vo vzduchu prach / malé častice<br/>(napr. vŕtanie alebo rezanie)</h4>
+<div class="risk-img"><img alt="Ochrana dýchacích ciest" class="icon-300" src="adembescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Hlasný hluk</h4>
+<div class="risk-img"><img alt="Sluchová ochrana" class="icon-300" src="gehoorbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Drsné materiály / rezanie</h4>
+<div class="risk-img"><img alt="Ochrana rúk" class="icon-300" src="handschoenen.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Vibrácie (napríklad pri vŕtaní)</h4>
+<div class="risk-img"><img alt="Proti‑vibračné rukavice" class="icon-300" src="trilhandschoeneng.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Práca vo výške</h4>
+<div class="risk-img"><img alt="Ochrana pred pádom" class="icon-300" src="valbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Elektrina</h4>
+<div class="risk-img"><img alt="Elektrické ochranné rukavice" class="icon-300" src="elekhandschoenen.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Tmavé priestory</h4>
+<div class="risk-img"><img alt="Čelovka" class="icon-300" src="hoofdlamp.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Nebezpečenstvo pre oči (napr. brúsenie)</h4>
+<div class="risk-img"><img alt="Ochrana očí" class="icon-300" src="oogbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Poveternostné podmienky</h4>
+<div class="risk-img"><img alt="Ochrana pred počasím" class="icon-300" src="weerbescherming.png"/></div>
+</div>
+</div>
+</section>
+<section id="stap2">
+<h2>Krok 2. Tesne pred začiatkom práce</h2>
+<div class="card"><div class="body">
+<p>Vykonaj analýzu rizík na poslednú chvíľu (LMRA).</p>
+<p><a class="btn" href="https://sbb-binnenafbouw.github.io/LMRA/?lang=sk" role="button">Otvoriť LMRA</a></p>
+<p>Ak je niektorá odpoveď „nie“, najprv to vyrieš. Až potom začni pracovať.</p>
+</div></div>
+</section>
+<section id="stap3">
+<h2>Krok 3. Počas práce</h2>
+<div class="card"><div class="body">
+<ul>
+<li>Neustále myslí na bezpečnosť</li>
+<li>Identifikuj nebezpečenstvá a hľadaj bezpečnejšie možnosti</li>
+<li>Upratuj medzi úlohami</li>
+<li>Pomáhaj ostatným pracovať bezpečne</li>
+</ul>
+</div></div>
+</section>
+<section id="stap4">
+<h2>Krok 4. Keď skončíš s prácou</h2>
+<div class="card"><div class="body">
+<p><strong>Skôr než pôjdeš domov:</strong></p>
+<ul>
+<li>Uprataj ešte raz <em>(Tip: upratuj priebežne; potom je menej práce.)</em></li>
+<li>Skontroluj, či je náradie nepoškodené a kompletné</li>
+<li>Zamysli sa nad dňom: čo išlo dobre a čo sa dá zlepšiť? V práci aj v bezpečnosti</li>
+</ul>
+</div></div>
+</section>
+</main>
+</body>
+</html>

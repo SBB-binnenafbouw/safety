@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="bg">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="План стъпка по стъпка: безопасно започване, работа и завършване на строежа." name="description"/>
+<link href="nl/binnenafbouw.png" rel="icon"/>
+<title>Безопасна работа – план стъпка по стъпка</title>
+<style>
+    :root{
+      --sbb-red:#7C1829; --text:#212121; --bg:#FFFFFF;
+      --g1:#A9A9A9; --g2:#E0E0E0; --g3:#ECECEC;
+      --radius:14px; --shadow:0 6px 18px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Helvetica, Arial, sans-serif; line-height:1.4; font-size:16px;}
+    a{color:var(--sbb-red); text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+
+    nav.toc{max-width:var(--maxw); margin:16px auto; padding:12px; background:#fff; border:1px solid var(--g2); border-radius:var(--radius); display:grid; grid-template-columns:1fr; gap:12px; box-shadow:var(--shadow)}
+    nav.toc h1{margin:0; font-size:clamp(20px, 3.6vw, 28px);}
+    nav.toc ol{margin:0; padding-left:0; list-style:none}
+    nav.toc li{margin-bottom:6px}
+    nav.toc li a span.step{color:var(--text); font-weight:600;}
+
+    .btn{display:inline-flex; align-items:center; justify-content:center; text-align:center; padding:10px 14px; border-radius:999px; border:1px solid var(--sbb-red); background:var(--sbb-red); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); min-height:40px; line-height:1.25; font-size:14px}
+
+    main{max-width:var(--maxw); margin:0 auto; padding:0 12px 24px}
+    section{margin:32px 0; background:var(--g3); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px;}
+    h2{margin:8px 0 14px; font-size:clamp(18px, 3.2vw, 24px); color:var(--sbb-red)}
+
+    .card{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 3px 10px rgba(0,0,0,0.08); margin-bottom:14px}
+    .icon-300{width:220px; height:220px; object-fit:contain; background:#fff; border:none; border-radius:12px}
+
+    .risk-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:14px}
+    .risk-item{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    .risk-item h4{margin:0 0 10px; font-size:16px; line-height:1.4;}
+    .risk-item h4 br{display:none;}
+    .risk-img{display:flex; align-items:center; justify-content:flex-start}
+
+    @media (max-width:1024px){
+      .risk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width:640px){
+      .risk-grid{grid-template-columns:1fr}
+      .icon-300{width:200px; height:200px}
+    }
+  </style>
+</head>
+<body>
+<nav aria-label="Съдържание" class="toc">
+<div>
+<h1>Безопасна работа – план стъпка по стъпка</h1>
+<ol>
+<li><a href="#stap1"><span class="step">Stap 1.</span> <span class="title">Подготви се</span></a></li>
+<li><a href="#stap2"><span class="step">Stap 2.</span> <span class="title">Преди започване</span></a></li>
+<li><a href="#stap3"><span class="step">Stap 3.</span> <span class="title">По време на работа</span></a></li>
+<li><a href="#stap4"><span class="step">Stap 4.</span> <span class="title">Приключване на работа</span></a></li>
+</ol>
+</div>
+</nav>
+<main>
+<section id="stap1">
+<h2>Стъпка 1. Подготви се за работа.</h2>
+<div class="card">
+<p style="font-size:18px; font-weight:500; margin-bottom:10px">Увери се, че инструментите и личните предпазни средства са проверени.</p>
+<a class="btn" href="https://sbb-binnenafbouw.github.io/safety/articles/gereedschapskeuringen/?lang=bg" role="button">Гледай видео за проверките</a>
+</div>
+<div class="card">
+<p style="font-size:18px; font-weight:500;">На строежа винаги носи каска, предпазни обувки и ярко облекло.</p>
+<figure style="margin:12px 0 0">
+<img alt="Основни ЛПС: каска, предпазни обувки и облекло с висока видимост" class="icon-300" src="essentials.png"/>
+</figure>
+</div>
+<h3 style="margin:18px 0 10px; color:var(--text)">Риск → Защита</h3>
+<div aria-label="Рискове и защита" class="risk-grid">
+<div class="risk-item">
+<h4>Висящ прах / дребни частици<br/>(напр. пробиване или рязане)</h4>
+<div class="risk-img"><img alt="Дихателна защита" class="icon-300" src="adembescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Силен шум</h4>
+<div class="risk-img"><img alt="Защита на слуха" class="icon-300" src="gehoorbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Груби материали / рязане</h4>
+<div class="risk-img"><img alt="Защита на ръцете" class="icon-300" src="handschoenen.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Вибрации (например при пробиване)</h4>
+<div class="risk-img"><img alt="Антивибрационни ръкавици" class="icon-300" src="trilhandschoeneng.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Работа на височина</h4>
+<div class="risk-img"><img alt="Защита от падане" class="icon-300" src="valbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Електричество</h4>
+<div class="risk-img"><img alt="Електроизолационни ръкавици" class="icon-300" src="elekhandschoenen.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Тъмни места</h4>
+<div class="risk-img"><img alt="Челник" class="icon-300" src="hoofdlamp.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Опасност за очите (напр. шлайфане)</h4>
+<div class="risk-img"><img alt="Защита на очите" class="icon-300" src="oogbescherming.png"/></div>
+</div>
+<div class="risk-item">
+<h4>Метеорологични условия</h4>
+<div class="risk-img"><img alt="Защита от атмосферни влияния" class="icon-300" src="weerbescherming.png"/></div>
+</div>
+</div>
+</section>
+<section id="stap2">
+<h2>Стъпка 2. Точно преди да започнеш работа</h2>
+<div class="card"><div class="body">
+<p>Извърши анализ на риска в последния момент (LMRA).</p>
+<p><a class="btn" href="https://sbb-binnenafbouw.github.io/LMRA/?lang=bg" role="button">Отвори LMRA</a></p>
+<p>Ако някой отговор е „не“, първо го отстрани. Едва след това започвай работа.</p>
+</div></div>
+</section>
+<section id="stap3">
+<h2>Стъпка 3. По време на работа</h2>
+<div class="card"><div class="body">
+<ul>
+<li>Постоянно мисли за безопасността</li>
+<li>Разпознавай опасностите и търси по‑безопасни варианти</li>
+<li>Почиствай между задачите</li>
+<li>Помагай на другите да работят безопасно</li>
+</ul>
+</div></div>
+</section>
+<section id="stap4">
+<h2>Стъпка 4. Когато приключиш работа</h2>
+<div class="card"><div class="body">
+<p><strong>Преди да си тръгнеш:</strong></p>
+<ul>
+<li>Почисти още малко <em>(Съвет: почиствай междувременно; после има по‑малко работа.)</em></li>
+<li>Провери дали инструментите са здрави и комплектни</li>
+<li>Помисли за деня: какво беше добре и какво може да се подобри? Както в работата, така и в безопасността</li>
+</ul>
+</div></div>
+</section>
+</main>
+</body>
+</html>

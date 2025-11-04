@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Stappenplan: veilig starten, werken en afsluiten op de bouw." />
+  <link rel="icon" href="nl/binnenafbouw.png" />
+  <title>Veilig werken – Stappenplan</title>
+  <style>
+    :root{
+      --sbb-red:#7C1829; --text:#212121; --bg:#FFFFFF;
+      --g1:#A9A9A9; --g2:#E0E0E0; --g3:#ECECEC;
+      --radius:14px; --shadow:0 6px 18px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%}
+    body{margin:0; background:var(--bg); color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", Helvetica, Arial, sans-serif; line-height:1.4; font-size:16px;}
+    a{color:var(--sbb-red); text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+
+    nav.toc{max-width:var(--maxw); margin:16px auto; padding:12px; background:#fff; border:1px solid var(--g2); border-radius:var(--radius); display:grid; grid-template-columns:1fr; gap:12px; box-shadow:var(--shadow)}
+    nav.toc h1{margin:0; font-size:clamp(20px, 3.6vw, 28px);}
+    nav.toc ol{margin:0; padding-left:0; list-style:none}
+    nav.toc li{margin-bottom:6px}
+    nav.toc li a span.step{color:var(--text); font-weight:600;}
+
+    .btn{display:inline-flex; align-items:center; justify-content:center; text-align:center; padding:10px 14px; border-radius:999px; border:1px solid var(--sbb-red); background:var(--sbb-red); color:#fff; font-weight:700; text-decoration:none; box-shadow:var(--shadow); min-height:40px; line-height:1.25; font-size:14px}
+
+    main{max-width:var(--maxw); margin:0 auto; padding:0 12px 24px}
+    section{margin:32px 0; background:var(--g3); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px;}
+    h2{margin:8px 0 14px; font-size:clamp(18px, 3.2vw, 24px); color:var(--sbb-red)}
+
+    .card{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 3px 10px rgba(0,0,0,0.08); margin-bottom:14px}
+    .icon-300{width:220px; height:220px; object-fit:contain; background:#fff; border:none; border-radius:12px}
+
+    .risk-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:14px}
+    .risk-item{background:#fff; border:1px solid var(--g2); border-radius:var(--radius); padding:18px; box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+    .risk-item h4{margin:0 0 10px; font-size:16px; line-height:1.4;}
+    .risk-item h4 br{display:none;}
+    .risk-img{display:flex; align-items:center; justify-content:flex-start}
+
+    @media (max-width:1024px){
+      .risk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width:640px){
+      .risk-grid{grid-template-columns:1fr}
+      .icon-300{width:200px; height:200px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="toc" aria-label="Inhoud">
+    <div>
+      <h1>Veilig werken – Stappenplan</h1>
+      <ol>
+        <li><a href="#stap1"><span class="step">Stap 1.</span> <span class="title">Bereid je voor</span></a></li>
+        <li><a href="#stap2"><span class="step">Stap 2.</span> <span class="title">Net voor je start</span></a></li>
+        <li><a href="#stap3"><span class="step">Stap 3.</span> <span class="title">Tijdens het werk</span></a></li>
+        <li><a href="#stap4"><span class="step">Stap 4.</span> <span class="title">Klaar met werken</span></a></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <section id="stap1">
+      <h2>Stap 1. Bereid je voor op je werk.</h2>
+      <div class="card">
+        <p style="font-size:18px; font-weight:500; margin-bottom:10px">Zorg dat jouw gereedschap en beschermingsmiddelen gekeurd zijn.</p>
+        <a class="btn" href="https://sbb-binnenafbouw.github.io/safety/articles/gereedschapskeuringen/?lang=nl" role="button">Bekijk video over keuren</a>
+      </div>
+
+      <div class="card">
+        <p style="font-size:18px; font-weight:500;">Draag op de bouw altijd een helm, veiligheidsschoenen en opvallende kleding.</p>
+        <figure style="margin:12px 0 0">
+          <img src="essentials.png" alt="Essentiële PBM: helm, veiligheidsschoenen en opvallende kleding" class="icon-300" />
+        </figure>
+      </div>
+
+      <h3 style="margin:18px 0 10px; color:var(--text)">Risico → bescherming</h3>
+      <div class="risk-grid" aria-label="Risico's en bescherming">
+        <div class="risk-item">
+          <h4>Vrijkomend stof / kleine deeltjes<br>(bijv. boren of zagen)</h4>
+          <div class="risk-img"><img src="adembescherming.png" alt="Adembescherming" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Hard lawaai</h4>
+          <div class="risk-img"><img src="gehoorbescherming.png" alt="Gehoorbescherming" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Ruwe materialen / zagen</h4>
+          <div class="risk-img"><img src="handschoenen.png" alt="Handbescherming" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Trillingen (bijvoorbeeld bij boren)</h4>
+          <div class="risk-img"><img src="trilhandschoeneng.png" alt="Tril-handschoenen" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Werken op hoogte</h4>
+          <div class="risk-img"><img src="valbescherming.png" alt="Valbescherming" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Elektriciteit</h4>
+          <div class="risk-img"><img src="elekhandschoenen.png" alt="Elektrische handschoenen" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Donkere ruimtes</h4>
+          <div class="risk-img"><img src="hoofdlamp.png" alt="Hoofdlamp" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Gevaar voor ogen (bijv. slijpen)</h4>
+          <div class="risk-img"><img src="oogbescherming.png" alt="Oogbescherming" class="icon-300" /></div>
+        </div>
+        <div class="risk-item">
+          <h4>Weersomstandigheden</h4>
+          <div class="risk-img"><img src="weerbescherming.png" alt="Bescherming tegen weer" class="icon-300" /></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stap2">
+      <h2>Stap 2. Net voordat je start met werken</h2>
+      <div class="card"><div class="body">
+        <p>Voer nog even een Last-Minute Risico Analyse uit.</p>
+        <p><a class="btn" href="https://sbb-binnenafbouw.github.io/LMRA/?lang=nl" role="button">Open de LMRA</a></p>
+        <p>Als één van de antwoorden “nee” is, regel dat eerst. Dan pas begin je met werken.</p>
+      </div></div>
+    </section>
+
+    <section id="stap3">
+      <h2>Stap 3. Tijdens het werk</h2>
+      <div class="card"><div class="body">
+        <ul>
+          <li>Blijf nadenken over veiligheid</li>
+          <li>Herken gevaren en bedenk wat veiliger kan</li>
+          <li>Ruim op tussen werkzaamheden door</li>
+          <li>Help anderen om veilig te werk te gaan</li>
+        </ul>
+      </div></div>
+    </section>
+
+    <section id="stap4">
+      <h2>Stap 4. Als je klaar bent met werken</h2>
+      <div class="card"><div class="body">
+        <p><strong>Voordat je naar huis gaat:</strong></p>
+        <ul>
+          <li>Ruim nog even op <em>(Tip: ruim tussendoor op, dan is het achteraf minder werk.)</em></li>
+          <li>Controleer of je gereedschap heel en compleet is</li>
+          <li>Denk na over vandaag: wat ging goed, en wat kan beter? Zowel qua werk als veiligheid</li>
+        </ul>
+      </div></div>
+    </section>
+  </main>
+</body>
+</html>

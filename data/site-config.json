@@ -3,7 +3,7 @@
     "homepageUrl": "./",
     "newsletterUrl": "https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60",
     "lmraUrl": "https://sbb-binnenafbouw.github.io/LMRA/",
-    "highlightedArticleSlug": "veilig-boren"
+    "highlightedArticleSlug": "bewust-werken"
   },
   "languages": [
     {
@@ -250,24 +250,24 @@
       "ua": "Оберіть мову"
     },
     "articleBack": {
-      "nl": "\u2190 Terug naar overzicht",
-      "en": "\u2190 Back to overview",
-      "de": "\u2190 Zur\u00fcck zur \u00dcbersicht",
-      "pl": "\u2190 Powr\u00f3t do przegl\u0105du",
-      "ro": "\u2190 \u00cenapoi la prezentarea general\u0103",
-      "bg": "\u2190 \u041d\u0430\u0437\u0430\u0434 \u043a\u044a\u043c \u043f\u0440\u0435\u0433\u043b\u0435\u0434\u0430",
-      "sk": "\u2190 Sp\u00e4\u0165 na preh\u013ead",
-      "ua": "\u2190 \u041d\u0430\u0437\u0430\u0434 \u0434\u043e \u043e\u0433\u043b\u044f\u0434\u0443"
+      "nl": "← Terug naar overzicht",
+      "en": "← Back to overview",
+      "de": "← Zurück zur Übersicht",
+      "pl": "← Powrót do przeglądu",
+      "ro": "← Înapoi la prezentarea generală",
+      "bg": "← Назад към прегледа",
+      "sk": "← Späť na prehľad",
+      "ua": "← Назад до огляду"
     },
     "relevantLabel": {
       "nl": "Relevant voor:",
       "en": "Relevant for:",
-      "de": "Relevant f\u00fcr:",
+      "de": "Relevant für:",
       "pl": "Istotne dla:",
       "ro": "Relevant pentru:",
-      "bg": "\u041f\u043e\u0434\u0445\u043e\u0434\u044f\u0449\u043e \u0437\u0430:",
-      "sk": "Relevantn\u00e9 pre:",
-      "ua": "\u0410\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u043e \u0434\u043b\u044f:"
+      "bg": "Подходящо за:",
+      "sk": "Relevantné pre:",
+      "ua": "Актуально для:"
     }
   }
 }
