@@ -3,7 +3,10 @@
   "published": "2025-03-01",
   "roles": [
     "timmerman",
-    "afwerker"
+    "plafonneur",
+    "monteur",
+    "afwerker",
+    "smeerder"
   ],
   "tags": [
     "video"
@@ -68,3 +71,4 @@
   }
 
 }
+
