@@ -34,27 +34,24 @@ const multipleChoiceOptions = {
 };
 
 const questionLabels = {
-  situatievraag: { number: 1, categoryTitleKey: "questions.titles.q1", questionKey: "questions.titles.q1" },
-  match_trillingen: { number: 2, categoryTitleKey: "questions.titles.q2", questionKey: "questions.match.risks.trillingen" },
-  match_stof: { number: 2, categoryTitleKey: "questions.titles.q2", questionKey: "questions.match.risks.stof" },
-  match_elektriciteit: { number: 2, categoryTitleKey: "questions.titles.q2", questionKey: "questions.match.risks.elektriciteit" },
-  match_hoogte: { number: 2, categoryTitleKey: "questions.titles.q2", questionKey: "questions.match.risks.hoogte" },
-  match_lawaai: { number: 2, categoryTitleKey: "questions.titles.q2", questionKey: "questions.match.risks.lawaai" },
-  toepassingsvraag: { number: 3, categoryTitleKey: "questions.titles.q3", questionKey: "questions.titles.q3" },
-  redeneervraag: { number: 4, categoryTitleKey: "questions.titles.q4", questionKey: "questions.titles.q4" },
-  herkenning: { number: 5, categoryTitleKey: "questions.titles.q5", questionKey: "questions.titles.q5" },
-  inzichtvraag: { number: 6, categoryTitleKey: "questions.titles.q6", questionKey: "questions.titles.q6" },
+  match_trillingen: { number: 1, categoryTitleKey: "questions.titles.q1", questionKey: "questions.match.risks.trillingen" },
+  match_stof: { number: 1, categoryTitleKey: "questions.titles.q1", questionKey: "questions.match.risks.stof" },
+  match_elektriciteit: { number: 1, categoryTitleKey: "questions.titles.q1", questionKey: "questions.match.risks.elektriciteit" },
+  match_hoogte: { number: 1, categoryTitleKey: "questions.titles.q1", questionKey: "questions.match.risks.hoogte" },
+  match_lawaai: { number: 1, categoryTitleKey: "questions.titles.q1", questionKey: "questions.match.risks.lawaai" },
+  toepassingsvraag: { number: 2, categoryTitleKey: "questions.titles.q2", questionKey: "questions.titles.q2" },
+  redeneervraag: { number: 3, categoryTitleKey: "questions.titles.q3", questionKey: "questions.titles.q3" },
+  herkenning: { number: 4, categoryTitleKey: "questions.titles.q4", questionKey: "questions.titles.q4" },
+  inzichtvraag: { number: 5, categoryTitleKey: "questions.titles.q5", questionKey: "questions.titles.q5" },
+  situatievraag: { number: 6, categoryTitleKey: "questions.titles.q6", questionKey: "questions.titles.q6" },
   praktijkvraag: { number: 7, categoryTitleKey: "questions.titles.q7", questionKey: "questions.titles.q7" },
-  koppeling: { number: 8, categoryTitleKey: "questions.titles.q8", questionKey: "questions.titles.q8" },
-  reflectie: { number: 9, categoryTitleKey: "questions.titles.q9", questionKey: "questions.titles.q9" },
-  denkvraag: { number: 10, categoryTitleKey: "questions.titles.q10", questionKey: "questions.titles.q10" }
+  reflectie: { number: 8, categoryTitleKey: "questions.titles.q8", questionKey: "questions.titles.q8" }
 };
 
 const questionGroups = [
-  { number: 1, titleKey: "questions.titles.q1", keys: ["situatievraag"] },
   {
-    number: 2,
-    titleKey: "questions.titles.q2",
+    number: 1,
+    titleKey: "questions.titles.q1",
     keys: [
       "match_trillingen",
       "match_stof",
@@ -63,14 +60,13 @@ const questionGroups = [
       "match_lawaai"
     ]
   },
-  { number: 3, titleKey: "questions.titles.q3", keys: ["toepassingsvraag"] },
-  { number: 4, titleKey: "questions.titles.q4", keys: ["redeneervraag"] },
-  { number: 5, titleKey: "questions.titles.q5", keys: ["herkenning"] },
-  { number: 6, titleKey: "questions.titles.q6", keys: ["inzichtvraag"] },
+  { number: 2, titleKey: "questions.titles.q2", keys: ["toepassingsvraag"] },
+  { number: 3, titleKey: "questions.titles.q3", keys: ["redeneervraag"] },
+  { number: 4, titleKey: "questions.titles.q4", keys: ["herkenning"] },
+  { number: 5, titleKey: "questions.titles.q5", keys: ["inzichtvraag"] },
+  { number: 6, titleKey: "questions.titles.q6", keys: ["situatievraag"] },
   { number: 7, titleKey: "questions.titles.q7", keys: ["praktijkvraag"] },
-  { number: 8, titleKey: "questions.titles.q8", keys: ["koppeling"] },
-  { number: 9, titleKey: "questions.titles.q9", keys: ["reflectie"] },
-  { number: 10, titleKey: "questions.titles.q10", keys: ["denkvraag"] }
+  { number: 8, titleKey: "questions.titles.q8", keys: ["reflectie"] }
 ];
 
 const translateKey = (key) => {
@@ -96,7 +92,6 @@ if (form) {
     const getChoice = (key) => getText(plainData[key]);
 
     const responses = {
-      situatievraag: getText(plainData.situatievraag),
       match_trillingen: getChoice("match_trillingen"),
       match_stof: getChoice("match_stof"),
       match_elektriciteit: getChoice("match_elektriciteit"),
@@ -106,10 +101,9 @@ if (form) {
       redeneervraag: getText(plainData.redeneervraag),
       herkenning: getChoice("herkenning"),
       inzichtvraag: getChoice("inzichtvraag"),
+      situatievraag: getText(plainData.situatievraag),
       praktijkvraag: getChoice("praktijkvraag"),
-      koppeling: getText(plainData.koppeling),
-      reflectie: getText(plainData.reflectie),
-      denkvraag: getText(plainData.denkvraag)
+      reflectie: getText(plainData.reflectie)
     };
 
     const incompleteGroups = questionGroups.filter((group) =>
@@ -203,9 +197,7 @@ if (form) {
       responses.praktijkvraag,
       (val) => translateKey(multipleChoiceOptions.praktijkvraag[val]) || ""
     );
-    addRow("koppeling", responses.koppeling);
     addRow("reflectie", responses.reflectie);
-    addRow("denkvraag", responses.denkvraag);
 
     const payload = {
       savedAt: timestamp,
