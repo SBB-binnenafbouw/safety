@@ -122,9 +122,9 @@ export const FALLBACK_DATA = {
           "de": "Mit Zusammenfassung",
           "pl": "Z podsumowaniem",
           "ro": "Cu rezumat",
-          "bg": "ѭ ��������%��ѫ����",
-          "sk": "So zhrnut��m",
-          "ua": "�- Ѩ�-��?��Ѭѧ��Ѭ"
+          "bg": "ѭ         %  ѫ    ",
+          "sk": "So zhrnut  m",
+          "ua": " - Ѩ -  ?  Ѭѧ  Ѭ"
         }
       },
       {
@@ -132,12 +132,12 @@ export const FALLBACK_DATA = {
         "translations": {
           "nl": "Met extra info",
           "en": "With extra info",
-          "de": "Mit zus��tzlichen Infos",
+          "de": "Mit zus  tzlichen Infos",
           "pl": "Z dodatkowymi informacjami",
-          "ro": "Cu informa�>ii suplimentare",
-          "bg": "ѭ ����Ѩ�Sѯѫ���'��ѯѫ�� ��ѫ�\"��?Ѭ�������?",
-          "sk": "S dopl�^ujǧcimi informǭciami",
-          "ua": "�- ���������'ѧ������Z �-ѫ�\"��?Ѭ���ť-�\"�Z"
+          "ro": "Cu informa >ii suplimentare",
+          "bg": "ѭ     Ѩ Sѯѫ   '  ѯѫ     ѫ \"  ?Ѭ       ?",
+          "sk": "S dopl ^ujǧcimi informǭciami",
+          "ua": " -          'ѧ      Z  -ѫ \"  ?Ѭ   ť- \" Z"
         }
       }
     ],
