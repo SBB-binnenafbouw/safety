@@ -47,19 +47,6 @@
             <h2 class="quiz-section__title" id="question-1-title" data-i18n="questions.titles.q1"></h2>
           </header>
           <p class="quiz-section__text" data-i18n="questions.bodies.q1"></p>
-          <textarea class="quiz-input quiz-input--textarea" id="situatievraag" name="situatievraag"></textarea>
-        </section>
-
-        <section class="quiz-section" aria-labelledby="question-2-title">
-          <header class="quiz-section__header">
-            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="2"></p>
-            <h2 class="quiz-section__title" id="question-2-title" data-i18n="questions.titles.q2"></h2>
-          </header>
-          <p class="quiz-section__text" data-i18n="questions.bodies.q2"></p>
-          <div class="quiz-fieldset">
-            <p class="quiz-label__title" data-i18n="questions.match.legendTitle"></p>
-            <p class="quiz-label__hint" data-i18n="questions.match.legendHint"></p>
-          </div>
           <div class="quiz-match" data-match-root>
             <div class="quiz-match__zones">
               <div class="quiz-dropzone" data-dropzone="match_trillingen">
@@ -212,12 +199,12 @@
           </div>
         </section>
 
-        <section class="quiz-section" aria-labelledby="question-3-title">
+        <section class="quiz-section" aria-labelledby="question-2-title">
           <header class="quiz-section__header">
-            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="3"></p>
-            <h2 class="quiz-section__title" id="question-3-title" data-i18n="questions.titles.q3"></h2>
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="2"></p>
+            <h2 class="quiz-section__title" id="question-2-title" data-i18n="questions.titles.q2"></h2>
           </header>
-          <p class="quiz-section__text" data-i18n="questions.bodies.q3"></p>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q2"></p>
           <div class="quiz-options">
             <label class="quiz-option">
               <input type="radio" name="toepassingsvraag" value="A" />
@@ -238,21 +225,21 @@
           </div>
         </section>
 
+        <section class="quiz-section" aria-labelledby="question-3-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="3"></p>
+            <h2 class="quiz-section__title" id="question-3-title" data-i18n="questions.titles.q3"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q3"></p>
+          <textarea class="quiz-input quiz-input--textarea" id="redeneervraag" name="redeneervraag"></textarea>
+        </section>
+
         <section class="quiz-section" aria-labelledby="question-4-title">
           <header class="quiz-section__header">
             <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="4"></p>
             <h2 class="quiz-section__title" id="question-4-title" data-i18n="questions.titles.q4"></h2>
           </header>
           <p class="quiz-section__text" data-i18n="questions.bodies.q4"></p>
-          <textarea class="quiz-input quiz-input--textarea" id="redeneervraag" name="redeneervraag"></textarea>
-        </section>
-
-        <section class="quiz-section" aria-labelledby="question-5-title">
-          <header class="quiz-section__header">
-            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="5"></p>
-            <h2 class="quiz-section__title" id="question-5-title" data-i18n="questions.titles.q5"></h2>
-          </header>
-          <p class="quiz-section__text" data-i18n="questions.bodies.q5"></p>
           <div class="quiz-options quiz-options--inline">
             <label class="quiz-option">
               <input type="radio" name="herkenning" value="juist" />
@@ -265,12 +252,12 @@
           </div>
         </section>
 
-        <section class="quiz-section" aria-labelledby="question-6-title">
+        <section class="quiz-section" aria-labelledby="question-5-title">
           <header class="quiz-section__header">
-            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="6"></p>
-            <h2 class="quiz-section__title" id="question-6-title" data-i18n="questions.titles.q6"></h2>
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="5"></p>
+            <h2 class="quiz-section__title" id="question-5-title" data-i18n="questions.titles.q5"></h2>
           </header>
-          <p class="quiz-section__text" data-i18n="questions.bodies.q6"></p>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q5"></p>
           <div class="quiz-options">
             <label class="quiz-option">
               <input type="radio" name="inzichtvraag" value="A" />
@@ -289,6 +276,15 @@
               <span data-i18n="questions.q6.options.d"></span>
             </label>
           </div>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-6-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="6"></p>
+            <h2 class="quiz-section__title" id="question-6-title" data-i18n="questions.titles.q6"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q6"></p>
+          <textarea class="quiz-input quiz-input--textarea" id="situatievraag" name="situatievraag"></textarea>
         </section>
 
         <section class="quiz-section" aria-labelledby="question-7-title">
@@ -323,25 +319,7 @@
             <h2 class="quiz-section__title" id="question-8-title" data-i18n="questions.titles.q8"></h2>
           </header>
           <p class="quiz-section__text" data-i18n="questions.bodies.q8"></p>
-          <textarea class="quiz-input quiz-input--textarea" id="koppeling" name="koppeling"></textarea>
-        </section>
-
-        <section class="quiz-section" aria-labelledby="question-9-title">
-          <header class="quiz-section__header">
-            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="9"></p>
-            <h2 class="quiz-section__title" id="question-9-title" data-i18n="questions.titles.q9"></h2>
-          </header>
-          <p class="quiz-section__text" data-i18n="questions.bodies.q9"></p>
           <textarea class="quiz-input quiz-input--textarea" id="reflectie" name="reflectie"></textarea>
-        </section>
-
-        <section class="quiz-section" aria-labelledby="question-10-title">
-          <header class="quiz-section__header">
-            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="10"></p>
-            <h2 class="quiz-section__title" id="question-10-title" data-i18n="questions.titles.q10"></h2>
-          </header>
-          <p class="quiz-section__text" data-i18n="questions.bodies.q10"></p>
-          <textarea class="quiz-input quiz-input--textarea" id="denkvraag" name="denkvraag"></textarea>
         </section>
 
         <div class="quiz-buttons">
