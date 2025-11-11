@@ -47,64 +47,59 @@
             <h2 class="quiz-section__title" id="question-1-title" data-i18n="questions.titles.q1"></h2>
           </header>
           <p class="quiz-section__text" data-i18n="questions.bodies.q1"></p>
-          <div class="quiz-match" data-match-root>
-            <div class="quiz-match__zones">
-              <div class="quiz-dropzone" data-dropzone="match_trillingen">
-                <div class="quiz-dropzone__header">
-                  <p class="quiz-dropzone__label" data-i18n="questions.match.risks.trillingen"></p>
-                  <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
-                </div>
-                <div class="quiz-dropzone__slot" data-drop-slot>
-                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
-                </div>
-                <input type="hidden" name="match_trillingen" data-drop-input />
-                <select class="quiz-match__select" data-match-select></select>
+        <div class="quiz-match quiz-match--desktop" data-match-root>
+          <div class="quiz-match__zones">
+            <div class="quiz-dropzone" data-dropzone="match_trillingen">
+              <div class="quiz-dropzone__header">
+                <p class="quiz-dropzone__label" data-i18n="questions.match.risks.trillingen"></p>
+                <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
               </div>
+              <div class="quiz-dropzone__slot" data-drop-slot>
+                <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
+              </div>
+              <input type="hidden" name="match_trillingen" data-drop-input />
+            </div>
               <div class="quiz-dropzone" data-dropzone="match_stof">
                 <div class="quiz-dropzone__header">
                   <p class="quiz-dropzone__label" data-i18n="questions.match.risks.stof"></p>
                   <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
                 </div>
-                <div class="quiz-dropzone__slot" data-drop-slot>
-                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
-                </div>
-                <input type="hidden" name="match_stof" data-drop-input />
-                <select class="quiz-match__select" data-match-select></select>
+              <div class="quiz-dropzone__slot" data-drop-slot>
+                <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
               </div>
+              <input type="hidden" name="match_stof" data-drop-input />
+            </div>
               <div class="quiz-dropzone" data-dropzone="match_elektriciteit">
                 <div class="quiz-dropzone__header">
                   <p class="quiz-dropzone__label" data-i18n="questions.match.risks.elektriciteit"></p>
                   <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
                 </div>
-                <div class="quiz-dropzone__slot" data-drop-slot>
-                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
-                </div>
-                <input type="hidden" name="match_elektriciteit" data-drop-input />
-                <select class="quiz-match__select" data-match-select></select>
+              <div class="quiz-dropzone__slot" data-drop-slot>
+                <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
               </div>
+              <input type="hidden" name="match_elektriciteit" data-drop-input />
+            </div>
               <div class="quiz-dropzone" data-dropzone="match_hoogte">
                 <div class="quiz-dropzone__header">
                   <p class="quiz-dropzone__label" data-i18n="questions.match.risks.hoogte"></p>
                   <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
                 </div>
-                <div class="quiz-dropzone__slot" data-drop-slot>
-                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
-                </div>
-                <input type="hidden" name="match_hoogte" data-drop-input />
-                <select class="quiz-match__select" data-match-select></select>
+              <div class="quiz-dropzone__slot" data-drop-slot>
+                <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
               </div>
+              <input type="hidden" name="match_hoogte" data-drop-input />
+            </div>
               <div class="quiz-dropzone" data-dropzone="match_lawaai">
                 <div class="quiz-dropzone__header">
                   <p class="quiz-dropzone__label" data-i18n="questions.match.risks.lawaai"></p>
                   <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
                 </div>
-                <div class="quiz-dropzone__slot" data-drop-slot>
-                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
-                </div>
-                <input type="hidden" name="match_lawaai" data-drop-input />
-                <select class="quiz-match__select" data-match-select></select>
+              <div class="quiz-dropzone__slot" data-drop-slot>
+                <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
               </div>
+              <input type="hidden" name="match_lawaai" data-drop-input />
             </div>
+          </div>
             <div class="quiz-match__pool" data-drop-pool>
               <p class="quiz-match__title" data-i18n="questions.match.poolTitle"></p>
               <p class="quiz-match__hint" data-i18n="questions.match.poolHint"></p>
@@ -199,10 +194,83 @@
                   />
                   <span class="sr-only" data-i18n="questions.match.ppe.oorbescherming"></span>
                 </div>
-              </div>
             </div>
           </div>
-        </section>
+        </div>
+
+        <div class="quiz-match__mobile" id="mobileMatchList" hidden>
+          <article class="quiz-mobile-card" data-mobile-ppe="valbescherming">
+            <img src="./valbescherming.png" alt="" />
+            <div class="quiz-mobile-card__body">
+              <label class="sr-only" data-i18n="questions.match.ppe.valbescherming"></label>
+              <select class="quiz-match__select" data-mobile-select>
+                <option value="" data-i18n="questions.match.selectPlaceholder"></option>
+                <option value="match_trillingen" data-i18n="questions.match.risks.trillingen"></option>
+                <option value="match_stof" data-i18n="questions.match.risks.stof"></option>
+                <option value="match_elektriciteit" data-i18n="questions.match.risks.elektriciteit"></option>
+                <option value="match_hoogte" data-i18n="questions.match.risks.hoogte"></option>
+                <option value="match_lawaai" data-i18n="questions.match.risks.lawaai"></option>
+              </select>
+            </div>
+          </article>
+          <article class="quiz-mobile-card" data-mobile-ppe="elekhandschoenen">
+            <img src="./elekhandschoenen.png" alt="" />
+            <div class="quiz-mobile-card__body">
+              <label class="sr-only" data-i18n="questions.match.ppe.elekhandschoenen"></label>
+              <select class="quiz-match__select" data-mobile-select>
+                <option value="" data-i18n="questions.match.selectPlaceholder"></option>
+                <option value="match_trillingen" data-i18n="questions.match.risks.trillingen"></option>
+                <option value="match_stof" data-i18n="questions.match.risks.stof"></option>
+                <option value="match_elektriciteit" data-i18n="questions.match.risks.elektriciteit"></option>
+                <option value="match_hoogte" data-i18n="questions.match.risks.hoogte"></option>
+                <option value="match_lawaai" data-i18n="questions.match.risks.lawaai"></option>
+              </select>
+            </div>
+          </article>
+          <article class="quiz-mobile-card" data-mobile-ppe="trilhandschoenen">
+            <img src="./trilhandschoeneng.png" alt="" />
+            <div class="quiz-mobile-card__body">
+              <label class="sr-only" data-i18n="questions.match.ppe.trilhandschoenen"></label>
+              <select class="quiz-match__select" data-mobile-select>
+                <option value="" data-i18n="questions.match.selectPlaceholder"></option>
+                <option value="match_trillingen" data-i18n="questions.match.risks.trillingen"></option>
+                <option value="match_stof" data-i18n="questions.match.risks.stof"></option>
+                <option value="match_elektriciteit" data-i18n="questions.match.risks.elektriciteit"></option>
+                <option value="match_hoogte" data-i18n="questions.match.risks.hoogte"></option>
+                <option value="match_lawaai" data-i18n="questions.match.risks.lawaai"></option>
+              </select>
+            </div>
+          </article>
+          <article class="quiz-mobile-card" data-mobile-ppe="adembescherming">
+            <img src="./adembescherming.png" alt="" />
+            <div class="quiz-mobile-card__body">
+              <label class="sr-only" data-i18n="questions.match.ppe.adembescherming"></label>
+              <select class="quiz-match__select" data-mobile-select>
+                <option value="" data-i18n="questions.match.selectPlaceholder"></option>
+                <option value="match_trillingen" data-i18n="questions.match.risks.trillingen"></option>
+                <option value="match_stof" data-i18n="questions.match.risks.stof"></option>
+                <option value="match_elektriciteit" data-i18n="questions.match.risks.elektriciteit"></option>
+                <option value="match_hoogte" data-i18n="questions.match.risks.hoogte"></option>
+                <option value="match_lawaai" data-i18n="questions.match.risks.lawaai"></option>
+              </select>
+            </div>
+          </article>
+          <article class="quiz-mobile-card" data-mobile-ppe="oorbescherming">
+            <img src="./gehoorbescherming.png" alt="" />
+            <div class="quiz-mobile-card__body">
+              <label class="sr-only" data-i18n="questions.match.ppe.oorbescherming"></label>
+              <select class="quiz-match__select" data-mobile-select>
+                <option value="" data-i18n="questions.match.selectPlaceholder"></option>
+                <option value="match_trillingen" data-i18n="questions.match.risks.trillingen"></option>
+                <option value="match_stof" data-i18n="questions.match.risks.stof"></option>
+                <option value="match_elektriciteit" data-i18n="questions.match.risks.elektriciteit"></option>
+                <option value="match_hoogte" data-i18n="questions.match.risks.hoogte"></option>
+                <option value="match_lawaai" data-i18n="questions.match.risks.lawaai"></option>
+              </select>
+            </div>
+          </article>
+        </div>
+      </section>
 
         <section class="quiz-section" aria-labelledby="question-2-title">
           <header class="quiz-section__header">

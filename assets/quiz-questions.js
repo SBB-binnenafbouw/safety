@@ -7,6 +7,7 @@ const matchingOptions = {
   adembescherming: "questions.match.ppe.adembescherming",
   oorbescherming: "questions.match.ppe.oorbescherming"
 };
+const PPE_VALUES = Object.keys(matchingOptions);
 
 const multipleChoiceOptions = {
   toepassingsvraag: {
@@ -114,7 +115,7 @@ if (form) {
       const warning = [
         "Je hebt nog niet alle vragen beantwoord:",
         "",
-        ...incompleteGroups.map((group) => `- ${group.label}`),
+        ...incompleteGroups.map((group) => `- ${buildGroupLabel(group)}`),
         "",
         "Wil je toch doorgaan?"
       ].join("\n");
@@ -147,8 +148,6 @@ if (form) {
         answer: cleanedAnswer || "-"
       });
     };
-
-    addRow("situatievraag", responses.situatievraag);
 
     addRow(
       "match_trillingen",
@@ -192,6 +191,7 @@ if (form) {
       responses.inzichtvraag,
       (val) => translateKey(multipleChoiceOptions.inzichtvraag[val]) || ""
     );
+    addRow("situatievraag", responses.situatievraag);
     addRow(
       "praktijkvraag",
       responses.praktijkvraag,
@@ -220,10 +220,13 @@ function setupMatchingQuestion() {
   const poolList = pool?.querySelector("[data-drop-pool-list]");
   const draggables = Array.from(document.querySelectorAll("[data-draggable]"));
   const dropZones = Array.from(document.querySelectorAll("[data-dropzone]"));
+  const mobileSelects = new Map();
 
   if (!pool || !poolList || dropZones.length === 0 || draggables.length === 0) {
     return;
   }
+
+  initMobileSelects();
 
   const handleDragOver = (event) => {
     event.preventDefault();
@@ -232,6 +235,7 @@ function setupMatchingQuestion() {
   };
 
   const setZoneSelection = (zone, value) => {
+    const riskId = zone.dataset.dropzone;
     const placeholder = zone.querySelector("[data-drop-placeholder]");
     if (placeholder) {
       placeholder.style.display = value ? "none" : "";
@@ -246,6 +250,8 @@ function setupMatchingQuestion() {
     } else {
       zone.classList.remove("quiz-dropzone--filled");
     }
+    updateSlotBadge(zone, value);
+    syncMobileSelectValue(zone, value, riskId);
   };
 
   const moveItemToPool = (item) => {
@@ -330,6 +336,57 @@ function setupMatchingQuestion() {
     if (!item) return;
     moveItemToPool(item);
   });
+
+  function initMobileSelects() {
+    const mobileList = document.getElementById("mobileMatchList");
+    if (mobileList) {
+      mobileList.hidden = false;
+    }
+    document.querySelectorAll("[data-mobile-select]").forEach((select) => {
+      const container = select.closest("[data-mobile-ppe]");
+      const ppe = container?.dataset.mobilePpe;
+      if (!ppe) return;
+      mobileSelects.set(ppe, select);
+      select.addEventListener("change", () =>
+        handleMobileSelectChange(ppe, select.value)
+      );
+    });
+  }
+
+  function handleMobileSelectChange(ppe, riskId) {
+    dropZones.forEach((zone) => {
+      if (zone.dataset.selection === ppe) {
+        setZoneSelection(zone, "");
+      }
+    });
+
+    if (!riskId) return;
+
+    mobileSelects.forEach((otherSelect, otherPpe) => {
+      if (otherPpe !== ppe && otherSelect.value === riskId) {
+        otherSelect.value = "";
+      }
+    });
+
+    const targetZone = dropZones.find(
+      (zone) => zone.dataset.dropzone === riskId
+    );
+    if (targetZone) {
+      setZoneSelection(targetZone, ppe);
+    }
+  }
+
+  function syncMobileSelectValue(zone, ppe, riskId = zone.dataset.dropzone) {
+    mobileSelects.forEach((select, value) => {
+      if (value === ppe) {
+        if (select.value !== riskId) {
+          select.value = ppe ? riskId : "";
+        }
+      } else if (select.value === riskId && value !== ppe) {
+        select.value = "";
+      }
+    });
+  }
 }
 
 function buildGroupLabel(group) {
@@ -352,4 +409,44 @@ function buildCategoryLabel(meta) {
 function buildQuestionLabel(meta) {
   if (!meta) return "";
   return translateKey(meta.questionKey) || "";
+}
+
+function syncSelectValue(zone, value) {
+  const select = zone.querySelector("[data-match-select]");
+  if (!select) return;
+  const nextValue = value || "";
+  if (select.value !== nextValue) {
+    select.value = nextValue;
+  }
+}
+
+function updateSlotBadge(zone, value) {
+  const slot = zone.querySelector("[data-drop-slot]");
+  if (!slot) return;
+  const existingBadge = slot.querySelector(".quiz-dropzone__selection");
+  const hasDraggable = slot.querySelector("[data-draggable]");
+
+  if (hasDraggable) {
+    if (existingBadge) existingBadge.remove();
+    return;
+  }
+
+  if (value) {
+    const label = getPpeLabel(value);
+    if (!label) return;
+    const badge = existingBadge || document.createElement("span");
+    badge.className = "quiz-dropzone__selection";
+    badge.textContent = label;
+    if (!existingBadge) {
+      slot.appendChild(badge);
+    }
+  } else if (existingBadge) {
+    existingBadge.remove();
+  }
+}
+
+function getPpeLabel(value) {
+  if (!value) return "";
+  const key = matchingOptions[value];
+  return translateKey(key) || value;
 }
