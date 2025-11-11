@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veiligheidsquiz - Stap 1</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/quiz.css" />
+  </head>
+  <body class="quiz-page" data-quiz-page="questions">
+    <header class="site-header site-header--compact">
+      <div class="header-column">
+        <a
+          class="cta"
+          target="_blank"
+          rel="noreferrer"
+          href="https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60"
+          data-i18n="shared.header.newsletter"
+        ></a>
+      </div>
+      <div class="header-logo">
+        <a href="../../index.html" data-lang-base="../../index.html">
+          <img src="../../assets/logo.png" alt="SBB Binnenafbouw" />
+        </a>
+      </div>
+      <div class="header-column header-column--align-end">
+        <div class="language-switcher" id="languageSwitcher">
+          <button class="language-switcher__button" id="languageTrigger" type="button">
+            Nederlands
+          </button>
+          <ul class="language-switcher__menu" id="languageMenu"></ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="quiz-main">
+      <section class="quiz-intro">
+        <p class="quiz-eyebrow" data-i18n="questions.stepEyebrow"></p>
+        <h1 class="quiz-title" data-i18n="questions.title"></h1>
+        <p class="quiz-lead" data-i18n="questions.lead"></p>
+      </section>
+
+      <form id="questionsForm" class="quiz-card quiz-card--stacked">
+        <section class="quiz-section" aria-labelledby="question-1-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="1"></p>
+            <h2 class="quiz-section__title" id="question-1-title" data-i18n="questions.titles.q1"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q1"></p>
+          <textarea class="quiz-input quiz-input--textarea" id="situatievraag" name="situatievraag"></textarea>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-2-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="2"></p>
+            <h2 class="quiz-section__title" id="question-2-title" data-i18n="questions.titles.q2"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q2"></p>
+          <div class="quiz-fieldset">
+            <p class="quiz-label__title" data-i18n="questions.match.legendTitle"></p>
+            <p class="quiz-label__hint" data-i18n="questions.match.legendHint"></p>
+          </div>
+          <div class="quiz-match" data-match-root>
+            <div class="quiz-match__zones">
+              <div class="quiz-dropzone" data-dropzone="match_trillingen">
+                <div class="quiz-dropzone__header">
+                  <p class="quiz-dropzone__label" data-i18n="questions.match.risks.trillingen"></p>
+                  <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
+                </div>
+                <div class="quiz-dropzone__slot" data-drop-slot>
+                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
+                </div>
+                <input type="hidden" name="match_trillingen" data-drop-input />
+              </div>
+              <div class="quiz-dropzone" data-dropzone="match_stof">
+                <div class="quiz-dropzone__header">
+                  <p class="quiz-dropzone__label" data-i18n="questions.match.risks.stof"></p>
+                  <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
+                </div>
+                <div class="quiz-dropzone__slot" data-drop-slot>
+                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
+                </div>
+                <input type="hidden" name="match_stof" data-drop-input />
+              </div>
+              <div class="quiz-dropzone" data-dropzone="match_elektriciteit">
+                <div class="quiz-dropzone__header">
+                  <p class="quiz-dropzone__label" data-i18n="questions.match.risks.elektriciteit"></p>
+                  <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
+                </div>
+                <div class="quiz-dropzone__slot" data-drop-slot>
+                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
+                </div>
+                <input type="hidden" name="match_elektriciteit" data-drop-input />
+              </div>
+              <div class="quiz-dropzone" data-dropzone="match_hoogte">
+                <div class="quiz-dropzone__header">
+                  <p class="quiz-dropzone__label" data-i18n="questions.match.risks.hoogte"></p>
+                  <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
+                </div>
+                <div class="quiz-dropzone__slot" data-drop-slot>
+                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
+                </div>
+                <input type="hidden" name="match_hoogte" data-drop-input />
+              </div>
+              <div class="quiz-dropzone" data-dropzone="match_lawaai">
+                <div class="quiz-dropzone__header">
+                  <p class="quiz-dropzone__label" data-i18n="questions.match.risks.lawaai"></p>
+                  <p class="quiz-dropzone__sub" data-i18n="questions.match.hint"></p>
+                </div>
+                <div class="quiz-dropzone__slot" data-drop-slot>
+                  <span class="quiz-dropzone__placeholder" data-drop-placeholder data-i18n="questions.match.placeholder"></span>
+                </div>
+                <input type="hidden" name="match_lawaai" data-drop-input />
+              </div>
+            </div>
+            <div class="quiz-match__pool" data-drop-pool>
+              <p class="quiz-match__title" data-i18n="questions.match.poolTitle"></p>
+              <p class="quiz-match__hint" data-i18n="questions.match.poolHint"></p>
+              <div class="quiz-match__items" data-drop-pool-list>
+                <div
+                  class="quiz-draggable"
+                  id="drag-valbescherming"
+                  data-draggable
+                  data-value="valbescherming"
+                  draggable="true"
+                  tabindex="0"
+                  aria-label="Valbescherming"
+                >
+                  <img
+                    class="quiz-draggable__image"
+                    src="./valbescherming.png"
+                    alt="Valbescherming"
+                    data-i18n="questions.match.ppe.valbescherming"
+                    data-i18n-attr="alt"
+                  />
+                  <span class="sr-only" data-i18n="questions.match.ppe.valbescherming"></span>
+                </div>
+                <div
+                  class="quiz-draggable"
+                  id="drag-elekhandschoenen"
+                  data-draggable
+                  data-value="elekhandschoenen"
+                  draggable="true"
+                  tabindex="0"
+                  aria-label="Elektriciteitshandschoenen"
+                >
+                  <img
+                    class="quiz-draggable__image"
+                    src="./elekhandschoenen.png"
+                    alt="Elektriciteitshandschoenen"
+                    data-i18n="questions.match.ppe.elekhandschoenen"
+                    data-i18n-attr="alt"
+                  />
+                  <span class="sr-only" data-i18n="questions.match.ppe.elekhandschoenen"></span>
+                </div>
+                <div
+                  class="quiz-draggable"
+                  id="drag-trilhandschoenen"
+                  data-draggable
+                  data-value="trilhandschoenen"
+                  draggable="true"
+                  tabindex="0"
+                  aria-label="Trilhandschoenen"
+                >
+                  <img
+                    class="quiz-draggable__image"
+                    src="./trilhandschoeneng.png"
+                    alt="Trilhandschoenen"
+                    data-i18n="questions.match.ppe.trilhandschoenen"
+                    data-i18n-attr="alt"
+                  />
+                  <span class="sr-only" data-i18n="questions.match.ppe.trilhandschoenen"></span>
+                </div>
+                <div
+                  class="quiz-draggable"
+                  id="drag-adembescherming"
+                  data-draggable
+                  data-value="adembescherming"
+                  draggable="true"
+                  tabindex="0"
+                  aria-label="Adembescherming"
+                >
+                  <img
+                    class="quiz-draggable__image"
+                    src="./adembescherming.png"
+                    alt="Adembescherming"
+                    data-i18n="questions.match.ppe.adembescherming"
+                    data-i18n-attr="alt"
+                  />
+                  <span class="sr-only" data-i18n="questions.match.ppe.adembescherming"></span>
+                </div>
+                <div
+                  class="quiz-draggable"
+                  id="drag-oorbescherming"
+                  data-draggable
+                  data-value="oorbescherming"
+                  draggable="true"
+                  tabindex="0"
+                  aria-label="Oorbescherming"
+                >
+                  <img
+                    class="quiz-draggable__image"
+                    src="./gehoorbescherming.png"
+                    alt="Oorbescherming"
+                    data-i18n="questions.match.ppe.oorbescherming"
+                    data-i18n-attr="alt"
+                  />
+                  <span class="sr-only" data-i18n="questions.match.ppe.oorbescherming"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-3-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="3"></p>
+            <h2 class="quiz-section__title" id="question-3-title" data-i18n="questions.titles.q3"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q3"></p>
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="toepassingsvraag" value="A" />
+              <span data-i18n="questions.q3.options.a"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="toepassingsvraag" value="B" />
+              <span data-i18n="questions.q3.options.b"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="toepassingsvraag" value="C" />
+              <span data-i18n="questions.q3.options.c"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="toepassingsvraag" value="D" />
+              <span data-i18n="questions.q3.options.d"></span>
+            </label>
+          </div>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-4-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="4"></p>
+            <h2 class="quiz-section__title" id="question-4-title" data-i18n="questions.titles.q4"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q4"></p>
+          <textarea class="quiz-input quiz-input--textarea" id="redeneervraag" name="redeneervraag"></textarea>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-5-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="5"></p>
+            <h2 class="quiz-section__title" id="question-5-title" data-i18n="questions.titles.q5"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q5"></p>
+          <div class="quiz-options quiz-options--inline">
+            <label class="quiz-option">
+              <input type="radio" name="herkenning" value="juist" />
+              <span data-i18n="questions.q5.options.true"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="herkenning" value="onjuist" />
+              <span data-i18n="questions.q5.options.false"></span>
+            </label>
+          </div>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-6-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="6"></p>
+            <h2 class="quiz-section__title" id="question-6-title" data-i18n="questions.titles.q6"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q6"></p>
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="inzichtvraag" value="A" />
+              <span data-i18n="questions.q6.options.a"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="inzichtvraag" value="B" />
+              <span data-i18n="questions.q6.options.b"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="inzichtvraag" value="C" />
+              <span data-i18n="questions.q6.options.c"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="inzichtvraag" value="D" />
+              <span data-i18n="questions.q6.options.d"></span>
+            </label>
+          </div>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-7-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="7"></p>
+            <h2 class="quiz-section__title" id="question-7-title" data-i18n="questions.titles.q7"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q7"></p>
+          <div class="quiz-options">
+            <label class="quiz-option">
+              <input type="radio" name="praktijkvraag" value="A" />
+              <span data-i18n="questions.q7.options.a"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="praktijkvraag" value="B" />
+              <span data-i18n="questions.q7.options.b"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="praktijkvraag" value="C" />
+              <span data-i18n="questions.q7.options.c"></span>
+            </label>
+            <label class="quiz-option">
+              <input type="radio" name="praktijkvraag" value="D" />
+              <span data-i18n="questions.q7.options.d"></span>
+            </label>
+          </div>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-8-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="8"></p>
+            <h2 class="quiz-section__title" id="question-8-title" data-i18n="questions.titles.q8"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q8"></p>
+          <textarea class="quiz-input quiz-input--textarea" id="koppeling" name="koppeling"></textarea>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-9-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="9"></p>
+            <h2 class="quiz-section__title" id="question-9-title" data-i18n="questions.titles.q9"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q9"></p>
+          <textarea class="quiz-input quiz-input--textarea" id="reflectie" name="reflectie"></textarea>
+        </section>
+
+        <section class="quiz-section" aria-labelledby="question-10-title">
+          <header class="quiz-section__header">
+            <p class="quiz-section__eyebrow" data-i18n="questions.labelPrefix" data-i18n-number="10"></p>
+            <h2 class="quiz-section__title" id="question-10-title" data-i18n="questions.titles.q10"></h2>
+          </header>
+          <p class="quiz-section__text" data-i18n="questions.bodies.q10"></p>
+          <textarea class="quiz-input quiz-input--textarea" id="denkvraag" name="denkvraag"></textarea>
+        </section>
+
+        <div class="quiz-buttons">
+          <button type="submit" class="quiz-button quiz-button--primary" aria-live="polite">
+            <span class="quiz-button__label" data-i18n="questions.button.next"></span>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__column site-footer__column--start">
+        <p class="site-footer__text">&copy; <span id="footerYearQuiz">2025</span> SBB Binnenafbouw</p>
+      </div>
+      <div class="site-footer__column site-footer__column--center">
+        <a
+          class="cta"
+          target="_blank"
+          rel="noreferrer"
+          href="https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60"
+          data-i18n="shared.buttons.newsletter"
+        ></a>
+      </div>
+      <div class="site-footer__column site-footer__column--end">
+        <a
+          class="site-footer__link"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.sbbbinnenafbouw.nl"
+        >
+          www.sbbbinnenafbouw.nl
+        </a>
+        <a
+          class="site-footer__social"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/company/sbb-binnenafbouw/"
+          aria-label="LinkedIn"
+        >
+          <svg
+            class="site-footer__social-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9A1.55 1.55 0 0 0 3.55 22h16.9A1.55 1.55 0 0 0 22 20.45V3.55A1.55 1.55 0 0 0 20.45 2ZM8.34 18.34H5.66V9.59h2.68ZM7 8.39a1.55 1.55 0 1 1 1.55-1.55A1.55 1.55 0 0 1 7 8.39Zm12 9.95h-2.66v-4.26c0-1.02 0-2.34-1.43-2.34s-1.65 1.12-1.65 2.27v4.33H10.6V9.59h2.55v1.19h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("footerYearQuiz").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="../../assets/quiz-i18n.js"></script>
+    <script type="module" src="../../assets/quiz-questions.js"></script>
+  </body>
+</html>

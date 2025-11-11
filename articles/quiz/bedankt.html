@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veiligheidsquiz - Bedankt</title>
+    <link rel="stylesheet" href="../../assets/styles.css" />
+    <link rel="stylesheet" href="../../assets/quiz.css" />
+  </head>
+  <body class="quiz-page" data-quiz-page="success">
+    <header class="site-header site-header--compact">
+      <div class="header-column">
+        <a
+          class="cta"
+          target="_blank"
+          rel="noreferrer"
+          href="https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60"
+          data-i18n="shared.header.newsletter"
+        ></a>
+      </div>
+      <div class="header-logo">
+        <a href="../../index.html" data-lang-base="../../index.html">
+          <img src="../../assets/logo.png" alt="SBB Binnenafbouw" />
+        </a>
+      </div>
+      <div class="header-column header-column--align-end">
+        <div class="language-switcher" id="languageSwitcher">
+          <button class="language-switcher__button" id="languageTrigger" type="button">
+            Nederlands
+          </button>
+          <ul class="language-switcher__menu" id="languageMenu"></ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="quiz-main">
+      <section class="quiz-success">
+        <p class="quiz-eyebrow" data-i18n="success.stepEyebrow"></p>
+        <div class="quiz-success__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img">
+            <circle cx="32" cy="32" r="30" />
+            <path d="M22 33l6 6 14-16" />
+          </svg>
+        </div>
+        <h1 class="quiz-title" data-i18n="success.title"></h1>
+        <p data-i18n="success.body"></p>
+        <div class="quiz-success__actions">
+          <a
+            class="quiz-button quiz-button--primary"
+            href="../../index.html"
+            data-lang-base="../../index.html"
+            data-i18n="shared.buttons.toVideos"
+          ></a>
+          <a
+            class="quiz-button quiz-button--ghost"
+            target="_blank"
+            rel="noreferrer"
+            href="https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60"
+            data-i18n="shared.buttons.newsletter"
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__column site-footer__column--start">
+        <p class="site-footer__text">&copy; <span id="footerYearQuiz">2025</span> SBB Binnenafbouw</p>
+      </div>
+      <div class="site-footer__column site-footer__column--center">
+        <a
+          class="cta"
+          target="_blank"
+          rel="noreferrer"
+          href="https://sbbbinnenafbouw.us7.list-manage.com/subscribe?u=1d0afb411ef19d7d917c6549d&id=1dc1f4cb60"
+          data-i18n="shared.buttons.newsletter"
+        ></a>
+      </div>
+      <div class="site-footer__column site-footer__column--end">
+        <a
+          class="site-footer__link"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.sbbbinnenafbouw.nl"
+        >
+          www.sbbbinnenafbouw.nl
+        </a>
+        <a
+          class="site-footer__social"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/company/sbb-binnenafbouw/"
+          aria-label="LinkedIn"
+        >
+          <svg
+            class="site-footer__social-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            role="img"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.45 2H3.55A1.55 1.55 0 0 0 2 3.55v16.9A1.55 1.55 0 0 0 3.55 22h16.9A1.55 1.55 0 0 0 22 20.45V3.55A1.55 1.55 0 0 0 20.45 2ZM8.34 18.34H5.66V9.59h2.68ZM7 8.39a1.55 1.55 0 1 1 1.55-1.55A1.55 1.55 0 0 1 7 8.39Zm12 9.95h-2.66v-4.26c0-1.02 0-2.34-1.43-2.34s-1.65 1.12-1.65 2.27v4.33H10.6V9.59h2.55v1.19h.04a2.8 2.8 0 0 1 2.52-1.38c2.7 0 3.2 1.78 3.2 4.09Z"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("footerYearQuiz").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="../../assets/quiz-i18n.js"></script>
+  </body>
+</html>
