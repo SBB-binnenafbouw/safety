@@ -16,56 +16,56 @@
   "translations": {
     "nl": {
       "title": "Bewust veilig werken",
-      "thumbnail": "articles/veilig-boren/Thumbnail_nl.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_nl.png",
       "video": "https://player.vimeo.com/video/1133412397?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/nl.html",
       "link": "articles/bewust-werken/?lang=nl"
     },
     "en": {
       "title": "Working safely awareness",
-      "thumbnail": "articles/veilig-boren/Thumbnail_en.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_en.png",
       "video": "https://player.vimeo.com/video/1133412378?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/en.html",
       "link": "articles/bewust-werken/?lang=en"
     },
     "de": {
       "title": "Bewusst sicher arbeiten",
-      "thumbnail": "articles/veilig-boren/Thumbnail_de.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_de.png",
       "video": "https://player.vimeo.com/video/1133412356?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/de.html",
       "link": "articles/bewust-werken/?lang=de"
     },
     "pl": {
       "title": "Świadoma bezpieczna praca",
-      "thumbnail": "articles/veilig-boren/Thumbnail_pl.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_pl.png",
       "video": "https://player.vimeo.com/video/1133412413?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/pl.html",
       "link": "articles/bewust-werken/?lang=pl"
     },
     "ro": {
       "title": "Lucrează în siguranță, conștient",
-      "thumbnail": "articles/veilig-boren/Thumbnail_ro.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_ro.png",
       "video": "https://player.vimeo.com/video/1133412424?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/ro.html",
       "link": "articles/bewust-werken/?lang=ro"
     },
     "bg": {
       "title": "Работи безопасно и съзнателно",
-      "thumbnail": "articles/veilig-boren/Thumbnail_bg.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_bg.png",
       "video": "https://player.vimeo.com/video/1133412334?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/bg.html",
       "link": "articles/bewust-werken/?lang=bg"
     },
     "sk": {
       "title": "Pracuj bezpečne a vedome",
-      "thumbnail": "articles/veilig-boren/Thumbnail_sk.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_sk.png",
       "video": "https://player.vimeo.com/video/1133412442?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/sk.html",
       "link": "articles/bewust-werken/?lang=sk"
     },
     "ua": {
       "title": "Працюй безпечно та усвідомлено",
-      "thumbnail": "articles/veilig-boren/Thumbnail_ua.png",
+      "thumbnail": "articles/bewust-werken/Thumbnail_ua.png",
       "video": "https://player.vimeo.com/video/1133412458?title=0&byline=0&portrait=0",
       "html": "articles/bewust-werken/ua.html",
       "link": "articles/bewust-werken/?lang=ua"
