@@ -1,0 +1,73 @@
+{
+  "slug": "valgevaar",
+  "published": "2026-02-01",
+  "roles": [
+    "timmerman",
+    "plafonneur",
+    "monteur",
+    "afwerker",
+    "smeerder"
+  ],
+  "tags": [
+    "video",
+    "extra-info"
+  ],
+  "translations": {
+    "nl": {
+      "title": "Valgevaar",
+      "thumbnail": "articles/valgevaar/Thumbnail_nl.png",
+      "video": "https://player.vimeo.com/video/1161157627?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/nl.html",
+      "link": "articles/valgevaar/?lang=nl"
+    },
+    "en": {
+      "title": "Fall hazard",
+      "thumbnail": "articles/valgevaar/Thumbnail_en.png",
+      "video": "https://player.vimeo.com/video/1161157600?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/en.html",
+      "link": "articles/valgevaar/?lang=en"
+    },
+    "de": {
+      "title": "Sturzgefahr",
+      "thumbnail": "articles/valgevaar/Thumbnail_de.png",
+      "video": "https://player.vimeo.com/video/1161157570?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/de.html",
+      "link": "articles/valgevaar/?lang=de"
+    },
+    "pl": {
+      "title": "Zagrożenie upadkiem",
+      "thumbnail": "articles/valgevaar/Thumbnail_pl.png",
+      "video": "https://player.vimeo.com/video/1161157661?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/pl.html",
+      "link": "articles/valgevaar/?lang=pl"
+    },
+    "ro": {
+      "title": "Pericol de cădere",
+      "thumbnail": "articles/valgevaar/Thumbnail_ro.png",
+      "video": "https://player.vimeo.com/video/1161157681?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/ro.html",
+      "link": "articles/valgevaar/?lang=ro"
+    },
+    "bg": {
+      "title": "Опасност от падане",
+      "thumbnail": "articles/valgevaar/Thumbnail_bg.png",
+      "video": "https://player.vimeo.com/video/1161157539?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/bg.html",
+      "link": "articles/valgevaar/?lang=bg"
+    },
+    "sk": {
+      "title": "Nebezpečenstvo pádu",
+      "thumbnail": "articles/valgevaar/Thumbnail_sk.png",
+      "video": "https://player.vimeo.com/video/1161157496?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/sk.html",
+      "link": "articles/valgevaar/?lang=sk"
+    },
+    "ua": {
+      "title": "Небезпека падіння",
+      "thumbnail": "articles/valgevaar/Thumbnail_ua.png",
+      "video": "https://player.vimeo.com/video/1161157519?title=0&byline=0&portrait=0",
+      "html": "articles/valgevaar/ua.html",
+      "link": "articles/valgevaar/?lang=ua"
+    }
+  }
+}

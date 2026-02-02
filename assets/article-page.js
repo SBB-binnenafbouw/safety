@@ -354,6 +354,7 @@ async function renderContent(translation) {
     }
     elements.articleContent.innerHTML = markup;
     elements.articleContent.hidden = false;
+    initValgevaarTabs(elements.articleContent);
   } catch (error) {
     console.warn("Kon HTML-fragment niet laden:", error);
     elements.articleContent.innerHTML = "";
@@ -456,6 +457,28 @@ function fetchJson(resource) {
       throw new Error(`Kon ${resource} niet ophalen (${response.status})`);
     }
     return response.json();
+  });
+}
+
+function initValgevaarTabs(root) {
+  if (!root) return;
+  const buttons = root.querySelectorAll(".valg__btn");
+  const panels = root.querySelectorAll(".valg__panel");
+  if (!buttons.length || !panels.length) return;
+
+  function setActive(target) {
+    buttons.forEach((btn) => {
+      btn.classList.toggle("is-active", btn.dataset.target === target);
+    });
+    panels.forEach((panel) => {
+      panel.classList.toggle("is-visible", panel.dataset.panel === target);
+    });
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setActive(btn.dataset.target);
+    });
   });
 }
 

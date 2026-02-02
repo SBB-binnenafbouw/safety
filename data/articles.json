@@ -34,5 +34,9 @@
   {
     "slug": "bewust-werken",
     "properties": "articles/bewust-werken/article.json"
+  },
+  {
+    "slug": "valgevaar",
+    "properties": "articles/valgevaar/article.json"
   }
 ]

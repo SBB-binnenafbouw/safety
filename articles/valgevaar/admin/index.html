@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artikelbeheer | Veilig boren</title>
+    <link rel="icon" href="../../../assets/logo.png" type="image/png" />
+    <link rel="stylesheet" href="../../../assets/article-admin.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <h1>Artikelbeheer – <span id="articleSlug"></span></h1>
+        <p>
+          Vul de functies, tags, titels, Vimeo-links en HTML-bestanden per taal in. De structuur
+          verwacht fragmentbestanden met de naam <code>&lt;slug&gt;_&lt;taalcode&gt;.html</code>,
+          bijvoorbeeld <code>veilig-boren_nl.html</code>. Voeg per taal ook de Vimeo-URL toe
+          (bij voorkeur de embed-link) en behoud de thumbnails
+          <code>Thumbnail_&lt;taalcode&gt;.png</code> in deze map.
+        </p>
+      </div>
+      <a class="page-header__link" id="articleBackLink" href="../">← Terug naar artikel</a>
+    </header>
+
+    <main class="page-content">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <h2>Artikeldata</h2>
+            <output class="panel__status" id="siteStatus"></output>
+            <output class="panel__status" id="manifestStatus"></output>
+            <output class="panel__status" id="articleStatus"></output>
+          </div>
+          <div class="panel__actions">
+            <label class="button button--ghost">
+              Artikelbestand laden
+              <input type="file" data-import="article" accept="application/json" />
+            </label>
+            <button class="button button--primary" data-action="download-article">
+              Download article.json
+            </button>
+          </div>
+        </div>
+
+        <section class="section-block">
+          <h3>Algemeen</h3>
+          <div class="form-grid">
+            <label>
+              <span>Publicatiedatum</span>
+              <input type="date" id="publishedInput" />
+            </label>
+          </div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-block__header">
+            <h3>Gekoppelde functies</h3>
+          </div>
+          <div class="chip-list" id="rolesContainer"></div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-block__header">
+            <h3>Gekoppelde tags</h3>
+          </div>
+          <div class="chip-list" id="tagsContainer"></div>
+        </section>
+
+        <section class="section-block">
+          <div class="section-block__header">
+            <h3>Vertalingen, video en HTML-fragmenten</h3>
+            <p class="hint">
+              Voor elke taal: titel, Vimeo-embed en de bestandsnaam van het fragment. Voorzie ook
+              de link die op de homepage gebruikt wordt (meestal
+              <code>articles/&lt;slug&gt;/?lang=&lt;code&gt;</code>).
+            </p>
+          </div>
+          <div id="titlesContainer"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>
+        Zorg dat de fragmentbestanden in dezelfde map staan (bijv.
+        <code>veilig-boren_nl.html</code>) en gebruik de embed-link van Vimeo
+        (<code>https://player.vimeo.com/video/&lt;id&gt;</code>) voor automatische weergave in de
+        artikelpagina.
+        <br />
+        <small>Huidig artikel: <code id="articleSlugFooter"></code></small>
+      </p>
+    </footer>
+
+    <script type="module" src="../../../assets/article-admin.js"></script>
+  </body>
+</html>
