@@ -13,7 +13,7 @@ async function initRedirect() {
     if (statusElement) {
       statusElement.textContent = dataset.isFallback
         ? "Voorbeeldartikel openen…"
-        : "Doorverwijzen naar het uitgelichte item…";
+        : "Doorverwijzen naar het nieuwste item…";
     }
 
     setTimeout(() => {
@@ -67,15 +67,11 @@ async function loadArticles(manifest) {
 
 function resolveTargetUrl(dataset) {
   const { config, articles } = dataset;
-  const slug = config?.site?.highlightedArticleSlug;
-  let article = slug ? articles.find((item) => item.slug === slug) : null;
+  const preferredSlug = config?.site?.highlightedArticleSlug || "";
+  const article = selectNewestArticle(articles, preferredSlug);
 
   if (!article) {
-    article = articles[0];
-  }
-
-  if (!article) {
-    throw new Error("Geen uitgelicht artikel beschikbaar.");
+    throw new Error("Geen artikelen beschikbaar voor redirect.");
   }
 
   const preferredLang = detectPreferredLanguage(article);
@@ -84,10 +80,40 @@ function resolveTargetUrl(dataset) {
   const link = buildArticleLink(article, translation, preferredLang);
 
   if (!link) {
-    throw new Error("Geen geldige link voor het uitgelichte artikel.");
+    throw new Error("Geen geldige link voor het nieuwste artikel.");
   }
 
   return link;
+}
+
+function getArticleUploadDateValue(article) {
+  return article?.uploadedAt || article?.uploadDate || article?.published || "";
+}
+
+function getArticleUploadTimestamp(article) {
+  const rawValue = getArticleUploadDateValue(article);
+  if (!rawValue) return Number.NEGATIVE_INFINITY;
+  const timestamp = Date.parse(rawValue);
+  return Number.isFinite(timestamp) ? timestamp : Number.NEGATIVE_INFINITY;
+}
+
+function selectNewestArticle(articles, preferredSlug = "") {
+  if (!Array.isArray(articles) || !articles.length) return null;
+  return articles.reduce((newest, candidate) => {
+    if (!newest) return candidate;
+    const newestTimestamp = getArticleUploadTimestamp(newest);
+    const candidateTimestamp = getArticleUploadTimestamp(candidate);
+    if (candidateTimestamp > newestTimestamp) return candidate;
+    if (candidateTimestamp < newestTimestamp) return newest;
+    const newestIsPreferred = preferredSlug && newest?.slug === preferredSlug;
+    const candidateIsPreferred = preferredSlug && candidate?.slug === preferredSlug;
+    if (candidateIsPreferred !== newestIsPreferred) {
+      return candidateIsPreferred ? candidate : newest;
+    }
+    const newestSlug = newest?.slug || "";
+    const candidateSlug = candidate?.slug || "";
+    return candidateSlug.localeCompare(newestSlug) < 0 ? candidate : newest;
+  }, null);
 }
 
 function detectPreferredLanguage(article) {
@@ -95,7 +121,7 @@ function detectPreferredLanguage(article) {
   const available = Object.keys(translations);
 
   if (!available.length) {
-    throw new Error("Geen vertalingen beschikbaar voor het uitgelichte artikel.");
+    throw new Error("Geen vertalingen beschikbaar voor het nieuwste artikel.");
   }
 
   const params = new URLSearchParams(window.location.search);

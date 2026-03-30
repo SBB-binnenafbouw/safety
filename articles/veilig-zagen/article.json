@@ -1,0 +1,70 @@
+{
+  "slug": "veilig-zagen",
+  "published": "2026-04-01",
+  "roles": [
+    "timmerman",
+    "monteur",
+    "afwerker"
+  ],
+  "tags": [
+    "extra-info"
+  ],
+  "translations": {
+    "nl": {
+      "title": "Veilig zagen",
+      "thumbnail": "articles/veilig-zagen/NL.png",
+      "video": "https://player.vimeo.com/video/1178356338?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/nl.html",
+      "link": "articles/veilig-zagen/?lang=nl"
+    },
+    "en": {
+      "title": "Safe sawing",
+      "thumbnail": "articles/veilig-zagen/EN.png",
+      "video": "https://player.vimeo.com/video/1178356208?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/en.html",
+      "link": "articles/veilig-zagen/?lang=en"
+    },
+    "de": {
+      "title": "Sicheres S\u00e4gen",
+      "thumbnail": "articles/veilig-zagen/DE.png",
+      "video": "https://player.vimeo.com/video/1178356251?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/de.html",
+      "link": "articles/veilig-zagen/?lang=de"
+    },
+    "pl": {
+      "title": "Bezpieczne ci\u0119cie pi\u0142\u0105",
+      "thumbnail": "articles/veilig-zagen/PL.png",
+      "video": "https://player.vimeo.com/video/1178356145?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/pl.html",
+      "link": "articles/veilig-zagen/?lang=pl"
+    },
+    "ro": {
+      "title": "T\u0103iere sigur\u0103 cu fer\u0103str\u0103ul",
+      "thumbnail": "articles/veilig-zagen/RO.png",
+      "video": "https://player.vimeo.com/video/1178356294?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/ro.html",
+      "link": "articles/veilig-zagen/?lang=ro"
+    },
+    "bg": {
+      "title": "\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u0440\u044f\u0437\u0430\u043d\u0435",
+      "thumbnail": "articles/veilig-zagen/BG.png",
+      "video": "https://player.vimeo.com/video/1178356354?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/bg.html",
+      "link": "articles/veilig-zagen/?lang=bg"
+    },
+    "sk": {
+      "title": "Bezpe\u010dn\u00e9 p\u00edlenie",
+      "thumbnail": "articles/veilig-zagen/SK.png",
+      "video": "https://player.vimeo.com/video/1178356083?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/sk.html",
+      "link": "articles/veilig-zagen/?lang=sk"
+    },
+    "ua": {
+      "title": "\u0411\u0435\u0437\u043f\u0435\u0447\u043d\u0435 \u043f\u0438\u043b\u044f\u043d\u043d\u044f",
+      "thumbnail": "articles/veilig-zagen/UA.png",
+      "video": "https://player.vimeo.com/video/1178356406?title=0&byline=0&portrait=0",
+      "html": "articles/veilig-zagen/ua.html",
+      "link": "articles/veilig-zagen/?lang=ua"
+    }
+  }
+}

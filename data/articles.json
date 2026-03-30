@@ -1,5 +1,9 @@
 [
   {
+    "slug": "veilig-zagen",
+    "properties": "articles/veilig-zagen/article.json"
+  },
+  {
     "slug": "veilig-boren",
     "properties": "articles/veilig-boren/article.json"
   },

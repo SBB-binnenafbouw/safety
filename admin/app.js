@@ -71,7 +71,7 @@ function attachEventHandlers() {
   elements.highlightSelect.addEventListener("change", () => {
     if (!state.siteConfig?.site) return;
     state.siteConfig.site.highlightedArticleSlug = elements.highlightSelect.value || "";
-    markSiteDirty("Uitgelicht artikel aangepast.");
+    markSiteDirty("Voorkeursartikel bij gelijke datum aangepast.");
   });
 }
 

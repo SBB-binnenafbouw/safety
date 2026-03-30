@@ -110,11 +110,10 @@ async function init() {
     state.articles = dataset.articles.slice();
     state.usingFallback = dataset.isFallback;
 
-    state.articles.sort((a, b) => {
-      const aDate = new Date(a.published);
-      const bDate = new Date(b.published);
-      return bDate - aDate;
-    });
+    sortArticlesByUploadDateDesc(
+      state.articles,
+      state.config?.site?.highlightedArticleSlug
+    );
 
     state.currentLanguage = determineInitialLanguage(state.config);
     state.activeRole = null;
@@ -317,11 +316,7 @@ function renderTexts() {
 }
 
 function renderHero() {
-  const { highlightedArticleSlug } = state.config.site;
-  const fallbackArticle = state.articles[0];
-  const heroArticle =
-    state.articles.find((article) => article.slug === highlightedArticleSlug) ||
-    fallbackArticle;
+  const heroArticle = state.articles[0];
 
   if (!heroArticle) {
     elements.heroCard.style.display = "none";
@@ -399,8 +394,37 @@ function createArticleCard(article) {
 }
 
 function buildMeta(article, languageCode = state.currentLanguage) {
-  const date = formatDate(article.published, languageCode);
+  const date = formatDate(getArticleUploadDateValue(article), languageCode);
   return date;
+}
+
+function getArticleUploadDateValue(article) {
+  return article?.uploadedAt || article?.uploadDate || article?.published || "";
+}
+
+function getArticleUploadTimestamp(article) {
+  const rawValue = getArticleUploadDateValue(article);
+  if (!rawValue) return Number.NEGATIVE_INFINITY;
+  const timestamp = Date.parse(rawValue);
+  return Number.isFinite(timestamp) ? timestamp : Number.NEGATIVE_INFINITY;
+}
+
+function sortArticlesByUploadDateDesc(articles, preferredSlug = "") {
+  articles.sort((a, b) => {
+    const aTimestamp = getArticleUploadTimestamp(a);
+    const bTimestamp = getArticleUploadTimestamp(b);
+    if (aTimestamp !== bTimestamp) {
+      return bTimestamp - aTimestamp;
+    }
+    const aIsPreferred = preferredSlug && a?.slug === preferredSlug;
+    const bIsPreferred = preferredSlug && b?.slug === preferredSlug;
+    if (aIsPreferred !== bIsPreferred) {
+      return aIsPreferred ? -1 : 1;
+    }
+    const aSlug = a?.slug || "";
+    const bSlug = b?.slug || "";
+    return aSlug.localeCompare(bSlug);
+  });
 }
 
 function getTranslation(article, languageCode) {

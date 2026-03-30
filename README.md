@@ -6,11 +6,11 @@ Deze map is klaar om naar een GitHub Pages-site te uploaden. Alles staat losjes 
 
 - `index.html` â€“ de homepage met hero, filter en kaartoverzicht.
 - `assets/` â€“ gedeelde styling (`styles.css`), artikelstijl (`article.css`), logo (`logo.png`) en scripts (`app.js`).
-- `data/site-config.json` â€“ alle systeeminstellingen: talen, functies, tags, UI-teksten en welk artikel uitgelicht wordt.
+- `data/site-config.json` â€“ alle systeeminstellingen: talen, functies, tags en UI-teksten.
 - `data/articles.json` â€“ lijst van artikels en een verwijzing naar de properties-bestanden.
 - `articles/<slug>/` â€“ per artikel een map met HTML-versies, thumbnails en een `article.json`.
-- `video-latest/` â€“ tussenpagina die altijd doorstuurt naar het momenteel uitgelichte artikel (met optionele taalpad, bijvoorbeeld `video-latest/en/`).
-- `admin/`  lokale properties manager met tabellen voor talen, functies, tags en uitgelicht artikel (open `admin/index.html`).
+- `video-latest/` â€“ tussenpagina die altijd doorstuurt naar het nieuwste artikel op basis van uploaddatum (met optionele taalpad, bijvoorbeeld `video-latest/en/`).
+- `admin/`  lokale properties manager met tabellen voor talen, functies, tags en een optionele tie-breaker bij gelijke datum (open `admin/index.html`).
 
 Daarnaast kun je op artikelniveau bewerken door `/admin/` aan de artikel-URL toe te voegen (bijvoorbeeld `articles/veilig-werken-met-hout/admin/`). Daar wijzig je datum, titels per taal, gekoppelde functies en tags van n artikel.
 Open lokaal idealiter via een kleine webserver (bijvoorbeeld `python -m http.server` of de VSâ€¯Code â€œLive Serverâ€-extensie). Direct via `file:///` blokkeren moderne browsers het laden van de JSON-data; in dat geval toont de site de fallback-voorbeelden (twee demo-artikelen en de standaard instellingen).
@@ -23,7 +23,7 @@ In `data/site-config.json` staat alles in tabellen (arrays) die je simpel kunt b
 - `roles` â€“ elke functie krijgt een `id` en vertalingen per taal.
 - `tags` â€“ zelfde principe voor tags.
 - `uiText` â€“ vertaalde labels voor knoppen en teksten op de homepage.
-- `site.highlightedArticleSlug` â€“ `slug` van het artikel dat je wilt uitlichten in de hero.
+- `site.highlightedArticleSlug` â€“ optionele `slug` als tie-breaker wanneer meerdere artikelen exact dezelfde (upload/publicatie)datum hebben.
 
 Werkstappen:
 1. Pas de tekst aan in een editor.
@@ -78,7 +78,7 @@ Wil je een taal toevoegen? Voeg hem aan `languages` toe en denk eraan om ook elk
 ]
 ```
 
-5. Optioneel: wil je de homepage-hero op dit artikel laten wijzen? Zet de `slug` in `site.highlightedArticleSlug`.
+5. Optioneel: als meerdere artikelen exact dezelfde datum hebben, kun je met `site.highlightedArticleSlug` bepalen welke van die gelijke items voorrang krijgt.
 6. Wil je voor dit artikel ook een formulier? Kopieer de map `articles/veilig-boren/admin/` naar `articles/<slug>/admin/` (of maak een nieuwe `admin/index.html`) en open die URL in de browser.
 
 ### Over de artikel-links
@@ -95,6 +95,7 @@ Wil je een taal toevoegen? Voeg hem aan `languages` toe en denk eraan om ook elk
 ## Hero en checklist
 
 - De tekst â€œOns nieuwste itemâ€ en de checklist-knoppen komen uit `uiText`.
+- De hero en `video-latest/` kiezen automatisch het artikel met de meest recente datum (`uploadedAt`/`uploadDate`, anders `published`).
 - Het LMRA-blok gebruikt de URL uit `site.lmraUrl`.
 - Voor de nieuwsbrief-knop gebruik je `site.newsletterUrl`.
 

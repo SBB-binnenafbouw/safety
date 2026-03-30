@@ -12,9 +12,9 @@
       <div>
         <h1>SBB Safety – Properties manager</h1>
         <p>
-          Pas de talen, functies, tags en uitgelichte artikelen aan zonder JSON
-          te schrijven. Download daarna de gewijzigde bestanden en vervang ze in
-          de projectmap.
+          Pas de talen, functies, tags en datum-tie-breakers aan zonder JSON te
+          schrijven. Download daarna de gewijzigde bestanden en vervang ze in de
+          projectmap.
         </p>
       </div>
       <a class="page-header__link" href="../index.html">← Terug naar site</a>
@@ -91,13 +91,15 @@
         </section>
 
         <section class="section-block">
-          <h3>Uitgelicht item</h3>
+          <h3>Voorkeursitem bij gelijke datum</h3>
           <p class="hint">
-            Kies welk artikel in de hero wordt uitgelicht. De lijst is gebaseerd
-            op <code>data/articles.json</code>.
+            De hero kiest altijd het nieuwste item op datum. Kies hier alleen
+            welk item voorrang krijgt als meerdere artikelen exact dezelfde
+            datum hebben. De lijst is gebaseerd op
+            <code>data/articles.json</code>.
           </p>
           <label class="select">
-            <span>Uitgelicht artikel:</span>
+            <span>Voorkeursartikel:</span>
             <select id="highlightSelect"></select>
           </label>
         </section>
