@@ -42,5 +42,9 @@
   {
     "slug": "valgevaar",
     "properties": "articles/valgevaar/article.json"
+  },
+  {
+    "slug": "snijwonden",
+    "properties": "articles/snijwonden/article.json"
   }
 ]

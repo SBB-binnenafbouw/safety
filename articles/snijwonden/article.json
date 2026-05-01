@@ -1,0 +1,70 @@
+{
+  "slug": "snijwonden",
+  "published": "2026-04-30",
+  "roles": [
+    "timmerman",
+    "monteur",
+    "afwerker"
+  ],
+  "tags": [
+    "video"
+  ],
+  "translations": {
+    "nl": {
+      "title": "Snijwonden voorkomen",
+      "thumbnail": "articles/snijwonden/NL.png",
+      "video": "https://player.vimeo.com/video/1188329790?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/nl.html",
+      "link": "articles/snijwonden/?lang=nl"
+    },
+    "en": {
+      "title": "Preventing cut wounds",
+      "thumbnail": "articles/snijwonden/EN.png",
+      "video": "https://player.vimeo.com/video/1188329761?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/en.html",
+      "link": "articles/snijwonden/?lang=en"
+    },
+    "de": {
+      "title": "Schnittwunden verhindern",
+      "thumbnail": "articles/snijwonden/DE.png",
+      "video": "https://player.vimeo.com/video/1188329759?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/de.html",
+      "link": "articles/snijwonden/?lang=de"
+    },
+    "pl": {
+      "title": "Zapobieganie skaleczeniom",
+      "thumbnail": "articles/snijwonden/PL.png",
+      "video": "https://player.vimeo.com/video/1188329794?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/pl.html",
+      "link": "articles/snijwonden/?lang=pl"
+    },
+    "ro": {
+      "title": "Prevenirea tăieturilor",
+      "thumbnail": "articles/snijwonden/RO.png",
+      "video": "https://player.vimeo.com/video/1188329796?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/ro.html",
+      "link": "articles/snijwonden/?lang=ro"
+    },
+    "bg": {
+      "title": "Предотвратяване на порезни рани",
+      "thumbnail": "articles/snijwonden/BG.png",
+      "video": "https://player.vimeo.com/video/1188329760?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/bg.html",
+      "link": "articles/snijwonden/?lang=bg"
+    },
+    "sk": {
+      "title": "Predchádzanie rezným ranám",
+      "thumbnail": "articles/snijwonden/SK.png",
+      "video": "https://player.vimeo.com/video/1188329819?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/sk.html",
+      "link": "articles/snijwonden/?lang=sk"
+    },
+    "ua": {
+      "title": "Запобігання порізам",
+      "thumbnail": "articles/snijwonden/UA.png",
+      "video": "https://player.vimeo.com/video/1188329843?title=0&byline=0&portrait=0",
+      "html": "articles/snijwonden/ua.html",
+      "link": "articles/snijwonden/?lang=ua"
+    }
+  }
+}
